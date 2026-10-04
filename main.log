@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  5 OCT 2026 03:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  5 OCT 2026 04:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1585,12 +1585,27 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [10 <./figs/q03.pdf>]
-<figs/q07.pdf, id=265, 433.62pt x 433.62pt>
-File: figs/q07.pdf Graphic file (type pdf)
-<use figs/q07.pdf>
-Package pdftex.def Info: figs/q07.pdf  used on input line 129.
-(pdftex.def)             Requested size: 254.9356pt x 254.94035pt.
- [11 <./figs/q07.pdf>]
+
+LaTeX Warning: File `figs/q07.pdf' not found on input line 129.
+
+
+! Package pdftex.def Error: File `figs/q07.pdf' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 ...olumnwidth,keepaspectratio]{figs/q07.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+29.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [11]
 ! Undefined control sequence.
 l.144 The TRUE option is \gate
                               
@@ -1610,7 +1625,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [12]
-<figs/q12.pdf, id=346, 505.89pt x 433.62pt>
+<figs/q12.pdf, id=312, 505.89pt x 433.62pt>
 File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
 Package pdftex.def Info: figs/q12.pdf  used on input line 204.
@@ -1645,7 +1660,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [16]
-<figs/q36.pdf, id=459, 433.62pt x 289.08pt>
+<figs/q36.pdf, id=424, 433.62pt x 289.08pt>
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
 Package pdftex.def Info: figs/q36.pdf  used on input line 396.
@@ -1696,7 +1711,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q38.pdf, id=541, 433.62pt x 289.08pt>
+<figs/q38.pdf, id=507, 433.62pt x 289.08pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
 Package pdftex.def Info: figs/q38.pdf  used on input line 531.
@@ -1726,7 +1741,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q48.pdf, id=625, 433.62pt x 325.215pt>
+<figs/q48.pdf, id=591, 433.62pt x 325.215pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
 Package pdftex.def Info: figs/q48.pdf  used on input line 611.
@@ -1742,7 +1757,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [22 <./figs/q48.pdf>]
-<figs/q49.pdf, id=704, 433.62pt x 325.215pt>
+<figs/q49.pdf, id=670, 433.62pt x 325.215pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
 Package pdftex.def Info: figs/q49.pdf  used on input line 654.
@@ -1780,7 +1795,7 @@ l.679     \fill[pattern=north east lines]
 (That was another \errmessage.)
 
 [23 <./figs/q49.pdf>] [24]
-<figs/q50.pdf, id=773, 361.35pt x 361.35pt>
+<figs/q50.pdf, id=739, 361.35pt x 361.35pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
 Package pdftex.def Info: figs/q50.pdf  used on input line 749.
@@ -1817,7 +1832,7 @@ l.780     \fill[pattern=north east lines]
                                           (7.0, -0.2) rectangle (7.35, 1.0);
 (That was another \errmessage.)
 
-<figs/q51.pdf, id=828, 433.62pt x 289.08pt>
+<figs/q51.pdf, id=794, 433.62pt x 289.08pt>
 File: figs/q51.pdf Graphic file (type pdf)
 <use figs/q51.pdf>
 Package pdftex.def Info: figs/q51.pdf  used on input line 829.
@@ -1835,11 +1850,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 50937 strings out of 474222
- 1219711 string characters out of 5748734
+ 50998 strings out of 474222
+ 1220770 string characters out of 5748734
  1952975 words of memory out of 5000000
- 72109 multiletter control sequences out of 15000+600000
- 602937 words of font info for 144 fonts, out of 8000000 for 9000
+ 72165 multiletter control sequences out of 15000+600000
+ 603452 words of font info for 146 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,18n,109p,1194b,1266s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -1861,13 +1876,14 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (27 pages, 461233 bytes).
+sfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courie
+r/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (27 pages, 458362 bytes).
 PDF statistics:
- 1068 PDF objects out of 1200 (max. 8388607)
- 648 compressed objects within 7 object streams
+ 1038 PDF objects out of 1200 (max. 8388607)
+ 646 compressed objects within 7 object streams
  314 named destinations out of 1000 (max. 500000)
- 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -70,5 +70,5 @@ ax.grid(True, linestyle='--', alpha=0.5)
 plt.tight_layout()
 
 # Save figure directly as a vector PDF
-plt.savefig('q07plot.pdf', bbox_inches='tight')
+plt.savefig('q07.pdf', bbox_inches='tight')
 plt.close(fig)
