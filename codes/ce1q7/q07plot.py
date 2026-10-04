@@ -1,44 +1,73 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-r = 1.0
-alpha_deg, beta_deg = 130.0, 50.0
-alpha, beta = np.radians(alpha_deg), np.radians(beta_deg)
+# Create figure and axis
+fig, ax = plt.subplots(figsize=(8, 9))
 
-# Points
-P = np.array([-r, 0.0])
-Q = np.array([r, 0.0])
+# --- Define Coordinates ---
 O = np.array([0.0, 0.0])
-R = np.array([r * np.cos(alpha), r * np.sin(alpha)])
-S = np.array([r * np.cos(beta), r * np.sin(beta)])
+P = np.array([-1.0, 0.0])
+Q = np.array([1.0, 0.0])
 
-# Intersection T of extended PR and QS
-T = np.array([0.0, (r * np.sin(alpha)) / (1 + np.cos(alpha))])
+# Angles in radians
+alpha = np.radians(130)  # Angle for R
+beta = np.radians(50)    # Angle for S
 
-# Circle points
+R = np.array([np.cos(alpha), np.sin(alpha)])  # (-0.6428, 0.7660)
+S = np.array([np.cos(beta), np.sin(beta)])    # (0.6428, 0.7660)
+T = np.array([0.0, 2.1445])
+
+# --- Plot Circle ---
 theta = np.linspace(0, 2 * np.pi, 300)
-x_circle = r * np.cos(theta)
-y_circle = r * np.sin(theta)
+ax.plot(np.cos(theta), np.sin(theta), color='blue', linewidth=2)
 
-plt.figure(figsize=(6, 6))
-plt.plot(x_circle, y_circle, 'b-', label='Circle')
-plt.plot([P[0], T[0]], [P[1], T[1]], 'r--', label='Extended PR')
-plt.plot([Q[0], T[0]], [Q[1], T[1]], 'g--', label='Extended QS')
+# --- Plot Secant Lines ---
+# P -> R -> T (Red)
+ax.plot([P[0], R[0]], [P[1], R[1]], color='red', linestyle='-', linewidth=1.5)
+ax.plot([R[0], T[0]], [R[1], T[1]], color='red', linestyle='--', linewidth=1.5)
 
-# Draw segments
-plt.plot([O[0], R[0]], [O[1], R[1]], 'k:')
-plt.plot([O[0], S[0]], [O[1], S[1]], 'k:')
+# Q -> S -> T (Green)
+ax.plot([Q[0], S[0]], [Q[1], S[1]], color='green', linestyle='-', linewidth=1.5)
+ax.plot([S[0], T[0]], [S[1], T[1]], color='green', linestyle='--', linewidth=1.5)
 
-# Plot points
-points = {'P': P, 'Q': Q, 'O': O, 'R': R, 'S': S, 'T': T}
-for name, pt in points.items():
-    plt.scatter(*pt, color='black')
-    plt.text(pt[0] + 0.05, pt[1] + 0.05, name, fontsize=12)
+# Radial lines O-R and O-S (Dotted black)
+ax.plot([O[0], R[0]], [O[1], R[1]], color='black', linestyle=':', linewidth=1.2)
+ax.plot([O[0], S[0]], [O[1], S[1]], color='black', linestyle=':', linewidth=1.2)
 
-plt.axhline(0, color='black', linewidth=0.5)
-plt.axvline(0, color='black', linewidth=0.5)
-plt.axis('equal')
-plt.grid(True, linestyle=':', alpha=0.6)
-plt.title('Circle Geometry with Intersection T')
-plt.savefig('q07.pdf')
-plt.close()
+# --- Coordinate Axes ---
+ax.axhline(0, color='black', linewidth=1.2)
+ax.axvline(0, color='black', linewidth=1.2)
+
+# --- Plot Points ---
+points = [O, P, Q, R, S, T]
+for pt in points:
+    ax.plot(pt[0], pt[1], 'ko', markersize=6)
+
+# --- Annotate Points with Coordinates ---
+annotations = {
+    'O': (O, (0.05, 0.05)),
+    'P': (P, (-0.45, 0.05)),
+    'Q': (Q, (0.05, 0.05)),
+    'R': (R, (-0.65, 0.05)),
+    'S': (S, (0.05, 0.05)),
+    'T': (T, (0.05, 0.03))
+}
+
+for label, (pt, offset) in annotations.items():
+    coord_text = f"{label} ({pt[0]:.2f}, {pt[1]:.2f})" if label not in ['O', 'P', 'Q'] else f"{label} ({pt[0]:.1f}, {pt[1]:.1f})"
+    ax.text(pt[0] + offset[0], pt[1] + offset[1], coord_text, fontsize=10, fontweight='bold')
+
+# --- Plot Styling ---
+ax.set_title('Circle Geometry with Intersection T', fontsize=12, fontweight='bold', pad=12)
+ax.set_xlim(-1.6, 1.6)
+ax.set_ylim(-1.2, 2.3)
+ax.set_xticks([-1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5])
+ax.set_yticks([-1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0])
+ax.set_aspect('equal')
+ax.grid(True, linestyle='--', alpha=0.5)
+
+plt.tight_layout()
+
+# Save figure directly as a PDF vector file
+plt.savefig('q07plot.pdf', bbox_inches='tight')
+plt.close(fig)
