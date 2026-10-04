@@ -301,45 +301,6 @@ Both approaches confirm that the Cholesky factor matrix and diagonal value are:
 \end{align}
 
 
-A symmetric positive definite matrix $A \in \mathbb{R}^{n \times n}$ can be factorized as
-\begin{equation}
-    A = LL^{\top} \label{eq:1.1.5.1}
-\end{equation}
-where $L$ is a lower triangular matrix with positive diagonal entries. The general formulas for computing the entries $l_{ij}$ of $L$ for $1 \le j \le i \le n$ are given by:
-\begin{equation}
-    l_{jj} = \sqrt{a_{jj} - \sum_{k=1}^{j-1} l_{jk}^2} \label{eq:cholesky_diag}
-\end{equation}
-\begin{equation}
-    l_{ij} = \frac{1}{l_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk} \right), \quad \text{for } i > j \label{eq:cholesky_offdiag}
-\end{equation}
-
-Given the matrix:
-\[
-    A = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix}
-\]
-
-Applying Equation~\eqref{eq:cholesky_diag} for $j = 1$:
-\begin{equation}
-    l_{11} = \sqrt{a_{11}} = \sqrt{9} = 3 \label{eq:1.2.8.2}
-\end{equation}
-
-Applying Equation~\eqref{eq:cholesky_offdiag} for $i = 2, j = 1$:
-\begin{equation}
-    l_{21} = \frac{a_{21}}{l_{11}} = \frac{15}{3} = 5 \label{eq:1.2.8.3}
-\end{equation}
-
-Applying Equation~\eqref{eq:cholesky_diag} for $j = 2$:
-\begin{equation}
-    l_{22} = \sqrt{a_{22} - l_{21}^2} = \sqrt{50 - 5^2} = \sqrt{25} = 5 \label{eq:1.2.8.4}
-\end{equation}
-
-Thus, the lower triangular matrix $L$ and the product $LL^{\top}$ are:
-\begin{equation}
-    L = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix}, \quad LL^{\top} = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix} \begin{pmatrix} 3 & 5 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix} \label{eq:1.2.8.5}
-\end{equation}
-
-Therefore, $|l_{22}| = 5$.
-
 The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \gate
 
 \solution Let
