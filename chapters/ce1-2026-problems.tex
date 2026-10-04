@@ -98,12 +98,21 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 \item $80^\circ$
 \end{enumerate}
 \end{multicols}
-
-\solution Let $O$ be the origin and the radius be $r$. Define
+% ----------------------------------------------------------- Q7
+\item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*), itemsep=0pt]
+\item $40^\circ$
+\item $50^\circ$
+\item $60^\circ$
+\item $80^\circ$
+\end{enumerate}
+\end{multicols}
+\solution Let $O$ be the origin and the radius be $r$, with the diameter $PQ$ along the $x$-axis. Here $\vec{i}$ is the unit vector along the positive $x$-axis, and $\vec{w}_\theta$ is the unit vector that makes an angle $\theta$ with the positive $x$-axis, i.e. the point of the unit circle at angle $\theta$:
 \begin{align}
-\vec{i} \triangleq \myvec{1\\ 0},\quad \vec{e}_\theta \triangleq \myvec{\cos\theta\\ \sin\theta}
+\vec{i} \triangleq \myvec{1\\ 0},\quad \vec{w}_\theta \triangleq \myvec{\cos\theta\\ \sin\theta}
 \end{align}
-Since $PQ$ is a diameter, $\vec{P}$ and $\vec{Q}$ are opposite points on the $x$-axis. Let $\vec{R} = r\vec{e}_\alpha$ and $\vec{S} = r\vec{e}_\beta$ with $0 < \beta < \alpha < 180^\circ$. The points are listed in Table \ref{tab:q07}.
+Since $PQ$ is a diameter, $\vec{P}$ and $\vec{Q}$ are opposite points on the $x$-axis. Let $\vec{R} = r\vec{w}_\alpha$ and $\vec{S} = r\vec{w}_\beta$ with $0 < \beta < \alpha < 180^\circ$. The points are listed in Table \ref{tab:q07}.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -112,19 +121,19 @@ Since $PQ$ is a diameter, $\vec{P}$ and $\vec{Q}$ are opposite points on the $x$
 $O$ & $\vec{0}$ & centre\\ \hline
 $P$ & $-r\vec{i}$ & end of diameter\\ \hline
 $Q$ & $r\vec{i}$ & end of diameter\\ \hline
-$R$ & $r\vec{e}_\alpha$ & on the circle\\ \hline
-$S$ & $r\vec{e}_\beta$ & on the circle\\ \hline
+$R$ & $r\vec{w}_\alpha$ & on the circle\\ \hline
+$S$ & $r\vec{w}_\beta$ & on the circle\\ \hline
 \end{tabular}
 \caption{Construction matrix of the points}
 \label{tab:q07}
 \end{table}
 The construction matrix is
 \begin{align}
-\myvec{\vec{P} & \vec{Q} & \vec{R} & \vec{S}} = r\myvec{-\vec{i} & \vec{i} & \vec{e}_\alpha & \vec{e}_\beta}
+\myvec{\vec{P} & \vec{Q} & \vec{R} & \vec{S}} = r\myvec{-\vec{i} & \vec{i} & \vec{w}_\alpha & \vec{w}_\beta}
 \end{align}
 From \eqref{eq:cosdiff},
 \begin{align}
-\cos\angle ROS = \vec{e}_\alpha^\top\vec{e}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
+\cos\angle ROS = \vec{w}_\alpha^\top\vec{w}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
 \end{align}
 The direction vectors of the lines $PR$ and $QS$ are
 \begin{align}
@@ -143,7 +152,6 @@ For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$. F
 \myvec{\vec{R}-\vec{P} & -\brak{\vec{S}-\vec{Q}}}\myvec{\kappa_1\\ \kappa_2} = \vec{Q} - \vec{P} \implies \vec{T} = \myvec{0\\ 2.1445}
 \end{align}
 and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q07.pdf}
