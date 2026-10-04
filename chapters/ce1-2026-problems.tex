@@ -608,6 +608,57 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 % ----------------------------------------------------------- Q50
 \item Two identical blocks $A$ and $B$ are connected by a rigid rod. The blocks rest against vertical and horizontal planes, as shown in the figure. The coefficient of static friction at the vertical and horizontal planes is the same. If the sliding impends when $\theta = 45^\circ$, the value of the coefficient of static friction is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
 
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+
+    % Define colors
+    \definecolor{boxblue}{RGB}{20, 45, 85}
+
+    % --- Hatching / Fixed Walls ---
+    % Vertical Wall Hatching (Left)
+    \fill[pattern=north east lines] (-0.25, 0) rectangle (0, 4.2);
+    
+    % Horizontal Floor Hatching (Bottom)
+    \fill[pattern=north east lines] (-0.25, -0.25) rectangle (5.2, 0);
+
+    % Solid Wall Surfaces
+    \draw[line width=1.2pt, boxblue] (0, 4.2) -- (0, 0) -- (5.2, 0);
+
+    % --- Block A (Top Left) ---
+    % Outline & Fill
+    \draw[line width=1.5pt, boxblue, fill=white] (0, 2.6) rectangle (1.0, 3.6);
+    \coordinate (A) at (0.5, 3.1);
+    
+    % Label A and Pin Joint
+    \node[anchor=south] at (0.5, 3.1) {\large\bfseries A};
+    \fill[black] (A) circle (3.5pt);
+
+    % --- Block B (Bottom Right) ---
+    % Outline & Fill
+    \draw[line width=1.5pt, boxblue, fill=white] (3.8, 0) rectangle (4.8, 1.0);
+    \coordinate (B) at (4.3, 0.5);
+    
+    % Label B and Pin Joint
+    \node[anchor=north] at (4.3, 0.5) {\large\bfseries B};
+    \fill[black] (B) circle (3.5pt);
+
+    % --- Connecting Rod ---
+    \draw[line width=1.5pt, black] (A) -- (B);
+
+    % --- Dashed Reference Line & Angle Theta ---
+    % Midpoint of rod
+    \coordinate (M) at ($(A)!0.52!(B)$);
+    
+    % Horizontal dashed line
+    \draw[line width=1.2pt, dashed] ($(M)+(-1.2,0)$) -- ($(M)+(1.2,0)$);
+
+    % Angle arc
+    \draw[line width=1pt] (M) ++(180:0.6) arc (180:145.6:0.6);
+    \node at ($(M) + (163:0.9)$) {\large $\mathbf{\theta}$};
+
+\end{tikzpicture}
+\end{center}
 \solution Let each block have weight $W$ and let the rod make angle $\theta$ with the horizontal, with $c = \cos\theta$, $s = \sin\theta$. The rod is a two-force member carrying compression $C$ along
 \begin{align}
 \vec{e} = \frac{\vec{A} - \vec{B}}{\norm{\vec{A} - \vec{B}}} = \myvec{-c\\ s}
