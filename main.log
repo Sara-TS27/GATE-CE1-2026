@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  5 OCT 2026 02:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  5 OCT 2026 02:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1711,14 +1711,36 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.571     \fill[pattern=north east lines]
+                                          (-0.5, -0.65) rectangle (0.5, -0.4);
+(That was another \errmessage.)
+
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.576     \fill[pattern=north east lines]
+                                          (3.5, -0.65) rectangle (4.5, -0.4);
+(That was another \errmessage.)
+
 [20 <./figs/q38.pdf>]
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
-Package pdftex.def Info: figs/q36.pdf  used on input line 575.
+Package pdftex.def Info: figs/q36.pdf  used on input line 639.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
-
+ [21]
 ! Undefined control sequence.
-l.591 \gate
+l.655 \gate
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1726,14 +1748,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q48.pdf, id=625, 433.62pt x 325.215pt>
+<figs/q48.pdf, id=630, 433.62pt x 325.215pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
-Package pdftex.def Info: figs/q48.pdf  used on input line 611.
+Package pdftex.def Info: figs/q48.pdf  used on input line 675.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
-[21]
+[22]
 ! Undefined control sequence.
-l.630 ...ounded off to the nearest integer). \gate
+l.694 ...ounded off to the nearest integer). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1741,15 +1763,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[22 <./figs/q48.pdf>]
-<figs/q49.pdf, id=704, 433.62pt x 325.215pt>
+[23 <./figs/q48.pdf>]
+<figs/q49.pdf, id=709, 433.62pt x 325.215pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
-Package pdftex.def Info: figs/q49.pdf  used on input line 654.
+Package pdftex.def Info: figs/q49.pdf  used on input line 718.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
 
 ! Undefined control sequence.
-l.665 ...rounded off to two decimal places). \gate
+l.729 ...rounded off to two decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1764,7 +1786,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.676     \fill[pattern=north east lines]
+l.740     \fill[pattern=north east lines]
                                           (-0.25, 0) rectangle (0, 4.2);
 (That was another \errmessage.)
 
@@ -1775,19 +1797,19 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.679     \fill[pattern=north east lines]
+l.743     \fill[pattern=north east lines]
                                           (-0.25, -0.25) rectangle (5.2, 0);
 (That was another \errmessage.)
 
-[23 <./figs/q49.pdf>] [24]
-<figs/q50.pdf, id=773, 361.35pt x 361.35pt>
+[24 <./figs/q49.pdf>]
+<figs/q50.pdf, id=768, 361.35pt x 361.35pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
-Package pdftex.def Info: figs/q50.pdf  used on input line 749.
+Package pdftex.def Info: figs/q50.pdf  used on input line 813.
 (pdftex.def)             Requested size: 254.9356pt x 254.93925pt.
- [25 <./figs/q50.pdf>]
+ [25]
 ! Undefined control sequence.
-l.762 ...(rounded off to one decimal place). \gate
+l.826 ...(rounded off to one decimal place). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1802,7 +1824,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.768     \fill[pattern=north east lines]
+l.832     \fill[pattern=north east lines]
                                           (-0.35, -0.2) rectangle (0, 1.0);
 (That was another \errmessage.)
 
@@ -1813,16 +1835,17 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.780     \fill[pattern=north east lines]
+l.844     \fill[pattern=north east lines]
                                           (7.0, -0.2) rectangle (7.35, 1.0);
 (That was another \errmessage.)
 
-<figs/q51.pdf, id=828, 433.62pt x 289.08pt>
+[26 <./figs/q50.pdf>]
+<figs/q51.pdf, id=832, 433.62pt x 289.08pt>
 File: figs/q51.pdf Graphic file (type pdf)
 <use figs/q51.pdf>
-Package pdftex.def Info: figs/q51.pdf  used on input line 829.
+Package pdftex.def Info: figs/q51.pdf  used on input line 893.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
-[26]) [27 <./figs/q51.pdf>] (./main.aux)
+ [27 <./figs/q51.pdf>]) [28] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1835,10 +1858,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 50937 strings out of 474222
- 1219711 string characters out of 5748734
+ 50971 strings out of 474222
+ 1220203 string characters out of 5748734
  1952975 words of memory out of 5000000
- 72109 multiletter control sequences out of 15000+600000
+ 72142 multiletter control sequences out of 15000+600000
  602937 words of font info for 144 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,18n,109p,1194b,1266s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1864,10 +1887,10 @@ msfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (27 pages, 461250 bytes).
+Output written on main.pdf (28 pages, 462393 bytes).
 PDF statistics:
- 1068 PDF objects out of 1200 (max. 8388607)
- 648 compressed objects within 7 object streams
- 314 named destinations out of 1000 (max. 500000)
+ 1072 PDF objects out of 1200 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 315 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
