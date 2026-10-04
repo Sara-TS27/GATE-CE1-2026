@@ -98,31 +98,41 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 \item $80^\circ$
 \end{enumerate}
 \end{multicols}
-\solution Let $O$ be the origin and the radius be $r$. Using the unit vector $\vec{w}_\theta = \myvec{\cos\theta\\ \sin\theta}$ from \eqref{eq:cosdiff},
-\begin{align}
-\vec{P} = r\vec{w}_{180^\circ} = -r\vec{w}_{0},\quad \vec{Q} = r\vec{w}_{0},\quad \vec{R} = r\vec{w}_\alpha,\quad \vec{S} = r\vec{w}_\beta
-\end{align}
-with $0 < \beta < \alpha < 180^\circ$. From \eqref{eq:cosdiff},
-\begin{align}
-\cos\angle ROS = \vec{w}_\alpha^\top\vec{w}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
-\end{align}
-The direction vectors of the lines $PR$ and $QS$ are
-\begin{align}
-\vec{R} - \vec{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
-\vec{S} - \vec{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
-\end{align}
-The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence vector TR is along $\vec{P} - \vec{R}$ and vector TS is along $\vec{Q} - \vec{S}$. Both are the negatives of the direction vectors above, and the scalars $2r\cos\frac{\alpha}{2}$ and $2r\sin\frac{\beta}{2}$ are positive. Using \eqref{eq:angle} with the unit vectors along these directions,
-\begin{align}
-\cos\angle RTS &= \myvec{\cos\frac{\alpha}{2} & \sin\frac{\alpha}{2}}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}\\
-&= \sin\frac{\alpha}{2}\cos\frac{\beta}{2} - \cos\frac{\alpha}{2}\sin\frac{\beta}{2} = \sin\frac{\alpha-\beta}{2}\\
-&= \sin 40^\circ = \cos 50^\circ\\
-\implies \angle RTS &= 50^\circ
-\end{align}
-For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$. From \eqref{eq:lineint},
-\begin{align}
-\myvec{\vec{R}-\vec{P} & -\brak{\vec{S}-\vec{Q}}}\myvec{\kappa_1\\ \kappa_2} = \vec{Q} - \vec{P} \implies \vec{T} = \myvec{0\\ 2.1445}
-\end{align}
-and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
+
+\solution:
+
+\noindent The row operations are applied to the matrix:
+\begin{equation}
+\begin{pmatrix} 1 & 1 & 1 \\ 1 & 0 & 2 \end{pmatrix} 
+\xrightarrow{R_2 \to R_2 - R_1} 
+\begin{pmatrix} 1 & 1 & 1 \\ 0 & -1 & 1 \end{pmatrix}
+\end{equation}
+
+Thus, the system becomes:
+\begin{equation}
+\begin{pmatrix} 1 & 1 & 1 \\ 0 & -1 & 1 \end{pmatrix} 
+\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} 
+= \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\end{equation}
+
+From the second row:
+\begin{equation}
+-x_2 + x_3 = 0 \implies x_2 = x_3
+\end{equation}
+
+From the first row:
+\begin{equation}
+x_1 + x_2 + x_3 = 0 \implies x_1 + x_3 + x_3 = 0 \implies x_1 = -2x_3
+\end{equation}
+
+Expressing the vector $\mathbf{x}$ in terms of free variable $x_3$:
+\begin{equation}
+\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} 
+= \begin{pmatrix} -2x_3 \\ x_3 \\ x_3 \end{pmatrix} 
+= x_3 \begin{pmatrix} -2 \\ 1 \\ 1 \end{pmatrix}, \quad x_3 \in \mathbb{R}
+\end{equation}
+
+This equation represents a line through the origin.
 
 \begin{figure}[H]
 \centering
