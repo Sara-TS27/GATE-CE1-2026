@@ -483,54 +483,50 @@ After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q39
-\item The plane frame has a hinge and a roller support, and is loaded as shown in the figure. Both the columns have same height.
-
-What is the absolute value of the maximum bending moment (in kN-m) in the frame? \gate
+\item Let $f(x)$ be a continuous function defined in $[0,2] \to \mathbb{R}$ and satisfying the equation
+\begin{align}
+\int_0^2 f(x)[x - f(x)] \, dx = \frac{2}{3}
+\end{align}
+The value of $f(1)$ is \gate
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
-\item 165
-\item 150
-\item 240
-\item 195
+\item 1
+\item 2
+\item $\frac{1}{2}$
+\item 0
 \end{enumerate}
 \end{multicols}
-\solution From the figure, the frame has a hinge at $A$, a roller at $B$, columns of height 3 m and a beam $CD$ of span 4 m. A horizontal load of 50 kN acts at $C$ and a vertical load of 90 kN acts at the mid-point $E$ of $CD$:
+\solution Using the completed square form with $a = x$ and $b = f(x)$:
 \begin{align}
-\vec{A} = \myvec{0\\ 0},\ \vec{C} = \myvec{0\\ 3},\ \vec{E} = \myvec{2\\ 3},\ \vec{D} = \myvec{4\\ 3},\ \vec{B} = \myvec{4\\ 0},\quad \vec{F}_C = \myvec{50\\ 0},\ \vec{F}_E = \myvec{0\\ -90}
+f(x)[x - f(x)] = \frac{x^2}{4} - \left(f(x) - \frac{x}{2}\right)^2
 \end{align}
-The reactions are $\vec{R}_A = \myvec{H_A & V_A}^\top$ and $\vec{R}_B = \myvec{0 & V_B}^\top$. From \eqref{eq:equil} with moments about $\vec{A}$,
+Integrating over $[0,2]$:
 \begin{align}
-\brak{\vec{C}-\vec{A}}\times\vec{F}_C &= 0\times 0 - 3\times 50 = -150\\
-\brak{\vec{E}-\vec{A}}\times\vec{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
-\brak{\vec{B}-\vec{A}}\times\vec{R}_B &= 4V_B
+\int_0^2 f(x)[x - f(x)] \, dx &= \int_0^2 \frac{x^2}{4} \, dx - \int_0^2 \left(f(x) - \frac{x}{2}\right)^2 dx \\
+&= \frac{2}{3} - \int_0^2 \left(f(x) - \frac{x}{2}\right)^2 dx
 \end{align}
-In matrix form:
+Equating with the given value,
 \begin{align}
-\myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4}\myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 90\\ 330} \implies \myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 7.5\\ 82.5}\text{ kN}
+\int_0^2 \left(f(x) - \frac{x}{2}\right)^2 dx = 0
 \end{align}
-Using \eqref{eq:bm}, the bending moment in column $AC$ at height $y$ (forces below the section) is
+Since the integrand is continuous and non-negative,
 \begin{align}
-\abs{M} = \abs{\brak{\vec{A} - \myvec{0\\ y}}\times\vec{R}_A} = 50y \implies \abs{M_C} = 150\text{ kN m}
+f(x) = \frac{x}{2} \implies f(1) = \frac{1}{2}
 \end{align}
-and in the beam at $E$ (forces to the right of the section) is
-\begin{align}
-\abs{M_E} = \abs{\brak{\vec{B} - \vec{E}}\times\vec{R}_B} = \abs{2\times 82.5 - \brak{-3}\times 0} = 165\text{ kN m}
-\end{align}
-In column $BD$, the roller reaction is vertical and along the column, so $M = 0$.
-The maximum bending moment is 165 kN m under the 90 kN load.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q39.pdf}
-\caption{Frame loading and bending moment diagram}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q36.pdf}
+\caption{The integrand attains its upper bound $\frac{x^2}{4}$ only for $f(x) = \frac{x}{2}$}
 \end{figure}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39.py}@*)
-\end{lstlisting}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39plot.py}@*)
+
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily\small, breaklines=true, linewidth=\linewidth, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q36/q36.py}}@*)
 \end{lstlisting}
 
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily\small, breaklines=true, linewidth=\linewidth, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q36/q36plot.py}}@*)
+\end{lstlisting}
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
 \begin{align}
