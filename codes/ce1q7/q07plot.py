@@ -4,22 +4,24 @@ import matplotlib.pyplot as plt
 # Create figure and axis
 fig, ax = plt.subplots(figsize=(8, 9))
 
-# --- Define Coordinates ---
+# --- Define Numerical Values for Plotting Geometry ---
+r = 1.0
+alpha_deg = 130
+beta_deg = 50
+
+alpha = np.radians(alpha_deg)  # Angle for R
+beta = np.radians(beta_deg)    # Angle for S
+
 O = np.array([0.0, 0.0])
-P = np.array([-1.0, 0.0])
-Q = np.array([1.0, 0.0])
-
-# Angles in radians
-alpha = np.radians(130)  # Angle for R
-beta = np.radians(50)    # Angle for S
-
-R = np.array([np.cos(alpha), np.sin(alpha)])  # (-0.6428, 0.7660)
-S = np.array([np.cos(beta), np.sin(beta)])    # (0.6428, 0.7660)
+P = np.array([-r, 0.0])
+Q = np.array([r, 0.0])
+R = np.array([r * np.cos(alpha), r * np.sin(alpha)])
+S = np.array([r * np.cos(beta), r * np.sin(beta)])
 T = np.array([0.0, 2.1445])
 
 # --- Plot Circle ---
 theta = np.linspace(0, 2 * np.pi, 300)
-ax.plot(np.cos(theta), np.sin(theta), color='blue', linewidth=2)
+ax.plot(r * np.cos(theta), r * np.sin(theta), color='blue', linewidth=2)
 
 # --- Plot Secant Lines ---
 # P -> R -> T (Red)
@@ -43,22 +45,21 @@ points = [O, P, Q, R, S, T]
 for pt in points:
     ax.plot(pt[0], pt[1], 'ko', markersize=6)
 
-# --- Annotate Points with Coordinates ---
+# --- Annotate Points in Exponential (e^(i*theta)) Form ---
 annotations = {
-    'O': (O, (0.05, 0.05)),
-    'P': (P, (-0.45, 0.05)),
-    'Q': (Q, (0.05, 0.05)),
-    'R': (R, (-0.65, 0.05)),
-    'S': (S, (0.05, 0.05)),
-    'T': (T, (0.05, 0.03))
+    r'$O(0)$': (O, (0.05, 0.05)),
+    r'$P(-r = r e^{i\pi})$': (P, (-0.65, 0.05)),
+    r'$Q(r = r e^{i 0})$': (Q, (0.05, 0.05)),
+    r'$R(r e^{i\alpha})$': (R, (-0.55, 0.05)),
+    r'$S(r e^{i\beta})$': (S, (0.05, 0.05)),
+    r'$T$': (T, (0.05, 0.03))
 }
 
 for label, (pt, offset) in annotations.items():
-    coord_text = f"{label} ({pt[0]:.2f}, {pt[1]:.2f})" if label not in ['O', 'P', 'Q'] else f"{label} ({pt[0]:.1f}, {pt[1]:.1f})"
-    ax.text(pt[0] + offset[0], pt[1] + offset[1], coord_text, fontsize=10, fontweight='bold')
+    ax.text(pt[0] + offset[0], pt[1] + offset[1], label, fontsize=11, fontweight='bold')
 
 # --- Plot Styling ---
-ax.set_title('Circle Geometry with Intersection T', fontsize=12, fontweight='bold', pad=12)
+ax.set_title(r'Circle Geometry in Exponential Form ($e^{i\theta}$)', fontsize=12, fontweight='bold', pad=12)
 ax.set_xlim(-1.6, 1.6)
 ax.set_ylim(-1.2, 2.3)
 ax.set_xticks([-1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5])
@@ -68,6 +69,6 @@ ax.grid(True, linestyle='--', alpha=0.5)
 
 plt.tight_layout()
 
-# Save figure directly as a PDF vector file
+# Save figure directly as a vector PDF
 plt.savefig('q07plot.pdf', bbox_inches='tight')
 plt.close(fig)
