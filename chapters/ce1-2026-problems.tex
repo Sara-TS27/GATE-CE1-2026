@@ -528,49 +528,157 @@ After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q39
-\item Let $f(x)$ be a continuous function defined in $[0,2] \to \mathbb{R}$ and satisfying the equation
-\begin{align}
-\int_0^2 f(x)[x - f(x)] \, dx = \frac{2}{3}
-\end{align}
-The value of $f(1)$ is \gate
+\item The plane frame has a hinge and a roller support, and is loaded as shown in the figure. Both the columns have same height.
+
+What is the absolute value of the maximum bending moment (in kN-m) in the frame? \hfill (GATE CE 2026)
+
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt]
-\item 1
-\item 2
-\item $\frac{1}{2}$
-\item 0
+\begin{enumerate}[label=\alph*)]
+    \item 165
+    \item 150
+    \item 240
+    \item 195
 \end{enumerate}
 \end{multicols}
-\solution Using the completed square form with $a = x$ and $b = f(x)$:
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, patterns}
+
+\begin{document}
+
+\begin{tikzpicture}[>=Stealth, scale=1.2, font=\sffamily\bfseries]
+
+    % Coordinates
+    \coordinate (A) at (0, 0);
+    \coordinate (C) at (0, 3);
+    \coordinate (E) at (2, 3);
+    \coordinate (D) at (4, 3);
+    \coordinate (B) at (4,Here is the complete TikZ code to recreate the structural frame diagram[cite: 1]:
+
+```latex
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, patterns}
+
+\begin{document}
+\begin{tikzpicture}[x=1.2cm, y=1.2cm]
+
+  % --- Coordinates ---
+  \coordinate (A) at (0,0);  % Left support base
+  \coordinate (B) at (4,0);  % Right support base
+  \coordinate (C) at (0,3);  % Top-left joint
+  \coordinate (D) at (4,3);  % Top-right joint
+  \coordinate (M) at (2,3);  % Mid-span point
+
+  % --- Frame Structure ---
+  \draw[ultra thick] (A) -- (C) -- (D) -- (B);
+
+  % --- Loads ---
+  % Horizontal 50 kN Load
+  \draw[very thick, -{Latex[length=3mm, width=2mm]}] (-1.2, 3) -- (C);
+  \node[above left] at (-0.6, 3) {\textbf{50 kN}};
+
+  % Vertical 90 kN Load
+  \draw[very thick, -{Latex[length=3mm, width=2mm]}] (M) +(0, 1.2) -- (M);
+  \node[above right] at (2, 3.4) {\textbf{90 kN}};
+
+  % --- Supports ---
+  % Left Support (Pin / Hinged)
+  \draw[thick] (A) -- (-0.3, -0.4) -- (0.3, -0.4) -- cycle;
+  \draw[thick] (-0.45, -0.4) -- (0.45, -0.4);
+  \fill[pattern=north east lines] (-0.45, -0.6) rectangle (0.45, -0.4);
+
+  % Right Support (Roller)
+  \draw[thick] (B) circle (0.2cm);
+  \draw[thick] (3.55, -0.4) -- (4.45, -0.4);
+  \fill[pattern=north east lines] (3.55, -0.6) rectangle (4.45, -0.4);
+
+  % --- Dimension Lines & Ticks ---
+  
+  % Extension lines (Horizontal)
+  \draw[thin] (0, 3.1) -- (0, 4.4);
+  \draw[thin] (2, 3.9) -- (2, 4.4);
+  \draw[thin] (4, 3.1) -- (4, 4.4);
+
+  % Horizontal Dimension Line
+  \draw[thick] (-0.3, 4.2) -- (4.3, 4.2);
+  
+  % Slanted dimension ticks (Horizontal)
+  \foreach \x in {0, 2, 4} {
+    \draw[thick] (\x-0.12, 4.05) -- (\x+0.12, 4.35);
+  }
+
+  % Horizontal Dimension Text
+  \node[above] at (1, 4.2) {\textbf{2 m}};
+  \node[above] at (3, 4.2) {\textbf{2 m}};
+
+  % Extension lines (Vertical)
+  \draw[thin] (4.1, 0) -- (5.2, 0);
+  \draw[thin] (4.1, 3) -- (5.2, 3);
+
+  % Vertical Dimension Line
+  \draw[thick] (4.9, -0.3) -- (4.9, 3.3);
+  
+  % Slanted dimension ticks (Vertical)
+  \foreach \y in {0, 3} {
+    \draw[thick] (4.77, \y-0.12) -- (5.03, \y+0.12);
+  }
+
+  % Vertical Dimension Text
+  \node[right] at (4.9, 1.5) {\textbf{3 m}};
+
+  % --- Caption ---
+  \node at (2, -1.1) {\textbf{(Figure not to scale)}};
+
+\end{tikzpicture}
+\end{document}
+
+\solution From the figure, the frame has a hinge at A, a roller at B, columns of height $3\text{ m}$ and a beam CD of span $4\text{ m}$. A horizontal load of $50\text{ kN}$ acts at C and a vertical load of $90\text{ kN}$ acts at the mid-point E of CD:
+\begin{equation}
+    A = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad C = \begin{pmatrix} 0 \\ 3 \end{pmatrix}, \quad E = \begin{pmatrix} 2 \\ 3 \end{pmatrix}, \quad D = \begin{pmatrix} 4 \\ 3 \end{pmatrix}, \quad B = \begin{pmatrix} 4 \\ 0 \end{pmatrix}
+\end{equation}
+\begin{equation}
+    F_C = \begin{pmatrix} 50 \\ 0 \end{pmatrix}, \quad F_E = \begin{pmatrix} 0 \\ -90 \end{pmatrix}
+\end{equation}
+
+The reactions are $R_A = \begin{pmatrix} H_A & V_A \end{pmatrix}^\top$ and $R_B = \begin{pmatrix} 0 & V_B \end{pmatrix}^\top$. From \eqref{eq:1.1.11.1} with moments about A,
 \begin{align}
-f(x)[x - f(x)] = \frac{x^2}{4} - \left(f(x) - \frac{x}{2}\right)^2
-\end{align}
-Integrating over $[0,2]$:
-\begin{align}
-\int_0^2 f(x)[x - f(x)] \, dx &= \int_0^2 \frac{x^2}{4} \, dx - \int_0^2 \left(f(x) - \frac{x}{2}\right)^2 dx \\
-&= \frac{2}{3} - \int_0^2 \left(f(x) - \frac{x}{2}\right)^2 dx
-\end{align}
-Equating with the given value,
-\begin{align}
-\int_0^2 \left(f(x) - \frac{x}{2}\right)^2 dx = 0
-\end{align}
-Since the integrand is continuous and non-negative,
-\begin{align}
-f(x) = \frac{x}{2} \implies f(1) = \frac{1}{2}
+    (C-A) \times F_C &= 0 \times 0 - 3 \times 50 = -150 \\
+    (E-A) \times F_E &= 2 \times (-90) - 3 \times 0 = -180 \\
+    (B-A) \times R_B &= 4V_B
 \end{align}
 
+In matrix form:
+\begin{equation}
+    \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{pmatrix} \begin{pmatrix} H_A \\ V_A \\ V_B \end{pmatrix} = \begin{pmatrix} -50 \\ 90 \\ 330 \end{pmatrix} \implies \begin{pmatrix} H_A \\ V_A \\ V_B \end{pmatrix} = \begin{pmatrix} -50 \\ 7.5 \\ 82.5 \end{pmatrix} \text{ kN}
+\end{equation}
+
+Using \eqref{eq:1.1.11.2}, the bending moment in column AC at height $y$ (forces below the section) is
+\begin{equation}
+    |M| = \left| \left( A - \begin{pmatrix} 0 \\ y \end{pmatrix} \right) \times R_A \right| = 50y \implies |M_C| = 150\text{ kN m}
+\end{equation}
+and in the beam at E (forces to the right of the section) is
+\begin{equation}
+    |M_E| = |(B-E) \times R_B| = |2 \times 82.5 - (-3) \times 0| = 165\text{ kN m}
+\end{equation}
+
+In column BD, the roller reaction is vertical and along the column, so $M=0$. The maximum bending moment is $165\text{ kN m}$ under the $90\text{ kN}$ load.
+
+\textbf{a)}.
+
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q36.pdf}
-\caption{The integrand attains its upper bound $\frac{x^2}{4}$ only for $f(x) = \frac{x}{2}$}
+    \centering
+    \includegraphics[width=0.7\linewidth]{figs/q39.pdf}
+    \caption{Frame loading and bending moment diagram}
+    \label{fig:q39}
 \end{figure}
 
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily\small, breaklines=true, linewidth=\linewidth, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q36/q36.py}}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q39/q39.py}}@*)
 \end{lstlisting}
 
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily\small, breaklines=true, linewidth=\linewidth, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q36/q36plot.py}}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q39/q39plot.py}}@*)
 \end{lstlisting}
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
