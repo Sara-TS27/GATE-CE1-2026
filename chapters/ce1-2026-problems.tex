@@ -247,7 +247,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
 \end{tikzpicture}
 
-Solution: Let $x_k \in \{0,1\}^7$ be the state vector after Step $k$ and $s_k = Ax_k$, where
+\solution Let $x_k \in \{0,1\}^7$ be the state vector after Step $k$ and $s_k = Ax_k$, where
 \[
 A = \begin{pmatrix}
 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
@@ -287,6 +287,13 @@ The number of bulbs which are ON at the end of Step 8 is:
 \[
 1^\top x_8 = 4
 \]
+
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q3/q03plot.py}@*)
+\end{lstlisting}
+
+
+
 % ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
 \begin{align}
