@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  5 OCT 2026 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  5 OCT 2026 09:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,28 +1405,28 @@ Package hyperref Info: Link coloring ON on input line 26.
 -dist/fonts/enc/dvips/base/8r.enc}
 
 
-] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+] (./main.toc)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+
+[2] (./chapters/ce1-2026-formulae.tex
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 9.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
- [2]
-(./chapters/ce1-2026-formulae.tex [3
+) [3
 
 ]
 ! Undefined control sequence.
@@ -1562,7 +1562,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [8]
-<figs/q03.pdf, id=182, 722.7pt x 578.16pt>
+<figs/q03.pdf, id=179, 722.7pt x 578.16pt>
 File: figs/q03.pdf Graphic file (type pdf)
 <use figs/q03.pdf>
 Package pdftex.def Info: figs/q03.pdf  used on input line 77.
@@ -1631,7 +1631,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [10 <./figs/q03.pdf>]
-<figs/q07.pdf, id=266, 570.91418pt x 629.56458pt>
+<figs/q07.pdf, id=263, 570.91418pt x 629.56458pt>
 File: figs/q07.pdf Graphic file (type pdf)
 <use figs/q07.pdf>
 Package pdftex.def Info: figs/q07.pdf  used on input line 157.
@@ -1656,7 +1656,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q12.pdf, id=357, 505.89pt x 433.62pt>
+<figs/q12.pdf, id=354, 505.89pt x 433.62pt>
 File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
 Package pdftex.def Info: figs/q12.pdf  used on input line 232.
@@ -1691,7 +1691,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [16]
-<figs/q36.pdf, id=472, 433.62pt x 289.08pt>
+<figs/q36.pdf, id=468, 433.62pt x 289.08pt>
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
 Package pdftex.def Info: figs/q36.pdf  used on input line 385.
@@ -1741,7 +1741,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q38.pdf, id=558, 433.62pt x 289.08pt>
+<figs/q38.pdf, id=555, 433.62pt x 289.08pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
 Package pdftex.def Info: figs/q38.pdf  used on input line 520.
