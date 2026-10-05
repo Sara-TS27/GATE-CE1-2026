@@ -86,18 +86,6 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 \end{lstlisting}
 
 
-%--------- q7
-
-
-\item In the given figure, $PQ$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $PR$ and $QS$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt]
-\item $40^\circ$
-\item $50^\circ$
-\item $60^\circ$
-\item $80^\circ$
-\end{enumerate}
-\end{multicols}
 % ----------------------------------------------------------- Q7
 \item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
 \begin{multicols}{2}
@@ -285,8 +273,44 @@ The number of bulbs which are ON at the end of Step 8 is:
 \]
 
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q3/q03plot.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q9/q09.py}@*)
 \end{lstlisting}
+%-------------------------------------------------------------Q10
+
+\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \hfill (GATE CE 2026)
+\begin{multicol}{2}
+\begin{enumerate}[label=\alph*)]
+        \item 13
+        \item 26
+        \item 39
+        \item 42
+\end{enumerate}
+\end{multicol}
+
+\solution The given equation can be written as
+\begin{equation}
+    P^2 - Q^2 = (P - Q)(P + Q) = 13 \tag{1.2.4.1}
+\end{equation}
+    Since 13 is prime and $0 < P - Q < P + Q$,
+\begin{equation}
+    P - Q = 1, \quad P + Q = 13 \tag{1.2.4.2}
+\end{equation}
+
+    Expressing in the matrix form \eqref{eq:axb} :
+\begin{equation}
+\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} P \\ Q \end{pmatrix} = \begin{pmatrix} 1 \\ 13 \end{pmatrix} \tag{1.2.4.3}
+\end{equation}
+
+    Applying $R_2 \rightarrow R_2 - R_1$ on the augmented matrix:
+\begin{equation}
+\begin{pmatrix} 1 & -1 & 1 \\ 1 & 1 & 13 \end{pmatrix} \xrightarrow{R_2 \rightarrow R_2 - R_1} \begin{pmatrix} 1 & -1 & 1 \\ 0 & 2 & 12 \end{pmatrix} \implies Q = 6,\ P = 7 \tag{1.2.4.4}
+\end{equation}
+
+    Therefore,
+\begin{equation}
+    PQ = 7 \times 6 = 42 \tag{1.2.4.5}
+\end{equation}
+\end{enumerate}
 
 
 
@@ -812,6 +836,11 @@ Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48plot.py}@*)
 \end{lstlisting}
 
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.c}@*)
+\end{lstlisting}
+
+
 % ----------------------------------------------------------- Q49
 \item Values of $y$ for different values of $x$ are tabulated below.
 \begin{center}
@@ -1005,7 +1034,7 @@ The internal force (in kN) that will develop in the spring $BC$ when the tempera
 \begin{align}
 k_r = \frac{AE}{L} = \frac{500\times 60\times 10^3}{3000} = 10^4\text{ N/mm} = 10000\text{ N/mm}
 \end{align}
-The free thermal expansion  \eqref{eq:glb} of the rod is
+The free thermal expansion  \eqref{eq:free} of the rod is
 \begin{align}
 \delta_{\text{th}} = L\alpha\Delta T = 3000 \times 12\times 10^{-6} \times 100 = 3.6\text{ mm}
 \end{align}

@@ -276,6 +276,15 @@ and the member stiffness matrix is $\myvec{\vec{k} & -\vec{k} \\ -\vec{k} & \vec
 \item Thermal Load Equivalence:
 A temperature rise $\Delta T$ with expansion coefficient $\alpha$ produces equivalent nodal loads of $AE\alpha\Delta T$ at member ends directed outward.
 \end{itemize}
+\item Free Thermal Expansion
+\begin{itemize}
+\item Thermal Strain and Elongation:
+A temperature change $\Delta T$ in an unrestrained member of length $L$ with coefficient of thermal expansion $\alpha$ produces thermal strain $\epsilon_{th}$ and free thermal elongation $\Delta L$:
+\begin{align}
+\Delta L = L \alpha \Delta T
+\label{eq:free}
+\end{align}
+\end{itemize}
 
 \item Cellular Update Rule in Matrix Form
 \begin{itemize}
