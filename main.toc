@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}GATE CE-1 2026}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Formulae}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Problems}{8}{subsection.1.2}%
