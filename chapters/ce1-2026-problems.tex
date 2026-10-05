@@ -164,6 +164,133 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q7/q07plot.py}@*)
 \end{lstlisting}
+
+
+
+
+
+
+
+%------------------------------------------------------------Q9
+
+\item Consider a linear arrangement of seven bulbs, each of which can be in the ON or OFF states. The initial configuration of the bulbs is shown in the figure. In every Step, the states of the bulbs are changed based on the following rules: Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged. The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \hfill (GATE CE 2026)
+
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+    \item 5
+    \item 4
+    \item 3
+    \item 0
+\end{enumerate}
+\end{multicols}
+
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+% Helper macro: \bulb{x}{y}{fill_color}
+\newcommand{\bulb}[3]{
+  \draw[fill=#3, thick] (#1,#2) circle (0.16);
+  \draw[fill=white, thin] (#1-0.05, #2-0.24) rectangle (#1+0.05, #2-0.15);
+}
+
+\begin{tikzpicture}[scale=1.2]
+
+  % --- Row 1: Initial ---
+  \node[font=\large, anchor=east] at (0.4, 2.8) {Initial};
+  \draw[thin] (0.8, 2.8) -- (4.2, 2.8);
+  
+  \bulb{1.0}{2.8}{black}
+  \bulb{1.5}{2.8}{black}
+  \bulb{2.0}{2.8}{black}
+  \bulb{2.5}{2.8}{gray!15}
+  \bulb{3.0}{2.8}{black}
+  \bulb{3.5}{2.8}{black}
+  \bulb{4.0}{2.8}{black}
+
+  % --- Step 1 Arrow ---
+  \node[font=\large, anchor=east] at (2.2, 2.0) {Step 1};
+  \node[font=\Large] at (2.5, 2.0) {$\downarrow$};
+
+  % --- Row 2: Step 1 ---
+  \draw[thin] (0.8, 1.2) -- (4.2, 1.2);
+  
+  \bulb{1.0}{1.2}{black}
+  \bulb{1.5}{1.2}{black}
+  \bulb{2.0}{1.2}{gray!15}
+  \bulb{2.5}{1.2}{gray!15}
+  \bulb{3.0}{1.2}{gray!15}
+  \bulb{3.5}{1.2}{black}
+  \bulb{4.0}{1.2}{black}
+
+  % --- Step 2 Arrow ---
+  \node[font=\large, anchor=east] at (2.2, 0.4) {Step 2};
+  \node[font=\Large] at (2.5, 0.4) {$\downarrow$};
+
+  % --- Row 3: Step 2 ---
+  \draw[thin] (0.8, -0.4) -- (4.2, -0.4);
+  
+  \bulb{1.0}{-0.4}{black}
+  \bulb{1.5}{-0.4}{gray!15}
+  \bulb{2.0}{-0.4}{gray!15}
+  \bulb{2.5}{-0.4}{black}
+  \bulb{3.0}{-0.4}{gray!15}
+  \bulb{3.5}{-0.4}{gray!15}
+  \bulb{4.0}{-0.4}{black}
+
+  % --- Legend ---
+  \bulb{5.7}{1.2}{gray!15}
+  \node[font=\large, anchor=west] at (6.0, 1.2) {ON};
+
+  \bulb{5.7}{0.4}{black}
+  \node[font=\large, anchor=west] at (6.0, 0.4) {OFF};
+
+\end{tikzpicture}
+\end{document}
+
+
+Solution: Let $x_k \in \{0,1\}^7$ be the state vector after Step $k$ and $s_k = Ax_k$, where
+\[
+A = \begin{pmatrix}
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0
+\end{pmatrix}
+\]
+The rules give the update:
+\[
+x_{k+1} = x_k + (1 - x_k) \odot [s_k = 1] - x_k \odot [s_k = 2]
+\]
+where $\odot$ is the element-wise product and $[\cdot]$ is 1 when the condition holds. The initial configuration has only the middle bulb ON:
+\[
+x_0 = \begin{pmatrix} 0 & 0 & 0 & 1 & 0 & 0 & 0 \end{pmatrix}^\top, \quad s_0 = \begin{pmatrix} 0 & 0 & 1 & 0 & 1 & 0 & 0 \end{pmatrix}^\top
+\]
+\[
+x_1 = \begin{pmatrix} 0 & 0 & 1 & 1 & 1 & 0 & 0 \end{pmatrix}^\top, \quad s_1 = \begin{pmatrix} 0 & 1 & 1 & 2 & 1 & 1 & 0 \end{pmatrix}^\top
+\]
+\[
+x_2 = \begin{pmatrix} 0 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}^\top, \quad s_2 = \begin{pmatrix} 1 & 1 & 2 & 1 & 1 & 1 & 1 \end{pmatrix}^\top
+\]
+\[
+x_3 = \begin{pmatrix} 1 & 1 & 1 & 0 & 1 & 1 & 1 \end{pmatrix}^\top, \quad s_3 = \begin{pmatrix} 1 & 2 & 1 & 2 & 1 & 2 & 1 \end{pmatrix}^\top
+\]
+\[
+x_4 = \begin{pmatrix} 1 & 0 & 1 & 0 & 1 & 0 & 1 \end{pmatrix}^\top, \quad s_4 = \begin{pmatrix} 0 & 2 & 0 & 2 & 0 & 2 & 0 \end{pmatrix}^\top
+\]
+$x_1$ and $x_2$ agree with Step 1 and Step 2 in the figure. In $x_4$, every OFF bulb has two ON neighbours and every ON bulb has none, so:
+\[
+x_5 = x_4 \Rightarrow x_8 = x_4 = \begin{pmatrix} 1 & 0 & 1 & 0 & 1 & 0 & 1 \end{pmatrix}^\top
+\]
+The number of bulbs which are ON at the end of Step 8 is:
+\[
+1^\top x_8 = 4
+\]
 % ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
 \begin{align}
