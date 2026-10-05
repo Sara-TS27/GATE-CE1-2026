@@ -289,25 +289,4 @@ a_{ij} = \begin{cases} 1, & \abs{i - j} = 1 \\ 0, & \text{otherwise} \end{cases}
 
 
 
-\item Direct Stiffness Method
-\begin{itemize}
-\item Member Stiffness Matrix:
-For an axial member of length $L$, area $A$, modulus $E$, with unit direction vector $\vec{m}$, the stiffness matrix of its end node is
-\begin{align}
-k = \frac{AE}{L}\vec{m}\vec{m}^\top
-\label{eq:node_stiffness}
-\end{align}
-and the member stiffness matrix is
-\begin{align}
-\myvec{k & -k \\ -k & k}
-\label{eq:member_stiffness}
-\end{align}
-\item Global Equilibrium and Thermal Effects:
-The global stiffness matrix is assembled by adding member matrices at the corresponding degrees of freedom:
-\begin{align}
-K\vec{u} = \vec{F}
-\label{eq:glb}
-\end{align}
-Boundary conditions are applied by deleting the rows and columns of restrained degrees of freedom. A temperature rise $\Delta T$ in a member with coefficient $\alpha$ is equivalent to nodal loads of magnitude $AE\alpha\Delta T$ at its ends, directed outward.
-\end{itemize}
 \end{enumerate}
