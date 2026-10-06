@@ -276,9 +276,42 @@ The number of bulbs which are ON at the end of Step 8 is:
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q9/q09.py}@*)
 \end{lstlisting}
 %-------------------------------------------------------------Q10
-
-
-
+\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \gate
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*), itemsep=0pt]
+\item 13
+\item 26
+\item 39
+\item 42
+\end{enumerate}
+\end{multicols}
+\solution The given equation can be written as
+\begin{align}
+P^2 - Q^2 = \brak{P-Q}\brak{P+Q} = 13
+\end{align}
+Since 13 is prime and $0 < P - Q < P + Q$,
+\begin{align}
+P - Q = 1,\quad P + Q = 13
+\end{align}
+Let
+\begin{align}
+\vec{A} = \myvec{1 & -1\\ 1 & 1},\quad \vec{b} = \myvec{1\\ 13},\quad \vec{x} = \myvec{P\\ Q}
+\end{align}
+Expressing in matrix form $\vec{A}\vec{x} = \vec{b}$:
+\begin{align}
+\myvec{1 & -1\\ 1 & 1}\myvec{P\\ Q} = \myvec{1\\ 13}
+\end{align}
+Reducing the augmented matrix:
+\begin{align}
+\myvec{1 & -1 & 1\\ 1 & 1 & 13} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & -1 & 1\\ 0 & 2 & 12} \implies Q = 6,\ P = 7
+\end{align}
+Since $\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{b}}} = 2 = n$, the solution is unique. Therefore,
+\begin{align}
+PQ = 7\times 6 = 42
+\end{align}
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q10/q10.py}@*)
+\end{lstlisting}
 
 % ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
