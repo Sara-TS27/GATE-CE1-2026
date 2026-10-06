@@ -10,7 +10,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
 
 % ----------------------------------------------------------- Q3
-\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
+\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 0
@@ -87,7 +87,7 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 
 
 % ----------------------------------------------------------- Q7
-\item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
+\item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $40^\circ$
@@ -183,7 +183,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
   % --- Row 1: Initial ---
   \node[font=\large, anchor=east] at (0.4, 2.8) {Initial};
   \draw[thin] (0.8, 2.8) -- (4.2, 2.8);
-  
+
   \bulb{1.0}{2.8}{black}
   \bulb{1.5}{2.8}{black}
   \bulb{2.0}{2.8}{black}
@@ -198,7 +198,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
   % --- Row 2: Step 1 ---
   \draw[thin] (0.8, 1.2) -- (4.2, 1.2);
-  
+
   \bulb{1.0}{1.2}{black}
   \bulb{1.5}{1.2}{black}
   \bulb{2.0}{1.2}{gray!15}
@@ -213,7 +213,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
   % --- Row 3: Step 2 ---
   \draw[thin] (0.8, -0.4) -- (4.2, -0.4);
-  
+
   \bulb{1.0}{-0.4}{black}
   \bulb{1.5}{-0.4}{gray!15}
   \bulb{2.0}{-0.4}{gray!15}
@@ -231,7 +231,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
 \end{tikzpicture}
 
-\solution Let $x_k \in \{0,1\}^7$ be the state vector after Step $k$ and $s_k = Ax_k$, where
+\solution Let $x_k \in \{0,1\}^7$ be the state vector after Step $k$ and $s_k = Ax_k$, where, from \eqref{eq:adj},
 \[
 A = \begin{pmatrix}
 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
@@ -276,7 +276,7 @@ The number of bulbs which are ON at the end of Step 8 is:
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q9/q09.py}@*)
 \end{lstlisting}
 %-------------------------------------------------------------Q10
-\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \gate
+\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 13
@@ -297,7 +297,7 @@ Let
 \begin{align}
 \vec{A} = \myvec{1 & -1\\ 1 & 1},\quad \vec{b} = \myvec{1\\ 13},\quad \vec{x} = \myvec{P\\ Q}
 \end{align}
-Expressing in matrix form $\vec{A}\vec{x} = \vec{b}$:
+Expressing in the matrix form \eqref{eq:axb}:
 \begin{align}
 \myvec{1 & -1\\ 1 & 1}\myvec{P\\ Q} = \myvec{1\\ 13}
 \end{align}
@@ -305,7 +305,7 @@ Reducing the augmented matrix:
 \begin{align}
 \myvec{1 & -1 & 1\\ 1 & 1 & 13} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & -1 & 1\\ 0 & 2 & 12} \implies Q = 6,\ P = 7
 \end{align}
-Since $\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{b}}} = 2 = n$, the solution is unique. Therefore,
+From \eqref{eq:rc}, $\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{b}}} = 2 = n$, so the solution is unique. Therefore,
 \begin{align}
 PQ = 7\times 6 = 42
 \end{align}
@@ -313,12 +313,13 @@ PQ = 7\times 6 = 42
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q10/q10.py}@*)
 \end{lstlisting}
 
+
 % ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
 \begin{align}
 \vec{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
 \end{align}
-The TRUE option is \gate
+The TRUE option is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item Trace of $\vec{P}$ is equal to the sum of the Eigen values of $\vec{P}$.
@@ -327,7 +328,7 @@ The TRUE option is \gate
 \item Absolute magnitude of each Eigen value is 1.
 \end{enumerate}
 \end{multicols}
-\solution From \eqref{eq:charpoly}, expanding along the second row,
+\solution From \eqref{eq:charpoly}, expanding along the second row using \eqref{eq:detexp},
 \begin{align}
 \abs{\lambda\vec{I} - \vec{P}} &= \mydet{\lambda-1 & 0 & -1\\ 0 & \lambda-1 & 0\\ -1 & 0 & \lambda-1}\\
 &= \brak{\lambda-1}\sbrak{\brak{\lambda-1}^2 - 1}\\
@@ -353,7 +354,7 @@ so option (A) is true. The remaining options are false since
 \begin{align}
 \myvec{1 & 1 & 1\\ 1 & 0 & 2}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0}
 \end{align}
-The above system of equations represents a \gate
+The above system of equations represents a \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item plane
@@ -389,7 +390,7 @@ which is a line through the origin (the intersection of two planes).
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q26
-\item Bag I contains 4 white and 6 black balls. Bag II contains 4 white and 3 black balls. One ball is drawn at random from any one of the two bags and it is found to be a black ball. The probability that the black ball was drawn from Bag I is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
+\item Bag I contains 4 white and 6 black balls. Bag II contains 4 white and 3 black balls. One ball is drawn at random from any one of the two bags and it is found to be a black ball. The probability that the black ball was drawn from Bag I is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE CE 2026)
 
 \solution Let $B_1$, $B_2$ denote choosing Bag I, Bag II and $E$ the event of drawing a black ball. The prior and likelihood vectors are
 \begin{align}
@@ -412,6 +413,7 @@ From \eqref{eq:bayes},
 \begin{align}
 \myvec{9 & 15\\ 15 & 50}
 \end{align}
+By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular matrix is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE 2026)
 
 \solution A symmetric positive definite matrix $A \in \mathbb{R}^{2 \times 2}$ given as
 \[
@@ -434,7 +436,7 @@ By absorbing $D^{1/2} = \text{diag}(\sqrt{9}, \sqrt{25}) = \text{diag}(3, 5)$ in
     L = L_{\text{LU}} D^{1/2} = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix} \begin{pmatrix} 3 & 0 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix} \label{eq:cholesky_from_lu}
 \end{equation}
 
-Alternatively, using the general Cholesky algorithm directly, $A = LL^\top$ computes $l_{ij}$ for $1 \le j \le i \le n$ via:
+Alternatively, comparing with \eqref{eq:chol2}, the general Cholesky algorithm $A = LL^\top$ computes $l_{ij}$ for $1 \le j \le i \le n$ via:
 \begin{equation}
     l_{jj} = \sqrt{a_{jj} - \sum_{k=1}^{j-1} l_{jk}^2} \label{eq:cholesky_diag}
 \end{equation}
@@ -468,7 +470,7 @@ Both approaches confirm that the Cholesky factor matrix and diagonal value are:
 \end{align}
 
 
-The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \gate
+The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE 2026)
 
 \solution Let
 \begin{align}
@@ -502,7 +504,7 @@ x^3 + y^3 = 27 + 64 = 91
 \begin{align}
 \int_0^2 f\brak{x}\sbrak{x - f\brak{x}}dx = \frac{2}{3}
 \end{align}
-The value of $f\brak{1}$ is \gate
+The value of $f\brak{1}$ is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 1
@@ -546,7 +548,7 @@ f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
 \begin{align}
 x^2\frac{d^2y}{dx^2} = 6y
 \end{align}
-Considering $a$ and $b$ as arbitrary constants, the general solution of the equation is \gate
+Considering $a$ and $b$ as arbitrary constants, the general solution of the equation is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $y\brak{x} = ax^3 + \frac{b}{x^2}$
@@ -641,7 +643,7 @@ y\brak{x} = ax^3 + \frac{b}{x^2}
 \end{tikzpicture}
 \end{center}
 
-After application of the boundary conditions, the stiffness matrix of the truss becomes: \gate
+After application of the boundary conditions, the stiffness matrix of the truss becomes: \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $\frac{AE}{L}\myvec{1 & 1\\ 1 & 1}$
@@ -659,7 +661,7 @@ From \eqref{eq:kbar},
 \vec{k}_{PQ} &= \frac{AE}{L}\vec{m}_{PQ}\vec{m}_{PQ}^\top = \frac{AE}{L}\myvec{0.5 & 0.5\\ 0.5 & 0.5}\\
 \vec{k}_{QR} &= \frac{AE}{L}\vec{m}_{QR}\vec{m}_{QR}^\top = \frac{AE}{L}\myvec{0.5 & -0.5\\ -0.5 & 0.5}
 \end{align}
-After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak{u,v}$ block at $Q$ receives contributions from both members:
+Assembling the global system \eqref{eq:kuf} and deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak{u,v}$ block at $Q$ receives contributions from both members:
 \begin{align}
 \vec{K} = \vec{k}_{PQ} + \vec{k}_{QR} = \frac{AE}{L}\myvec{1 & 0\\ 0 & 1}
 \end{align}
@@ -682,11 +684,11 @@ After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak
 What is the absolute value of the maximum bending moment (in kN-m) in the frame? \hfill (GATE CE 2026)
 
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*)]
-    \item 165
-    \item 150
-    \item 240
-    \item 195
+\begin{enumerate}[label=\alph*), itemsep=0pt]
+\item 165
+\item 150
+\item 240
+\item 195
 \end{enumerate}
 \end{multicols}
 \begin{center}
@@ -761,7 +763,7 @@ What is the absolute value of the maximum bending moment (in kN-m) in the frame?
     F_C = \begin{pmatrix} 50 \\ 0 \end{pmatrix}, \quad F_E = \begin{pmatrix} 0 \\ -90 \end{pmatrix}
 \end{equation}
 
-The reactions are $R_A = \begin{pmatrix} H_A & V_A \end{pmatrix}^\top$ and $R_B = \begin{pmatrix} 0 & V_B \end{pmatrix}^\top$. From \eqref{eq:1.1.11.1} with moments about A,
+The reactions are $R_A = \begin{pmatrix} H_A & V_A \end{pmatrix}^\top$ and $R_B = \begin{pmatrix} 0 & V_B \end{pmatrix}^\top$. From \eqref{eq:equil} with moments about A,
 \begin{align}
     (C-A) \times F_C &= 0 \times 0 - 3 \times 50 = -150 \\
     (E-A) \times F_E &= 2 \times (-90) - 3 \times 0 = -180 \\
@@ -773,7 +775,7 @@ In matrix form:
     \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{pmatrix} \begin{pmatrix} H_A \\ V_A \\ V_B \end{pmatrix} = \begin{pmatrix} -50 \\ 90 \\ 330 \end{pmatrix} \implies \begin{pmatrix} H_A \\ V_A \\ V_B \end{pmatrix} = \begin{pmatrix} -50 \\ 7.5 \\ 82.5 \end{pmatrix} \text{ kN}
 \end{equation}
 
-Using \eqref{eq:1.1.11.2}, the bending moment in column AC at height $y$ (forces below the section) is
+Using \eqref{eq:bm}, the bending moment in column AC at height $y$ (forces below the section) is
 \begin{equation}
     |M| = \left| \left( A - \begin{pmatrix} 0 \\ y \end{pmatrix} \right) \times R_A \right| = 50y \implies |M_C| = 150\text{ kN m}
 \end{equation}
@@ -784,28 +786,25 @@ and in the beam at E (forces to the right of the section) is
 
 In column BD, the roller reaction is vertical and along the column, so $M=0$. The maximum bending moment is $165\text{ kN m}$ under the $90\text{ kN}$ load.
 
-\textbf{a)}.
-
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{figs/q39.pdf}
-    \caption{Frame loading and bending moment diagram}
-    \label{fig:q39}
+\centering
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q39.pdf}
+\caption{Frame loading and bending moment diagram}
+\label{fig:q39}
 \end{figure}
 
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily\small, breaklines=true, linewidth=\linewidth, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q39/q39.py}}@*)
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39.py}@*)
 \end{lstlisting}
-
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily\small, breaklines=true, linewidth=\linewidth, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{\parbox{\linewidth}{\centering codes/ce1q39/q39plot.py}}@*)
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39plot.py}@*)
 \end{lstlisting}
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
 \begin{align}
 f\brak{x} = e^{-x} - x
 \end{align}
-\gate
+\hfill (GATE CE 2026)
 
 \solution The function and its derivative are
 \begin{align}
@@ -849,7 +848,7 @@ $x$ & $-2$ & 1 & 2\\ \hline
 $y$ & 28 & 4 & 16\\ \hline
 \end{tabular}
 \end{center}
-If a second-degree interpolating polynomial $P_2\brak{x}$ is used to represent $y$, the value of $P_2\brak{0}$ is \underline{\hspace{2cm}} (rounded off to the nearest integer). \gate
+If a second-degree interpolating polynomial $P_2\brak{x}$ is used to represent $y$, the value of $P_2\brak{0}$ is \underline{\hspace{2cm}} (rounded off to the nearest integer). \hfill (GATE CE 2026)
 
 \solution Let $\vec{c} = \myvec{c_0 & c_1 & c_2}^\top$ and $\vec{y} = \myvec{28 & 4 & 16}^\top$. From \eqref{eq:vander},
 \begin{align}
@@ -884,7 +883,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q50
-\item Two identical blocks $A$ and $B$ are connected by a rigid rod. The blocks rest against vertical and horizontal planes, as shown in the figure. The coefficient of static friction at the vertical and horizontal planes is the same. If the sliding impends when $\theta = 45^\circ$, the value of the coefficient of static friction is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
+\item Two identical blocks $A$ and $B$ are connected by a rigid rod. The blocks rest against vertical and horizontal planes, as shown in the figure. The coefficient of static friction at the vertical and horizontal planes is the same. If the sliding impends when $\theta = 45^\circ$, the value of the coefficient of static friction is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE CE 2026)
 
 
 \begin{center}
@@ -896,7 +895,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
     % --- Hatching / Fixed Walls ---
     % Vertical Wall Hatching (Left)
     \fill[pattern=north east lines] (-0.25, 0) rectangle (0, 4.2);
-    
+
     % Horizontal Floor Hatching (Bottom)
     \fill[pattern=north east lines] (-0.25, -0.25) rectangle (5.2, 0);
 
@@ -907,7 +906,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
     % Outline & Fill
     \draw[line width=1.5pt, boxblue, fill=white] (0, 2.6) rectangle (1.0, 3.6);
     \coordinate (A) at (0.5, 3.1);
-    
+
     % Label A and Pin Joint
     \node[anchor=south] at (0.5, 3.1) {\large\bfseries A};
     \fill[black] (A) circle (3.5pt);
@@ -916,7 +915,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
     % Outline & Fill
     \draw[line width=1.5pt, boxblue, fill=white] (3.8, 0) rectangle (4.8, 1.0);
     \coordinate (B) at (4.3, 0.5);
-    
+
     % Label B and Pin Joint
     \node[anchor=north] at (4.3, 0.5) {\large\bfseries B};
     \fill[black] (B) circle (3.5pt);
@@ -927,7 +926,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
     % --- Dashed Reference Line & Angle Theta ---
     % Midpoint of rod
     \coordinate (M) at ($(A)!0.52!(B)$);
-    
+
     % Horizontal dashed line
     \draw[line width=1.2pt, dashed] ($(M)+(-1.2,0)$) -- ($(M)+(1.2,0)$);
 
@@ -981,7 +980,7 @@ taking the positive root.
 % ----------------------------------------------------------- Q51
 \item A homogenous, linearly elastic rod $AB$ is connected to a linearly elastic spring $BC$ in between the fixed supports at $A$ and $C$, as shown in the figure. The cross-sectional area, modulus of elasticity, and the coefficient of thermal expansion of the rod $AB$ are 500 mm$^2$, $60\times 10^3$ MPa, and $12\times 10^{-6}$ per $^\circ$C, respectively. The stiffness $\brak{k}$ of spring $BC$ is 2500 N/mm.
 
-The internal force (in kN) that will develop in the spring $BC$ when the temperature of rod $AB$ is increased by $100^\circ$C is \underline{\hspace{2cm}} (rounded off to one decimal place). \gate
+The internal force (in kN) that will develop in the spring $BC$ when the temperature of rod $AB$ is increased by $100^\circ$C is \underline{\hspace{2cm}} (rounded off to one decimal place). \hfill (GATE CE 2026)
 
 \begin{center}
 \begin{tikzpicture}[scale=1.2]
@@ -1014,13 +1013,13 @@ The internal force (in kN) that will develop in the spring $BC$ when the tempera
     % Vertical extension ticks
     \draw[line width=1.2pt] (0, 1.3) -- (0, 2.1);
     \draw[line width=1.2pt] (4, 1.3) -- (4, 2.1);
-    
+
     % Diagonal slash ticks
     \draw[line width=1.2pt] (-0.2, 1.5) -- (0.2, 1.9);
     \draw[line width=1.2pt] (3.8, 1.5) -- (4.2, 1.9);
-    
+
     % Horizontal dimension line with arrows
-    \draw[line width=1.2pt, <->, >=Stealth] (0, 1.7) -- (4, 1.7) 
+    \draw[line width=1.2pt, <->, >=Stealth] (0, 1.7) -- (4, 1.7)
         node[midway, above, font=\bfseries\large] {3 m};
 
     % --- Note at Bottom ---
