@@ -174,11 +174,22 @@ A matrix is symmetric if $\vec{A}^\top = \vec{A}$ and skew-symmetric if $\vec{A}
 \item Cholesky Decomposition
 \begin{itemize}
 \item Factorization:
-A symmetric positive definite matrix $\vec{A}$ can be factorized as $\vec{A} = \vec{L}\vec{L}^\top$ \label{eq:chol1}  where $\vec{L}$ is lower triangular.
+A symmetric positive definite matrix $\vec{A}$ can be factorized as:
+\begin{equation}
+\vec{A} = \vec{L}\vec{L}^\top
+\label{eq:chol1}
+\end{equation}
+where $\vec{L}$ is lower triangular with positive diagonal elements.
+
+\item General Formulas for Entries of $\vec{L}$:
+\begin{align}
+\text{Diagonal entries:}\quad & l_{jj} = \sqrt{a_{jj} - \sum_{k=1}^{j-1} l_{jk}^2} \label{eq:choldiag} \\
+\text{Off-diagonal entries }(i > j):\quad & l_{ij} = \frac{1}{l_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk} \right) \label{eq:choloff}
+\end{align}
+
 \item $2 \times 2$ Decomposition Form:
 \begin{align}
-\myvec{a_{11} & a_{12} \\ a_{12} & a_{22}} = \myvec{l_{11} & 0 \\ l_{21} & l_{22}} \myvec{l_{11} & l_{21} \\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21} \\ l_{11}l_{21} & l_{21}^2 + l_{22}^2}
-\label{eq:chol2} %% NEW
+\myvec{a_{11} & a_{12} \\ a_{12} & a_{22}} &= \myvec{l_{11} & 0 \\ l_{21} & l_{22}} \myvec{l_{11} & l_{21} \\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21} \\ l_{11}l_{21} & l_{21}^2 + l_{22}^2} \label{eq:chol2}
 \end{align}
 \end{itemize}
 
