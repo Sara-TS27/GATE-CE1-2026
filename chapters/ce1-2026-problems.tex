@@ -422,43 +422,42 @@ From \eqref{eq:bayes},
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q27
-% ----------------------------------------------------------- Q27
 \item A matrix is given as:
 \begin{align}
-\myvec{9 & 15\\ 15 & 50}
+\myvec{9 & 15\\ 15 & 50} \label{eq:ce1q27_matrix}
 \end{align}
 By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular matrix is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE 2026)
 
 \solution Let
 \begin{align}
-\vec{A} = \myvec{9 & 15\\ 15 & 50}
+\vec{A} = \myvec{9 & 15\\ 15 & 50} \label{eq:ce1q27_A}
 \end{align}
 Cholesky decomposition applies to a square, symmetric, positive definite matrix. Here $\vec{A}^\top = \vec{A}$ and, using \eqref{eq:det2}, the leading principal minors are
 \begin{align}
-a_{11} = 9 > 0,\quad \mydet{9 & 15\\ 15 & 50} = 9\times 50 - 15^2 = 225 > 0
+a_{11} = 9 > 0,\quad \mydet{9 & 15\\ 15 & 50} = 9\times 50 - 15^2 = 225 > 0 \label{eq:ce1q27_minors}
 \end{align}
 so $\vec{A}$ is positive definite and, from \eqref{eq:chol1}, can be written as $\vec{A} = \vec{L}\vec{L}^\top$, where $\vec{L}$ is lower triangular with positive diagonal entries. For a general $n\times n$ matrix, the entries of $\vec{L}$ are found column by column using \eqref{eq:choldiag} and \eqref{eq:choloff}. For $n = 2$, these reduce to \eqref{eq:chol2}:
 \begin{align}
-\myvec{9 & 15\\ 15 & 50} = \myvec{l_{11} & 0\\ l_{21} & l_{22}}\myvec{l_{11} & l_{21}\\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21}\\ l_{11}l_{21} & l_{21}^2 + l_{22}^2}
+\myvec{9 & 15\\ 15 & 50} = \myvec{l_{11} & 0\\ l_{21} & l_{22}}\myvec{l_{11} & l_{21}\\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21}\\ l_{11}l_{21} & l_{21}^2 + l_{22}^2} \label{eq:ce1q27_decomp}
 \end{align}
-Comparing the entries one at a time:
+Comparing the entries in \eqref{eq:ce1q27_decomp} one at a time:
 \begin{align}
-\text{Entry }\brak{1,1}:&\quad l_{11}^2 = 9 \implies l_{11} = 3\\
-\text{Entry }\brak{2,1}:&\quad l_{11}l_{21} = 15 \implies l_{21} = \frac{15}{3} = 5\\
-\text{Entry }\brak{2,2}:&\quad l_{21}^2 + l_{22}^2 = 50 \implies l_{22}^2 = 50 - 25 = 25 \implies l_{22} = 5
+\text{Entry }\brak{1,1}:&\quad l_{11}^2 = 9 \implies l_{11} = 3 \label{eq:ce1q27_l11}\\
+\text{Entry }\brak{2,1}:&\quad l_{11}l_{21} = 15 \implies l_{21} = \frac{15}{3} = 5 \label{eq:ce1q27_l21}\\
+\text{Entry }\brak{2,2}:&\quad l_{21}^2 + l_{22}^2 = 50 \implies l_{22}^2 = 50 - 25 = 25 \implies l_{22} = 5 \label{eq:ce1q27_l22}
 \end{align}
-These are the same as \eqref{eq:choldiag} with $j = 1$, \eqref{eq:choloff} with $i = 2,\ j = 1$, and \eqref{eq:choldiag} with $j = 2$. Thus,
+These are the same as \eqref{eq:choldiag} with $j = 1$, \eqref{eq:choloff} with $i = 2,\ j = 1$, and \eqref{eq:choldiag} with $j = 2$. Thus, using \eqref{eq:ce1q27_l11}, \eqref{eq:ce1q27_l21}, and \eqref{eq:ce1q27_l22},
 \begin{align}
-\vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{3 & 0\\ 5 & 5}\myvec{3 & 5\\ 0 & 5} = \myvec{9 & 15\\ 15 & 50} = \vec{A}
+\vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{3 & 0\\ 5 & 5}\myvec{3 & 5\\ 0 & 5} = \myvec{9 & 15\\ 15 & 50} = \vec{A} \label{eq:ce1q27_L}
 \end{align}
-As a check, using \eqref{eq:det2}, $\abs{\vec{L}} = 3\times 5 - 0\times 5 = 15$, so $\abs{\vec{A}} = \abs{\vec{L}}^2 = 225$, which matches the minor computed above. Hence,
+As a check, using \eqref{eq:det2}, $\abs{\vec{L}} = 3\times 5 - 0\times 5 = 15$, so $\abs{\vec{A}} = \abs{\vec{L}}^2 = 225$, which matches the minor computed in \eqref{eq:ce1q27_minors}. Hence, from \eqref{eq:ce1q27_l22},
 \begin{align}
-\abs{l_{22}} = 5
+\abs{l_{22}} = 5 \label{eq:ce1q27_ans}
 \end{align}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q27/q27.py}@*)
 \end{lstlisting}
-
+% ----------------------------------------------------------- Q27
 % ----------------------------------------------------------- Q28
 \item It is given that $x$ and $y$ are integers in the following equation:
 \begin{align}
