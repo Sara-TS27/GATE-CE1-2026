@@ -10,7 +10,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
 
 % ----------------------------------------------------------- Q3
-\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \hfill (GATE CE1 2026)
+\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 0
@@ -87,7 +87,7 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 
 
 % ----------------------------------------------------------- Q7
-\item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \hfill (GATE CE1 2026)
+\item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $40^\circ$
@@ -161,7 +161,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
 %------------------------------------------------------------Q9
 
-\item Consider a linear arrangement of seven bulbs, each of which can be in the ON or OFF states. The initial configuration of the bulbs is shown in the figure. In every Step, the states of the bulbs are changed based on the following rules: Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged. The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \hfill (GATE CE1 2026)
+\item Consider a linear arrangement of seven bulbs, each of which can be in the ON or OFF states. The initial configuration of the bulbs is shown in the figure. In every Step, the states of the bulbs are changed based on the following rules: Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged. The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \hfill (GATE CE 2026)
 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -276,7 +276,7 @@ The number of bulbs which are ON at the end of Step 8 is:
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q9/q09.py}@*)
 \end{lstlisting}
 %-------------------------------------------------------------Q10
-\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \hfill (GATE CE1 2026)
+\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 13
@@ -319,7 +319,7 @@ PQ = 7\times 6 = 42
 \begin{align}
 \vec{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
 \end{align}
-The TRUE option is \hfill (GATE CE1 2026)
+The TRUE option is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item Trace of $\vec{P}$ is equal to the sum of the Eigen values of $\vec{P}$.
@@ -354,7 +354,7 @@ so option (A) is true. The remaining options are false since
 \begin{align}
 \myvec{1 & 1 & 1\\ 1 & 0 & 2}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0}
 \end{align}
-The above system of equations represents a \hfill (GATE CE1 2026)
+The above system of equations represents a \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item plane
@@ -363,17 +363,30 @@ The above system of equations represents a \hfill (GATE CE1 2026)
 \item point
 \end{enumerate}
 \end{multicols}
-\solution The augmented matrix is reduced as
+\solution Let
 \begin{align}
-\myvec{1 & 1 & 1 & 0\\ 1 & 0 & 2 & 0} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & 1 & 1 & 0\\ 0 & -1 & 1 & 0}
+\vec{A} = \myvec{1 & 1 & 1\\ 1 & 0 & 2},\quad \vec{x} = \myvec{x_1\\ x_2\\ x_3}
+\end{align}
+so the system is $\vec{A}\vec{x} = \vec{0}$. Reducing $\vec{A}$ to row echelon form:
+\begin{align}
+\myvec{1 & 1 & 1\\ 1 & 0 & 2} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & 1 & 1\\ 0 & -1 & 1} \xrightarrow{R_1\to R_1 + R_2} \myvec{1 & 0 & 2\\ 0 & -1 & 1}
 \end{align}
 Thus,
 \begin{align}
-\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{b}}} = 2 < n = 3
+\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{0}}} = 2 < n = 3
 \end{align}
-From \eqref{eq:rc}, the system is consistent with $n - r = 1$ free variable. From \eqref{eq:cross}, the solution is
+From \eqref{eq:rc}, the system is consistent with $n - r = 1$ free variable, taken as $x_3$. The reduced system is
 \begin{align}
-\vec{x} = \kappa\brak{\myvec{1\\ 1\\ 1}\times\myvec{1\\ 0\\ 2}} = \kappa\myvec{2\\ -1\\ -1},\quad \kappa\in\mathbb{R}
+\myvec{1 & 0 & 2\\ 0 & -1 & 1}\vec{x} = \vec{0}
+\end{align}
+which gives
+\begin{align}
+x_1 + 2x_3 &= 0 \implies x_1 = -2x_3\\
+-x_2 + x_3 &= 0 \implies x_2 = x_3
+\end{align}
+Hence,
+\begin{align}
+\vec{x} = \myvec{x_1\\ x_2\\ x_3} = \myvec{-2x_3\\ x_3\\ x_3} = x_3\myvec{-2\\ 1\\ 1},\quad x_3\in\mathbb{R}
 \end{align}
 which is a line through the origin (the intersection of two planes).
 
@@ -390,7 +403,7 @@ which is a line through the origin (the intersection of two planes).
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q26
-\item Bag I contains 4 white and 6 black balls. Bag II contains 4 white and 3 black balls. One ball is drawn at random from any one of the two bags and it is found to be a black ball. The probability that the black ball was drawn from Bag I is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE CE1 2026)
+\item Bag I contains 4 white and 6 black balls. Bag II contains 4 white and 3 black balls. One ball is drawn at random from any one of the two bags and it is found to be a black ball. The probability that the black ball was drawn from Bag I is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE CE 2026)
 
 \solution Let $B_1$, $B_2$ denote choosing Bag I, Bag II and $E$ the event of drawing a black ball. The prior and likelihood vectors are
 \begin{align}
@@ -413,52 +426,34 @@ From \eqref{eq:bayes},
 \begin{align}
 \myvec{9 & 15\\ 15 & 50}
 \end{align}
-By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular matrix is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE1 2026)
+By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular matrix is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE 2026)
 
-\solution A symmetric positive definite matrix $A \in \mathbb{R}^{2 \times 2}$ given as
-\[
-    A = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix}
-\]
-can be factored using standard LU decomposition into $A = L_{\text{LU}} U$ with a unit lower triangular matrix $L_{\text{LU}}$:
-\begin{equation}
-    \begin{pmatrix} 1 & 0 \\ l_{21} & 1 \end{pmatrix} \begin{pmatrix} u_{11} & u_{12} \\ 0 & u_{22} \end{pmatrix} = \begin{pmatrix} u_{11} & u_{12} \\ l_{21}u_{11} & l_{21}u_{12} + u_{22} \end{pmatrix} = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix} \label{eq:lu_system}
-\end{equation}
-Equating entries yields $u_{11} = 9$, $u_{12} = 15$, $l_{21} = 15/9 = 5/3$, and $u_{22} = 50 - (5/3)(15) = 25$. This gives:
-\begin{equation}
-    L_{\text{LU}} = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix}, \quad U = \begin{pmatrix} 9 & 15 \\ 0 & 25 \end{pmatrix} \label{eq:lu_result}
-\end{equation}
-Factoring out the diagonal matrix $D = \text{diag}(9, 25)$ transforms the LU decomposition into $A = L_{\text{LU}} D L_{\text{LU}}^\top$:
-\begin{equation}
-    A = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix} \begin{pmatrix} 9 & 0 \\ 0 & 25 \end{pmatrix} \begin{pmatrix} 1 & \frac{5}{3} \\ 0 & 1 \end{pmatrix} \label{eq:ldl_result}
-\end{equation}
-By absorbing $D^{1/2} = \text{diag}(\sqrt{9}, \sqrt{25}) = \text{diag}(3, 5)$ into $L_{\text{LU}}$, the Cholesky factor $L$ for $A = LL^\top$ is derived:
-\begin{equation}
-    L = L_{\text{LU}} D^{1/2} = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix} \begin{pmatrix} 3 & 0 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix} \label{eq:cholesky_from_lu}
-\end{equation}
-
-Alternatively, comparing with \eqref{eq:chol2}, the general Cholesky algorithm $A = LL^\top$ computes $l_{ij}$ for $1 \le j \le i \le n$ via:
-\begin{equation}
-    l_{jj} = \sqrt{a_{jj} - \sum_{k=1}^{j-1} l_{jk}^2} \label{eq:cholesky_diag}
-\end{equation}
-\begin{equation}
-    l_{ij} = \frac{1}{l_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk} \right), \quad \text{for } i > j \label{eq:cholesky_offdiag}
-\end{equation}
-Evaluating Equation~\eqref{eq:cholesky_diag} for $j = 1$ gives:
-\begin{equation}
-    l_{11} = \sqrt{a_{11}} = \sqrt{9} = 3 \label{eq:step_l11}
-\end{equation}
-Evaluating Equation~\eqref{eq:cholesky_offdiag} for $i = 2, j = 1$ gives:
-\begin{equation}
-    l_{21} = \frac{a_{21}}{l_{11}} = \frac{15}{3} = 5 \label{eq:step_l21}
-\end{equation}
-Evaluating Equation~\eqref{eq:cholesky_diag} for $j = 2$ gives:
-\begin{equation}
-    l_{22} = \sqrt{a_{22} - l_{21}^2} = \sqrt{50 - 5^2} = \sqrt{25} = 5 \label{eq:step_l22}
-\end{equation}
-Both approaches confirm that the Cholesky factor matrix and diagonal value are:
-\begin{equation}
-    L = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix}, \quad |l_{22}| = 5 \label{eq:final_answer}
-\end{equation}
+\solution Let
+\begin{align}
+\vec{A} = \myvec{9 & 15\\ 15 & 50}
+\end{align}
+Cholesky decomposition applies to a square, symmetric, positive definite matrix. Here $\vec{A}^\top = \vec{A}$ and the leading principal minors are
+\begin{align}
+a_{11} = 9 > 0,\quad \mydet{9 & 15\\ 15 & 50} = 9\times 50 - 15^2 = 225 > 0
+\end{align}
+so $\vec{A}$ is positive definite and, from \eqref{eq:chol}, can be written as $\vec{A} = \vec{L}\vec{L}^\top$, where $\vec{L}$ is lower triangular with positive diagonal entries. For a general $n\times n$ matrix, the entries of $\vec{L}$ are found column by column using \eqref{eq:choldiag} and \eqref{eq:choloff}. For $n = 2$, these reduce to \eqref{eq:chol2}:
+\begin{align}
+\myvec{9 & 15\\ 15 & 50} = \myvec{l_{11} & 0\\ l_{21} & l_{22}}\myvec{l_{11} & l_{21}\\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21}\\ l_{11}l_{21} & l_{21}^2 + l_{22}^2}
+\end{align}
+Comparing the entries one at a time:
+\begin{align}
+\text{Entry }\brak{1,1}:&\quad l_{11}^2 = 9 \implies l_{11} = 3\\
+\text{Entry }\brak{2,1}:&\quad l_{11}l_{21} = 15 \implies l_{21} = \frac{15}{3} = 5\\
+\text{Entry }\brak{2,2}:&\quad l_{21}^2 + l_{22}^2 = 50 \implies l_{22}^2 = 50 - 25 = 25 \implies l_{22} = 5
+\end{align}
+These are the same as \eqref{eq:choldiag} with $j = 1$, \eqref{eq:choloff} with $i = 2,\ j = 1$, and \eqref{eq:choldiag} with $j = 2$. Thus,
+\begin{align}
+\vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{3 & 0\\ 5 & 5}\myvec{3 & 5\\ 0 & 5} = \myvec{9 & 15\\ 15 & 50} = \vec{A}
+\end{align}
+As a check, $\abs{\vec{A}} = \brak{l_{11}l_{22}}^2 = \brak{3\times 5}^2 = 225$. Hence,
+\begin{align}
+\abs{l_{22}} = 5
+\end{align}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q27/q27.py}@*)
 \end{lstlisting}
@@ -470,23 +465,52 @@ Both approaches confirm that the Cholesky factor matrix and diagonal value are:
 \end{align}
 
 
-The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE1 2026)
+The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \hfill (GATE CE 2026)
 
-\solution Let
+\solution Let the two lines be
 \begin{align}
-\vec{A} = \myvec{1 & 1\\ 3 & 1},\quad \vec{b} = \myvec{7\\ 13},\quad \vec{x} = \myvec{x\\ y}
+L_1:\ x + y - 7 = 0,\quad L_2:\ 3x + y - 13 = 0
 \end{align}
-The given equation is
+Each squared line is a degenerate conic of the form \eqref{eq:conic}:
 \begin{align}
-\norm{\vec{A}\vec{x} - \vec{b}}^2 = 0
+\brak{x + y - 7}^2 = 0 &\implies \vec{V}_1 = \myvec{1 & 1\\ 1 & 1},\ \vec{u}_1 = \myvec{-7\\ -7},\ f_1 = 49\\
+\brak{3x + y - 13}^2 = 0 &\implies \vec{V}_2 = \myvec{9 & 3\\ 3 & 1},\ \vec{u}_2 = \myvec{-39\\ -13},\ f_2 = 169
 \end{align}
-From \eqref{eq:zeronorm},
+The given equation is the member $\mu = 1$ of the pencil \eqref{eq:pencil}:
 \begin{align}
-\vec{A}\vec{x} = \vec{b}
+\vec{V} = \vec{V}_1 + \vec{V}_2 = \myvec{10 & 4\\ 4 & 2},\quad \vec{u} = \vec{u}_1 + \vec{u}_2 = \myvec{-46\\ -20},\quad f = f_1 + f_2 = 218
 \end{align}
-Reducing the augmented matrix:
+Writing $\tilde{\vec{x}} = \myvec{x & y & 1}^\top$, the conic becomes
 \begin{align}
-\myvec{1 & 1 & 7\\ 3 & 1 & 13} \xrightarrow{R_2\to R_2 - 3R_1} \myvec{1 & 1 & 7\\ 0 & -2 & -8} \implies y = 4,\ x = 3
+\tilde{\vec{x}}^\top\vec{M}\tilde{\vec{x}} = 0,\quad \vec{M} = \myvec{\vec{V} & \vec{u}\\ \vec{u}^\top & f} = \myvec{10 & 4 & -46\\ 4 & 2 & -20\\ -46 & -20 & 218}
+\end{align}
+Reducing $\vec{M}$:
+\begin{align}
+\myvec{10 & 4 & -46\\ 4 & 2 & -20\\ -46 & -20 & 218}
+&\xrightarrow[R_3\to 5R_3 + 23R_1]{R_2\to 5R_2 - 2R_1}
+\myvec{10 & 4 & -46\\ 0 & 2 & -8\\ 0 & -8 & 32}\\
+&\xrightarrow{R_3\to R_3 + 4R_2}
+\myvec{10 & 4 & -46\\ 0 & 2 & -8\\ 0 & 0 & 0}
+\end{align}
+The last row is zero, so
+\begin{align}
+\mydet{\vec{V} & \vec{u}\\ \vec{u}^\top & f} = 0
+\end{align}
+and from \eqref{eq:degen} the conic is degenerate. From \eqref{eq:class},
+\begin{align}
+\abs{\vec{V}} = 10\times 2 - 4^2 = 4 > 0
+\end{align}
+so it is a degenerate ellipse, i.e. a single point. To find this point, note that
+\begin{align}
+\vec{M} = \vec{B}^\top\vec{B},\quad \vec{B} = \myvec{1 & 1 & -7\\ 3 & 1 & -13}
+\end{align}
+so the given equation is
+\begin{align}
+\tilde{\vec{x}}^\top\vec{M}\tilde{\vec{x}} = \norm{\vec{B}\tilde{\vec{x}}}^2 = 0
+\end{align}
+From \eqref{eq:zeronorm}, $\vec{B}\tilde{\vec{x}} = \vec{0}$, hence $\vec{M}\tilde{\vec{x}} = \vec{B}^\top\vec{B}\tilde{\vec{x}} = \vec{0}$. Using the reduced form of $\vec{M}$,
+\begin{align}
+\myvec{10 & 4 & -46\\ 0 & 2 & -8\\ 0 & 0 & 0}\myvec{x\\ y\\ 1} = \vec{0} \implies 2y - 8 = 0,\ 10x + 4y - 46 = 0 \implies y = 4,\ x = 3
 \end{align}
 Therefore,
 \begin{align}
@@ -504,7 +528,7 @@ x^3 + y^3 = 27 + 64 = 91
 \begin{align}
 \int_0^2 f\brak{x}\sbrak{x - f\brak{x}}dx = \frac{2}{3}
 \end{align}
-The value of $f\brak{1}$ is \hfill (GATE CE1 2026)
+The value of $f\brak{1}$ is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 1
@@ -548,7 +572,7 @@ f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
 \begin{align}
 x^2\frac{d^2y}{dx^2} = 6y
 \end{align}
-Considering $a$ and $b$ as arbitrary constants, the general solution of the equation is \hfill (GATE CE1 2026)
+Considering $a$ and $b$ as arbitrary constants, the general solution of the equation is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $y\brak{x} = ax^3 + \frac{b}{x^2}$
@@ -643,7 +667,7 @@ y\brak{x} = ax^3 + \frac{b}{x^2}
 \end{tikzpicture}
 \end{center}
 
-After application of the boundary conditions, the stiffness matrix of the truss becomes: \hfill (GATE CE1 2026)
+After application of the boundary conditions, the stiffness matrix of the truss becomes: \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $\frac{AE}{L}\myvec{1 & 1\\ 1 & 1}$
@@ -681,7 +705,7 @@ Assembling the global system \eqref{eq:kuf} and deleting the restrained degrees 
 % ----------------------------------------------------------- Q39
 \item The plane frame has a hinge and a roller support, and is loaded as shown in the figure. Both the columns have same height.
 
-What is the absolute value of the maximum bending moment (in kN-m) in the frame? \hfill (GATE CE1 2026)
+What is the absolute value of the maximum bending moment (in kN-m) in the frame? \hfill (GATE CE 2026)
 
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
@@ -804,7 +828,7 @@ In column BD, the roller reaction is vertical and along the column, so $M=0$. Th
 \begin{align}
 f\brak{x} = e^{-x} - x
 \end{align}
-\hfill (GATE CE1 2026)
+\hfill (GATE CE 2026)
 
 \solution The function and its derivative are
 \begin{align}
@@ -848,7 +872,7 @@ $x$ & $-2$ & 1 & 2\\ \hline
 $y$ & 28 & 4 & 16\\ \hline
 \end{tabular}
 \end{center}
-If a second-degree interpolating polynomial $P_2\brak{x}$ is used to represent $y$, the value of $P_2\brak{0}$ is \underline{\hspace{2cm}} (rounded off to the nearest integer). \hfill (GATE CE1 2026)
+If a second-degree interpolating polynomial $P_2\brak{x}$ is used to represent $y$, the value of $P_2\brak{0}$ is \underline{\hspace{2cm}} (rounded off to the nearest integer). \hfill (GATE CE 2026)
 
 \solution Let $\vec{c} = \myvec{c_0 & c_1 & c_2}^\top$ and $\vec{y} = \myvec{28 & 4 & 16}^\top$. From \eqref{eq:vander},
 \begin{align}
@@ -883,7 +907,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q50
-\item Two identical blocks $A$ and $B$ are connected by a rigid rod. The blocks rest against vertical and horizontal planes, as shown in the figure. The coefficient of static friction at the vertical and horizontal planes is the same. If the sliding impends when $\theta = 45^\circ$, the value of the coefficient of static friction is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE CE1 2026)
+\item Two identical blocks $A$ and $B$ are connected by a rigid rod. The blocks rest against vertical and horizontal planes, as shown in the figure. The coefficient of static friction at the vertical and horizontal planes is the same. If the sliding impends when $\theta = 45^\circ$, the value of the coefficient of static friction is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE CE 2026)
 
 
 \begin{center}
@@ -980,7 +1004,7 @@ taking the positive root.
 % ----------------------------------------------------------- Q51
 \item A homogenous, linearly elastic rod $AB$ is connected to a linearly elastic spring $BC$ in between the fixed supports at $A$ and $C$, as shown in the figure. The cross-sectional area, modulus of elasticity, and the coefficient of thermal expansion of the rod $AB$ are 500 mm$^2$, $60\times 10^3$ MPa, and $12\times 10^{-6}$ per $^\circ$C, respectively. The stiffness $\brak{k}$ of spring $BC$ is 2500 N/mm.
 
-The internal force (in kN) that will develop in the spring $BC$ when the temperature of rod $AB$ is increased by $100^\circ$C is \underline{\hspace{2cm}} (rounded off to one decimal place). \hfill (GATE CE1 2026)
+The internal force (in kN) that will develop in the spring $BC$ when the temperature of rod $AB$ is increased by $100^\circ$C is \underline{\hspace{2cm}} (rounded off to one decimal place). \hfill (GATE CE 2026)
 
 \begin{center}
 \begin{tikzpicture}[scale=1.2]
