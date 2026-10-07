@@ -350,7 +350,7 @@ so option (A) is true. The remaining options are false since
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q12
-% ----------------------------------------------------------- Q12 (1.1.6)
+% ----------------------------------------------------------- Q12
 \item Given:
 \begin{align}
 \myvec{1 & 1 & 1\\ 1 & 0 & 2}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0} \label{eq:ce1q12_system}
@@ -364,36 +364,20 @@ The above system of equations represents a \hfill (GATE CE 2026)
 \item point
 \end{enumerate}
 \end{multicols}
-\solution Let
+\solution Reducing the given system:
 \begin{align}
-\vec{A} = \myvec{1 & 1 & 1\\ 1 & 0 & 2},\quad \vec{x} = \myvec{x_1\\ x_2\\ x_3} \label{eq:ce1q12_A}
+\myvec{1 & 1 & 1\\ 1 & 0 & 2}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0} \implies \myvec{1 & 0 & 2\\ 0 & -1 & 1}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0}
 \end{align}
-so the system \eqref{eq:ce1q12_system} is written in matrix form \eqref{eq:axb} as $\vec{A}\vec{x} = \vec{0}$. Reducing $\vec{A}$ to reduced row echelon form:
+This gives:
 \begin{align}
-\myvec{1 & 1 & 1\\ 1 & 0 & 2} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & 1 & 1\\ 0 & -1 & 1} \xrightarrow{R_1\to R_1 + R_2} \myvec{1 & 0 & 2\\ 0 & -1 & 1} \label{eq:ce1q12_rref}
+x_1 + 2x_3 &= 0\\
+-x_2 + x_3 &= 0
 \end{align}
-Thus,
+Expressing the solution vector $\vec{x}$:
 \begin{align}
-\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{0}}} = 2 < n = 3 \label{eq:ce1q12_rank}
+\myvec{x_1\\ x_2\\ x_3} = \myvec{-2x_3\\ x_3\\ x_3} = x_3\myvec{-2\\ 1\\ 1}
 \end{align}
-From \eqref{eq:rc}, the system is consistent with $n - r = 3 - 2 = 1$ free variable, taken as $x_3$. Using \eqref{eq:ce1q12_rref}, the reduced system is
-\begin{align}
-\myvec{1 & 0 & 2\\ 0 & -1 & 1}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0} \label{eq:ce1q12_redsys}
-\end{align}
-which yields the scalar equations:
-\begin{align}
-x_1 + 2x_3 &= 0 \implies x_1 = -2x_3 \label{eq:ce1q12_x1}\\
--x_2 + x_3 &= 0 \implies x_2 = x_3 \label{eq:ce1q12_x2}
-\end{align}
-Expressing the solution vector $\vec{x}$ in terms of $x_3$:
-\begin{align}
-\vec{x} = \myvec{x_1\\ x_2\\ x_3} = \myvec{-2x_3\\ x_3\\ x_3} = x_3\myvec{-2\\ 1\\ 1},\quad x_3\in\mathbb{R} \label{eq:ce1q12_sol}
-\end{align}
-Alternatively, using \eqref{eq:cross}, the solution vector lies along the cross product of row vectors $\vec{a}_1 = \myvec{1 & 1 & 1}^\top$ and $\vec{a}_2 = \myvec{1 & 0 & 2}^\top$:
-\begin{align}
-\vec{a}_1 \times \vec{a}_2 = \mydet{\vec{i} & \vec{j} & \vec{k}\\ 1 & 1 & 1\\ 1 & 0 & 2} = \myvec{2\\ -1\\ -1} = -\myvec{-2\\ 1\\ 1} \label{eq:ce1q12_cross}
-\end{align}
-which gives the same direction. Since \eqref{eq:ce1q12_sol} represents a 1-dimensional subspace parameterized by $x_3$, the solution set forms a line passing through the origin.
+which represents a line passing through the origin.
 
 \begin{figure}[H]
 \centering
