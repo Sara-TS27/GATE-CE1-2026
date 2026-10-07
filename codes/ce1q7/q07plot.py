@@ -1,69 +1,74 @@
+import sys, os
+HERE  = os.path.dirname(os.path.abspath(__file__))              # repo/codes/ce1qN
+REPO  = os.path.abspath(os.path.join(HERE,'..','..'))           # repo
+sys.path.insert(0, os.path.join(REPO,'CoordGeo'))
+FIGS  = os.path.join(REPO,'figs'); os.makedirs(FIGS,exist_ok=True)
 import numpy as np
+import numpy.linalg as LA
 import matplotlib.pyplot as plt
-from coordgeo import line_gen, circ_gen
+try:                                  # CoordGeo/line/funcs.py , CoordGeo/conics/funcs.py
+    from line.funcs import *
+    from conics.funcs import *
+except ModuleNotFoundError:           # CoordGeo/line.py , CoordGeo/conics.py
+    from line import *
+    from conics import *
+from params import *
 
-# setup geometry
-r = 1.0
-alpha = np.radians(130)
-beta = np.radians(50)
 
-O = np.array([[0.0], [0.0]])
-P = np.array([[-r], [0.0]])
-Q = np.array([[r], [0.0]])
-R = r * np.array([[np.cos(alpha)], [np.sin(alpha)]])
-S = r * np.array([[np.cos(beta)], [np.sin(beta)]])
-T = np.array([[0.0], [2.1445]])
+#if using termux
+import subprocess
+import shlex
+#end if
 
-# generate circle and lines using coordgeo
-x_circ = circ_gen(O, r)
-x_PR = line_gen(P, R)
-x_RT = line_gen(R, T)
-x_QS = line_gen(Q, S)
-x_ST = line_gen(S, T)
-x_OR = line_gen(O, R)
-x_OS = line_gen(O, S)
+#Q7 : circle, diameter PQ, angle ROS = 80 deg, T = PR ∩ QS
+r = 1
+al = np.deg2rad(130); be = np.deg2rad(50)
+w = lambda t: np.array([[np.cos(t)],[np.sin(t)]])     # unit vector w_theta
 
-# plot
-fig, ax = plt.subplots(figsize=(8, 9))
+O = np.zeros((2,1))
+P = -r*e1;  Q = r*e1
+R = r*w(al); S = r*w(be)
 
-ax.plot(x_circ[0, :], x_circ[1, :], color='blue', linewidth=2)
+#Intersection of the lines PR and QS : [R-P  -(S-Q)][k1;k2] = Q-P
+M = np.block([dir_vec(P,R), -dir_vec(Q,S)])
+k = LA.solve(M, Q-P)
+T = P + k[0]*dir_vec(P,R)
 
-# secants
-ax.plot(x_PR[0, :], x_PR[1, :], color='red', linestyle='-', linewidth=1.5)
-ax.plot(x_RT[0, :], x_RT[1, :], color='red', linestyle='--', linewidth=1.5)
-ax.plot(x_QS[0, :], x_QS[1, :], color='green', linestyle='-', linewidth=1.5)
-ax.plot(x_ST[0, :], x_ST[1, :], color='green', linestyle='--', linewidth=1.5)
+x_circ = circ_gen(O,r)
+x_PR = line_gen(P,R);  x_RT = line_gen(R,T)
+x_QS = line_gen(Q,S);  x_ST = line_gen(S,T)
+x_OR = line_gen(O,R);  x_OS = line_gen(O,S)
 
-# radial lines
-ax.plot(x_OR[0, :], x_OR[1, :], color='black', linestyle=':', linewidth=1.2)
-ax.plot(x_OS[0, :], x_OS[1, :], color='black', linestyle=':', linewidth=1.2)
+plt.figure(figsize=(8,10))
+plt.plot(x_circ[0,:],x_circ[1,:],'b')
+plt.plot(x_PR[0,:],x_PR[1,:],'r');   plt.plot(x_RT[0,:],x_RT[1,:],'r--')
+plt.plot(x_QS[0,:],x_QS[1,:],'g');   plt.plot(x_ST[0,:],x_ST[1,:],'g--')
+plt.plot(x_OR[0,:],x_OR[1,:],'k:');  plt.plot(x_OS[0,:],x_OS[1,:],'k:')
 
-# axes
-ax.axhline(0, color='black', linewidth=1.2)
-ax.axvline(0, color='black', linewidth=1.2)
+pts = np.block([P,Q,R,S,T,O])
+plt.plot(pts[0,:],pts[1,:],'ko',ms=4)
+lab = [('$P(-r=re^{i\\pi})$',P,(-4,4),'right'), ('$Q(r=re^{i0})$',Q,(4,4),'left'),
+       ('$R(re^{i\\alpha})$',R,(-8,10),'right'), ('$S(re^{i\\beta})$',S,(8,10),'left'),
+       ('$T$',T,(6,6),'left'), ('$O(0)$',O,(5,4),'left')]
+for txt,pt,off,ha in lab:
+    plt.annotate(txt,(pt[0,0],pt[1,0]),textcoords='offset points',xytext=off,ha=ha,fontsize=7)
 
-# plot points & labels
-pts = [O, P, Q, R, S, T]
-for pt in pts:
-    ax.plot(pt[0, 0], pt[1, 0], 'ko', markersize=6)
+plt.axhline(0,color='k',lw=1); plt.axvline(0,color='k',lw=1)
+plt.grid(alpha=0.4,ls='--',lw=0.5)
+plt.gca().set_aspect('equal',adjustable='box')
+plt.xlim(-1.6,1.6); plt.ylim(-1.15,2.25)
+plt.title('Circle Geometry in Exponential Form ($e^{i\\theta}$)',fontsize=9,fontweight='bold')
+plt.savefig(os.path.join(FIGS,'q07.pdf'))
+plt.show()
 
-annotations = {
-    r'$O(0)$': (O, (0.05, 0.05)),
-    r'$P(-r)$': (P, (-0.35, 0.05)),
-    r'$Q(r)$': (Q, (0.05, 0.05)),
-    r'$R(re^{i\alpha})$': (R, (-0.45, 0.05)),
-    r'$S(re^{i\beta})$': (S, (0.05, 0.05)),
-    r'$T$': (T, (0.05, 0.03))
-}
+#if using termux
+#plt.savefig('./figs/q7.pdf')
+#plt.savefig('./figs/q7.png')
+#subprocess.run(shlex.split("termux-open ./figs/q7.pdf"))
 
-for label, (pt, offset) in annotations.items():
-    ax.text(pt[0, 0] + offset[0], pt[1, 0] + offset[1], label, fontsize=11, fontweight='bold')
+#plt.savefig('../figs/q7.pdf')
+#plt.savefig('../figs/q7.eps')
+#subprocess.run(shlex.split("termux-open ../figs/q7.pdf"))
+#else
+#plt.show() #opening the plot window
 
-ax.set_title(r'Circle Geometry ($\angle RTS = 50^\circ$)', fontsize=12, fontweight='bold')
-ax.set_xlim(-1.6, 1.6)
-ax.set_ylim(-1.2, 2.3)
-ax.set_aspect('equal')
-ax.grid(True, linestyle='--', alpha=0.5)
-
-plt.savefig('figs/q07.pdf', bbox_inches='tight')
-plt.close(fig)
