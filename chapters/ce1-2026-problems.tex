@@ -433,11 +433,11 @@ By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular mat
 \begin{align}
 \vec{A} = \myvec{9 & 15\\ 15 & 50}
 \end{align}
-Cholesky decomposition applies to a square, symmetric, positive definite matrix \eqref{eq:chol}. Here $\vec{A}^\top = \vec{A}$ and, using \eqref{eq:det2}, the leading principal minors are
+Cholesky decomposition applies to a square, symmetric, positive definite matrix. Here $\vec{A}^\top = \vec{A}$ and, using \eqref{eq:det2}, the leading principal minors are
 \begin{align}
 a_{11} = 9 > 0,\quad \mydet{9 & 15\\ 15 & 50} = 9\times 50 - 15^2 = 225 > 0
 \end{align}
-so $\vec{A}$ is positive definite and, from \eqref{eq:chol}, can be written as $\vec{A} = \vec{L}\vec{L}^\top$, where $\vec{L}$ is lower triangular with positive diagonal entries. For a general $n\times n$ matrix, the entries of $\vec{L}$ are found column by column using \eqref{eq:choldiag} and \eqref{eq:choloff}. For $n = 2$, these reduce to \eqref{eq:chol2}:
+so $\vec{A}$ is positive definite and, from \eqref{eq:chol1}, can be written as $\vec{A} = \vec{L}\vec{L}^\top$, where $\vec{L}$ is lower triangular with positive diagonal entries. For a general $n\times n$ matrix, the entries of $\vec{L}$ are found column by column using \eqref{eq:choldiag} and \eqref{eq:choloff}. For $n = 2$, these reduce to \eqref{eq:chol2}:
 \begin{align}
 \myvec{9 & 15\\ 15 & 50} = \myvec{l_{11} & 0\\ l_{21} & l_{22}}\myvec{l_{11} & l_{21}\\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21}\\ l_{11}l_{21} & l_{21}^2 + l_{22}^2}
 \end{align}
