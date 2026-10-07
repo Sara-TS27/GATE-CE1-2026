@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  7 OCT 2026 09:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  7 OCT 2026 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1435,7 +1435,7 @@ l.104 ...n\alpha}$ with $\vec{e}_\alpha \triangleq
 
 ? r
 OK, entering \nonstopmode...
-[4] [5] [6]) [7] (./chapters/ce1-2026-problems.tex
+[4] [5] [6] [7]) [8] (./chapters/ce1-2026-problems.tex
 ! Undefined control sequence.
 <argument> ...nAnchorHref {section*.3}\textarabic 
                                                   {المسائل}
@@ -1545,13 +1545,13 @@ l.7 \section*{\textarabic{المسائل}}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[8]
-<figs/q03.pdf, id=180, 722.7pt x 578.16pt>
+[9]
+<figs/q03.pdf, id=187, 722.7pt x 578.16pt>
 File: figs/q03.pdf Graphic file (type pdf)
 <use figs/q03.pdf>
 Package pdftex.def Info: figs/q03.pdf  used on input line 77.
 (pdftex.def)             Requested size: 254.9356pt x 203.94699pt.
- [9]
+ [10]
 ! Undefined control sequence.
 <argument>  \vec {i} \triangleq 
                                 \myvec {1\\ 0},\quad \vec {w}_\theta \triang...
@@ -1596,13 +1596,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[10 <./figs/q03.pdf>]
-<figs/q07.pdf, id=260, 570.91418pt x 629.56458pt>
+[11 <./figs/q03.pdf>]
+<figs/q07.pdf, id=267, 570.91418pt x 629.56458pt>
 File: figs/q07.pdf Graphic file (type pdf)
 <use figs/q07.pdf>
 Package pdftex.def Info: figs/q07.pdf  used on input line 145.
 (pdftex.def)             Requested size: 254.9356pt x 281.12079pt.
- [11]
+ [12]
 
 ! Package enumitem Error: (a) undefined.
 
@@ -1616,65 +1616,24 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 197.
-[12 <./figs/q07.pdf>] [13] [14] [15]
-<figs/q12.pdf, id=406, 505.89pt x 433.62pt>
+[13 <./figs/q07.pdf>] [14] [15] [16]
+<figs/q12.pdf, id=413, 505.89pt x 433.62pt>
 File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
 Package pdftex.def Info: figs/q12.pdf  used on input line 395.
 (pdftex.def)             Requested size: 254.9356pt x 218.51653pt.
- [16 <./figs/q12.pdf>]
-
-LaTeX Warning: Reference `eq:choldiag' on page 17 undefined on input line 439.
-
-
-LaTeX Warning: Reference `eq:choloff' on page 17 undefined on input line 439.
-
-
-LaTeX Warning: Reference `eq:ce1q27_decomp' on page 17 undefined on input line 
-443.
-
-
-LaTeX Warning: Reference `eq:choldiag' on page 17 undefined on input line 449.
-
-
-LaTeX Warning: Reference `eq:choloff' on page 17 undefined on input line 449.
-
-
-LaTeX Warning: Reference `eq:choldiag' on page 17 undefined on input line 449.
-
-
-LaTeX Warning: Reference `eq:ce1q27_l11' on page 17 undefined on input line 449
-.
-
-
-LaTeX Warning: Reference `eq:ce1q27_l21' on page 17 undefined on input line 449
-.
-
-
-LaTeX Warning: Reference `eq:ce1q27_l22' on page 17 undefined on input line 449
-.
-
-[17]
-
-LaTeX Warning: Reference `eq:ce1q27_minors' on page 18 undefined on input line 
-453.
-
-
-LaTeX Warning: Reference `eq:ce1q27_l22' on page 18 undefined on input line 453
-.
-
-[18]
+ [17 <./figs/q12.pdf>] [18] [19]
 Overfull \hbox (17.5956pt too wide) detected at line 514
 []
  []
 
-[19]
-<figs/q36.pdf, id=521, 433.62pt x 289.08pt>
+[20]
+<figs/q36.pdf, id=534, 433.62pt x 289.08pt>
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
 Package pdftex.def Info: figs/q36.pdf  used on input line 560.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
- [20 <./figs/q36.pdf>]
+ [21 <./figs/q36.pdf>]
 
 ! Package tikz Error: You need to say \usetikzlibrary{patterns}.
 
@@ -1700,13 +1659,13 @@ l.636     \fill[pattern=north east lines]
                                           (5.4, -0.8) rectangle (6.6, -0.5);
 (That was another \errmessage.)
 
-[21]
-<figs/q38.pdf, id=603, 433.62pt x 289.08pt>
+[22]
+<figs/q38.pdf, id=617, 433.62pt x 289.08pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
 Package pdftex.def Info: figs/q38.pdf  used on input line 695.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
- [22]
+ [23]
 
 ! Package tikz Error: You need to say \usetikzlibrary{patterns}.
 
@@ -1729,19 +1688,19 @@ l.739     \fill[pattern=north east lines]
                                           (3.5, -0.65) rectangle (4.5, -0.4);
 (That was another \errmessage.)
 
-[23 <./figs/q38.pdf>] [24]
-<figs/q39.pdf, id=695, 505.89pt x 361.35pt>
+[24 <./figs/q38.pdf>] [25]
+<figs/q39.pdf, id=709, 505.89pt x 361.35pt>
 File: figs/q39.pdf Graphic file (type pdf)
 <use figs/q39.pdf>
 Package pdftex.def Info: figs/q39.pdf  used on input line 815.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
-<figs/q48.pdf, id=697, 433.62pt x 325.215pt>
+<figs/q48.pdf, id=711, 433.62pt x 325.215pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
 Package pdftex.def Info: figs/q48.pdf  used on input line 851.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
- [25 <./figs/q39.pdf>] [26 <./figs/q48.pdf>]
-<figs/q49.pdf, id=821, 433.62pt x 325.215pt>
+ [26 <./figs/q39.pdf>] [27 <./figs/q48.pdf>]
+<figs/q49.pdf, id=834, 433.62pt x 325.215pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
 Package pdftex.def Info: figs/q49.pdf  used on input line 899.
@@ -1769,13 +1728,13 @@ l.924     \fill[pattern=north east lines]
                                           (-0.25, -0.25) rectangle (5.2, 0);
 (That was another \errmessage.)
 
-[27 <./figs/q49.pdf>] [28]
-<figs/q50.pdf, id=891, 361.35pt x 361.35pt>
+[28 <./figs/q49.pdf>] [29]
+<figs/q50.pdf, id=904, 361.35pt x 361.35pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
 Package pdftex.def Info: figs/q50.pdf  used on input line 994.
 (pdftex.def)             Requested size: 254.9356pt x 254.93925pt.
- [29 <./figs/q50.pdf>]
+ [30 <./figs/q50.pdf>]
 
 ! Package tikz Error: You need to say \usetikzlibrary{patterns}.
 
@@ -1798,29 +1757,22 @@ l.1025     \fill[pattern=north east lines]
                                            (7.0, -0.2) rectangle (7.35, 1.0);
 (That was another \errmessage.)
 
-<figs/q51.pdf, id=947, 433.62pt x 289.08pt>
+<figs/q51.pdf, id=960, 433.62pt x 289.08pt>
 File: figs/q51.pdf Graphic file (type pdf)
 <use figs/q51.pdf>
 Package pdftex.def Info: figs/q51.pdf  used on input line 1074.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
-[30]) [31 <./figs/q51.pdf>] (./main.aux)
+[31]) [32 <./figs/q51.pdf>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 51056 strings out of 474222
- 1221600 string characters out of 5748734
+ 51060 strings out of 474222
+ 1221643 string characters out of 5748734
  1953975 words of memory out of 5000000
  72202 multiletter control sequences out of 15000+600000
  605799 words of font info for 150 fonts, out of 8000000 for 9000
@@ -1847,10 +1799,10 @@ ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 482818 bytes).
+Output written on main.pdf (32 pages, 483812 bytes).
 PDF statistics:
- 1190 PDF objects out of 1200 (max. 8388607)
- 715 compressed objects within 8 object streams
- 346 named destinations out of 1000 (max. 500000)
+ 1204 PDF objects out of 1440 (max. 8388607)
+ 728 compressed objects within 8 object streams
+ 350 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 
