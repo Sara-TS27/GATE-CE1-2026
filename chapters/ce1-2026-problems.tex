@@ -3,7 +3,7 @@
 % Compile with XeLaTeX. Main language = English, Arabic only in heading.
 % Each problem is an \item of the outer enumerate.
 % Options are a nested enumerate so they are NOT numbered as problems.
-
+\begin{document}
 \section*{\textarabic{المسائل}}    % "Problems" (only Arabic text in the document)
 \setcounter{subsection}{1}         % labels become 1.1, 1.2, ...
 
@@ -766,49 +766,46 @@ What is the absolute value of the maximum bending moment (in kN-m) in the frame?
 
 \end{tikzpicture}
 \end{center}
-\solution From the figure, the frame has a hinge at A, a roller at B, columns of height $3\text{ m}$ and a beam CD of span $4\text{ m}$. A horizontal load of $50\text{ kN}$ acts at C and a vertical load of $90\text{ kN}$ acts at the mid-point E of CD:
-\begin{equation}
-    A = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad C = \begin{pmatrix} 0 \\ 3 \end{pmatrix}, \quad E = \begin{pmatrix} 2 \\ 3 \end{pmatrix}, \quad D = \begin{pmatrix} 4 \\ 3 \end{pmatrix}, \quad B = \begin{pmatrix} 4 \\ 0 \end{pmatrix}
-\end{equation}
-\begin{equation}
-    F_C = \begin{pmatrix} 50 \\ 0 \end{pmatrix}, \quad F_E = \begin{pmatrix} 0 \\ -90 \end{pmatrix}
-\end{equation}
 
-The reactions are $R_A = \begin{pmatrix} H_A & V_A \end{pmatrix}^\top$ and $R_B = \begin{pmatrix} 0 & V_B \end{pmatrix}^\top$. From \eqref{eq:equil} with moments about A,
+\solution Consider the system of linear equations $Ax = b$. The augmented matrix $[A \mid b]$ is constructed and reduced to row echelon form:
 \begin{align}
-	(\vec{C}-\vec{A}) \times \vec{F_C} &= 0 \times 0 - 3 \times 50 = -150 \\
-	(\vec{E}-\vec{A}) \times \vec{F_E} &= 2 \times (-90) - 3 \times 0 = -180 \\
-	(\vec{B}-\vec{A}) \times \vec{R_B} &= 4V_B
+[A \mid b] &= \begin{pmatrix}
+2 & 1 & -1 & \vert & 8 \\
+-3 & -1 & 2 & \vert & -11 \\
+-2 & 1 & 2 & \vert & -3
+\end{pmatrix} \\
+&\xrightarrow{R_2 \leftarrow R_2 + \frac{3}{2}R_1, \, R_3 \leftarrow R_3 + R_1} \begin{pmatrix}
+2 & 1 & -1 & \vert & 8 \\
+0 & 0.5 & 0.5 & \vert & 1 \\
+0 & 2 & 1 & \vert & 5
+\end{pmatrix} \\
+&\xrightarrow{R_3 \leftarrow R_3 - 4R_2} \begin{pmatrix}
+2 & 1 & -1 & \vert & 8 \\
+0 & 0.5 & 0.5 & \vert & 1 \\
+0 & 0 & -1 & \vert & 1
+\end{pmatrix}
 \end{align}
-
-In matrix form:
-\begin{equation}
-    \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{pmatrix} \begin{pmatrix} H_A \\ V_A \\ V_B \end{pmatrix} = \begin{pmatrix} -50 \\ 90 \\ 330 \end{pmatrix} \implies \begin{pmatrix} H_A \\ V_A \\ V_B \end{pmatrix} = \begin{pmatrix} -50 \\ 7.5 \\ 82.5 \end{pmatrix} \text{ kN}
-\end{equation}
-
-Using \eqref{eq:bm}, the bending moment in column AC at height $y$ (forces below the section) is
-\begin{equation}
-    |M| = \left| \left( A - \begin{pmatrix} 0 \\ y \end{pmatrix} \right) \times R_A \right| = 50y \implies |M_C| = 150\text{ kN m}
-\end{equation}
-and in the beam at E (forces to the right of the section) is
-\begin{equation}
-    |M_E| = |(B-E) \times R_B| = |2 \times 82.5 - (-3) \times 0| = 165\text{ kN m}
-\end{equation}
-
-In column BD, the roller reaction is vertical and along the column, so $M=0$. The maximum bending moment is $165\text{ kN m}$ under the $90\text{ kN}$ load.
+The rank of the coefficient matrix $A$ and the augmented matrix $[A \mid b]$ are obtained by counting the number of non-zero rows:
+\begin{align}
+\text{rank}(A) &= 3 \\
+\text{rank}([A \mid b]) &= 3
+\end{align}
+Since $\text{rank}(A) = \text{rank}([A \mid b]) = 3$, which equals the number of variables, the system has a unique solution. Performing back-substitution gives $x_3 = -1$, $x_2 = 3$, and $x_1 = 2$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q39.pdf}
-\caption{Frame loading and bending moment diagram}
-\label{fig:q39}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q48.pdf}
+\caption{Solving $Ax = b$ using augmented matrix and rank method}
 \end{figure}
-
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.py}@*)
 \end{lstlisting}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39plot.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48plot.py}@*)
+\end{lstlisting;
+
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.c}@*)
 \end{lstlisting}
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
