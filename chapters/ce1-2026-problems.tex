@@ -422,6 +422,7 @@ From \eqref{eq:bayes},
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q27
+% ----------------------------------------------------------- Q27
 \item A matrix is given as:
 \begin{align}
 \myvec{9 & 15\\ 15 & 50}
@@ -432,7 +433,7 @@ By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular mat
 \begin{align}
 \vec{A} = \myvec{9 & 15\\ 15 & 50}
 \end{align}
-Cholesky decomposition applies to a square, symmetric, positive definite matrix. Here $\vec{A}^\top = \vec{A}$ and the leading principal minors are
+Cholesky decomposition applies to a square, symmetric, positive definite matrix \eqref{eq:chol}. Here $\vec{A}^\top = \vec{A}$ and, using \eqref{eq:det2}, the leading principal minors are
 \begin{align}
 a_{11} = 9 > 0,\quad \mydet{9 & 15\\ 15 & 50} = 9\times 50 - 15^2 = 225 > 0
 \end{align}
@@ -450,7 +451,7 @@ These are the same as \eqref{eq:choldiag} with $j = 1$, \eqref{eq:choloff} with 
 \begin{align}
 \vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{3 & 0\\ 5 & 5}\myvec{3 & 5\\ 0 & 5} = \myvec{9 & 15\\ 15 & 50} = \vec{A}
 \end{align}
-As a check, $\abs{\vec{A}} = \brak{l_{11}l_{22}}^2 = \brak{3\times 5}^2 = 225$. Hence,
+As a check, using \eqref{eq:det2}, $\abs{\vec{L}} = 3\times 5 - 0\times 5 = 15$, so $\abs{\vec{A}} = \abs{\vec{L}}^2 = 225$, which matches the minor computed above. Hence,
 \begin{align}
 \abs{l_{22}} = 5
 \end{align}
