@@ -38,8 +38,6 @@ plt.ylabel('Spring Force $F_{BC}$ (kN)')
 plt.title('Spring Force vs. Temperature Rise of Rod AB')
 plt.legend(loc='upper left',fontsize=8)
 plt.savefig(os.path.join(FIGS,'q51.pdf'))
-plt.show()
-
 
 #if using termux
 plt.savefig('../../figs/q51.pdf')
@@ -51,5 +49,6 @@ plt.savefig('../../figs/q51.png')
 #subprocess.run(shlex.split("termux-open ../../figs/q51.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()
 
 
