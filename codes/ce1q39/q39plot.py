@@ -49,7 +49,6 @@ x_beam = np.block([C + M_C*s*e2, E + M_E*s*e2, D + M_D*s*e2])
 
 plt.figure(figsize=(8,6))
 plt.plot(x_frame[0,:],x_frame[1,:],'k',lw=3)
-plt.arrow(C[0,0],C[1,0],0.8,0,color='r',width=0.02,head_width=0.12,head_length=0.15,length_includes_head=True)
 plt.arrow(E[0,0],E[1,0],0,-0.8,color='b',width=0.02,head_width=0.12,head_length=0.15,length_includes_head=True)
 plt.plot(x_col[0,:],x_col[1,:],'m',lw=1)
 plt.plot([-M_C*s,0],[3,3],'m--',lw=1)
@@ -60,7 +59,6 @@ for txt,pt in (('C',C),('E',E),('D',D)):
     plt.annotate(txt,(pt[0,0],pt[1,0]),textcoords='offset points',xytext=(0,4),fontsize=7)
 
 h = [Line2D([0],[0],color='k',lw=3,label='Plane Frame'),
-     mpatches.Patch(color='r',label='50 kN Horizontal'),
      mpatches.Patch(color='b',label='90 kN Vertical'),
      Line2D([0],[0],color='m',lw=1,label='BM Diagram')]
 plt.legend(handles=h,loc='upper right',fontsize=7)
@@ -69,7 +67,7 @@ plt.gca().set_aspect('equal',adjustable='box')
 plt.grid(alpha=0.4,ls=':')
 plt.title('Frame Loading and Bending Moment Diagram',fontsize=9)
 plt.savefig(os.path.join(FIGS,'q39.pdf'))
-plt.show()
+
 
 #if using termux
 plt.savefig('../../figs/q39.pdf')
@@ -81,3 +79,4 @@ plt.savefig('../../figs/q39.png')
 #subprocess.run(shlex.split("termux-open ../../figs/q39.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()

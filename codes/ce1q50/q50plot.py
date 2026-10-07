@@ -22,7 +22,6 @@ import shlex
 
 
 #Q50 : blocks A and B connected by a rigid rod
-from matplotlib.patches import Arc
 
 theta = np.deg2rad(45);  L = 2
 A = L*np.sin(theta)*e2                      # block A on the wall
@@ -38,8 +37,6 @@ ax.plot(x_wall[0,:],x_wall[1,:],'k',lw=4)
 ax.plot(x_floor[0,:],x_floor[1,:],'k',lw=4)
 ax.plot(x_rod[0,:],x_rod[1,:],'b',lw=4)
 ax.plot([A[0,0],B[0,0]],[A[1,0],B[1,0]],'bo',ms=8)
-ax.add_patch(Arc((0,0),0.8,0.8,theta1=0,theta2=45,color='r',ls='--',lw=1.5))
-ax.text(0.45,0.1,r'$\theta=45^\circ$',color='r',fontsize=8)
 ax.annotate('Block A',(A[0,0],A[1,0]),textcoords='offset points',xytext=(0,10),ha='center')
 ax.annotate('Block B',(B[0,0],B[1,0]),textcoords='offset points',xytext=(24,-16),ha='center')
 ax.set_xlim(-0.5,2.5); ax.set_ylim(-0.5,2.5)
