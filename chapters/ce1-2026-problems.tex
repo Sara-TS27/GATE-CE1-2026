@@ -3,7 +3,6 @@
 % Compile with XeLaTeX. Main language = English, Arabic only in heading.
 % Each problem is an \item of the outer enumerate.
 % Options are a nested enumerate so they are NOT numbered as problems.
-\begin{document}
 \section*{\textarabic{المسائل}}    % "Problems" (only Arabic text in the document)
 \setcounter{subsection}{1}         % labels become 1.1, 1.2, ...
 
@@ -96,7 +95,7 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 \item $80^\circ$
 \end{enumerate}
 \end{multicols}
-\solution Let $O$ be the origin and the radius be $r$, with the diameter $PQ$ along the $x$-axis. Here $\vec{i}$ is the unit vector along the positive $x$-axis, and $\vec{w}_\theta$ is the unit vector that makes an angle $\theta$ with the positive $x$-axis, i.e. the point of the unit circle at angle $\theta$:
+\solution Let $O$ be the origin and the radius be $r$, with the diameter $PQ$ along the $x$-axis. As in the figure, $R$ and $S$ lie on the same side of $PQ$ (taken above it) and $T$ lies beyond both $R$ and $S$. Here $\vec{i}$ is the unit vector along the positive $x$-axis, and $\vec{w}_\theta$ is the unit vector that makes an angle $\theta$ with the positive $x$-axis, i.e. the point of the unit circle at angle $\theta$:
 \begin{align}
 \vec{i} \triangleq \myvec{1\\ 0},\quad \vec{w}_\theta \triangleq \myvec{\cos\theta\\ \sin\theta}
 \end{align}
@@ -164,7 +163,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 \item Consider a linear arrangement of seven bulbs, each of which can be in the ON or OFF states. The initial configuration of the bulbs is shown in the figure. In every Step, the states of the bulbs are changed based on the following rules: Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged. The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \hfill (GATE CE 2026)
 
 \begin{multicols}{4}
-\begin{enumerate}[(a)]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
     \item 5
     \item 4
     \item 3
@@ -178,6 +177,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
   \draw[fill=white, thin] (#1-0.05, #2-0.24) rectangle (#1+0.05, #2-0.15);
 }
 
+\begin{center}
 \begin{tikzpicture}[scale=1.2]
 
   % --- Row 1: Initial ---
@@ -230,6 +230,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
   \node[font=\large, anchor=west] at (6.0, 0.4) {OFF};
 
 \end{tikzpicture}
+\end{center}
 
 \solution Let $x_k \in \{0,1\}^7$ be the state vector after Step $k$ and $s_k = Ax_k$, where, from \eqref{eq:adj},
 \[
@@ -255,7 +256,7 @@ x_0 = \begin{pmatrix} 0 & 0 & 0 & 1 & 0 & 0 & 0 \end{pmatrix}^\top, \quad s_0 = 
 x_1 = \begin{pmatrix} 0 & 0 & 1 & 1 & 1 & 0 & 0 \end{pmatrix}^\top, \quad s_1 = \begin{pmatrix} 0 & 1 & 1 & 2 & 1 & 1 & 0 \end{pmatrix}^\top
 \]
 \[
-x_2 = \begin{pmatrix} 0 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}^\top, \quad s_2 = \begin{pmatrix} 1 & 1 & 2 & 1 & 1 & 1 & 1 \end{pmatrix}^\top
+x_2 = \begin{pmatrix} 0 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}^\top, \quad s_2 = \begin{pmatrix} 1 & 1 & 1 & 2 & 1 & 1 & 1 \end{pmatrix}^\top
 \]
 \[
 x_3 = \begin{pmatrix} 1 & 1 & 1 & 0 & 1 & 1 & 1 \end{pmatrix}^\top, \quad s_3 = \begin{pmatrix} 1 & 2 & 1 & 2 & 1 & 2 & 1 \end{pmatrix}^\top
@@ -339,7 +340,7 @@ From \eqref{eq:trace}:
 \begin{align}
 \text{tr}\brak{\vec{P}} = 1+1+1 = 3 = \lambda_1 + \lambda_2 + \lambda_3
 \end{align}
-so option (A) is true. The remaining options are false since
+so option (a) is true. The remaining options are false since
 \begin{align}
 \vec{P}^\top\vec{P} &= \myvec{2 & 0 & 2\\ 0 & 1 & 0\\ 2 & 0 & 2} \neq \vec{I}\\
 \vec{P}^\top &= \vec{P} \neq -\vec{P}\\
@@ -349,7 +350,6 @@ so option (A) is true. The remaining options are false since
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q11/q11.py}@*)
 \end{lstlisting}
 
-% ----------------------------------------------------------- Q12
 % ----------------------------------------------------------- Q12
 \item Given:
 \begin{align}
@@ -377,7 +377,11 @@ Expressing the solution vector $\vec{x}$:
 \begin{align}
 \myvec{x_1\\ x_2\\ x_3} = \myvec{-2x_3\\ x_3\\ x_3} = x_3\myvec{-2\\ 1\\ 1}
 \end{align}
-which represents a line passing through the origin.
+which represents a line passing through the origin. As a check, the rows of the coefficient matrix are $\vec{a}_1 = \myvec{1 & 1 & 1}^\top$ and $\vec{a}_2 = \myvec{1 & 0 & 2}^\top$ with rank $2$, so from \eqref{eq:cross}
+\begin{align}
+\vec{x} = \kappa\brak{\vec{a}_1 \times \vec{a}_2} = \kappa\myvec{2\\ -1\\ -1}
+\end{align}
+which is the same line. Since $n - r = 3 - 2 = 1$ by \eqref{eq:rc}, there is one free variable, so the solution set is a line. Hence the correct option is (b).
 
 \begin{figure}[H]
 \centering
@@ -438,7 +442,7 @@ These are the same as \eqref{eq:choldiag} with $j = 1$, \eqref{eq:choloff} with 
 \begin{align}
 \vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{3 & 0\\ 5 & 5}\myvec{3 & 5\\ 0 & 5} = \myvec{9 & 15\\ 15 & 50} = \vec{A} \label{eq:ce1q27_L}
 \end{align}
-As a check, using \eqref{eq:det2}, $\abs{\vec{L}} = 3\times 5 - 0\times 5 = 15$, so $\abs{\vec{A}} = \abs{\vec{L}}^2 = 225$, which matches the minor computed . Hence,
+As a check, using \eqref{eq:det2}, $\abs{\vec{L}} = 3\times 5 - 0\times 5 = 15$, so $\abs{\vec{A}} = \abs{\vec{L}}^2 = 225$, which matches the minor computed in \eqref{eq:ce1q27_minors}. Hence,
 \begin{align}
 \abs{l_{22}} = 5 \label{eq:ce1q27_ans}
 \end{align}
@@ -471,7 +475,7 @@ Writing $\tilde{\vec{x}} = \myvec{x & y & 1}^\top$, the conic becomes
 \begin{align}
 \tilde{\vec{x}}^\top\vec{M}\tilde{\vec{x}} = 0,\quad \vec{M} = \myvec{\vec{V} & \vec{u}\\ \vec{u}^\top & f} = \myvec{10 & 4 & -46\\ 4 & 2 & -20\\ -46 & -20 & 218}
 \end{align}
-Reducing $\vec{M}$:
+Reducing $\vec{M}$ by row operations (the multipliers $5$ in $R_2\to 5R_2 - 2R_1$ and $R_3\to 5R_3 + 23R_1$ are chosen to cancel the first column without introducing fractions; they only rescale the rows, so the rank is unchanged):
 \begin{align}
 \myvec{10 & 4 & -46\\ 4 & 2 & -20\\ -46 & -20 & 218}
 &\xrightarrow[R_3\to 5R_3 + 23R_1]{R_2\to 5R_2 - 2R_1}
@@ -497,7 +501,8 @@ so the given equation is
 \end{align}
 From \eqref{eq:zeronorm}, $\vec{B}\tilde{\vec{x}} = \vec{0}$, hence $\vec{M}\tilde{\vec{x}} = \vec{B}^\top\vec{B}\tilde{\vec{x}} = \vec{0}$. Using the reduced form of $\vec{M}$,
 \begin{align}
-\myvec{10 & 4 & -46\\ 0 & 2 & -8\\ 0 & 0 & 0}\myvec{x\\ y\\ 1} = \vec{0} \implies 2y - 8 = 0,\ 10x + 4y - 46 = 0 \implies y = 4,\ x = 3
+\myvec{10 & 4 & -46\\ 0 & 2 & -8\\ 0 & 0 & 0}\myvec{x\\ y\\ 1} = \vec{0}\\
+\implies 2y - 8 = 0,\ 10x + 4y - 46 = 0 \implies y = 4,\ x = 3
 \end{align}
 Therefore,
 \begin{align}
@@ -537,7 +542,7 @@ Equating with the given value,
 \begin{align}
 \int_0^2\brak{f\brak{x} - \frac{x}{2}}^2dx = 0
 \end{align}
-Since the integrand is continuous and non-negative,
+Since the integrand is continuous and non-negative, the zero integral property \eqref{eq:zeroint} gives
 \begin{align}
 f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
 \end{align}
@@ -568,7 +573,7 @@ Considering $a$ and $b$ as arbitrary constants, the general solution of the equa
 \item $y\brak{x} = ax^3 + b\ln x$
 \end{enumerate}
 \end{multicols}
-\solution Let $x = e^t$ $\brak{x > 0}$. Then
+\solution The equation is of Cauchy--Euler type, so we take $x > 0$ and let $x = e^t$, which maps $x > 0$ onto all real $t$. Then
 \begin{align}
 x\frac{dy}{dx} = \frac{dy}{dt},\quad x^2\frac{d^2y}{dx^2} = \frac{d^2y}{dt^2} - \frac{dy}{dt}
 \end{align}
@@ -586,7 +591,7 @@ Decomposing into partial fractions and using \eqref{eq:lapexp},
 \begin{align}
 Y\brak{s} = \frac{a}{s-3} + \frac{b}{s+2} \implies y\brak{t} = ae^{3t} + be^{-2t}
 \end{align}
-Substituting $e^t = x$:
+The Laplace transform is applied to $y\brak{t}$ for $t \ge 0$ only to identify the exponents $3$ and $-2$ and the form of the solution. This form does not depend on the starting point, and $y = ax^3 + bx^{-2}$ satisfies the ODE for every $x > 0$ (for example, $x^2y'' = 6ax^3 + 6bx^{-2} = 6y$). Substituting $e^t = x$:
 \begin{align}
 y\brak{x} = ax^3 + \frac{b}{x^2}
 \end{align}
@@ -707,13 +712,13 @@ What is the absolute value of the maximum bending moment (in kN-m) in the frame?
 
     % --- Frame Coordinates ---
     \coordinate (A) at (0, 0);   % Left Pin Support
-    \coordinate (B) at (0, 3);   % Top Left Joint
-    \coordinate (C) at (2, 3);   % Mid-span Load Point
+    \coordinate (C) at (0, 3);   % Top Left Joint
+    \coordinate (E) at (2, 3);   % Mid-span Load Point
     \coordinate (D) at (4, 3);   % Top Right Joint
-    \coordinate (E) at (4, 0);   % Right Roller Support
+    \coordinate (B) at (4, 0);   % Right Roller Support
 
     % --- Portal Frame Structure ---
-    \draw[line width=1.5pt] (A) -- (B) -- (D) -- (E);
+    \draw[line width=1.5pt] (A) -- (C) -- (D) -- (B);
 
     % --- Left Support (Pin / Hinge) ---
     \draw[line width=1pt] (A) -- (-0.3, -0.4) -- (0.3, -0.4) -- cycle;
@@ -721,33 +726,40 @@ What is the absolute value of the maximum bending moment (in kN-m) in the frame?
     \fill[pattern=north east lines] (-0.5, -0.65) rectangle (0.5, -0.4);
 
     % --- Right Support (Roller) ---
-    \draw[line width=1pt] (E) circle (0.2);
+    \draw[line width=1pt] (4, -0.2) circle (0.2);
     \draw[line width=1pt] (3.5, -0.4) -- (4.5, -0.4);
     \fill[pattern=north east lines] (3.5, -0.65) rectangle (4.5, -0.4);
 
     % --- Applied Loads ---
     % 50 kN Horizontal Load
-    \draw[->, >=Stealth, line width=1.3pt] (-1.1, 3) -- (A |- B);
+    \draw[->, >=Stealth, line width=1.3pt] (-1.1, 3) -- (C);
     \node[anchor=south east, font=\bfseries] at (-0.3, 3) {50 kN};
 
     % 90 kN Vertical Load
-    \draw[->, >=Stealth, line width=1.3pt] (C |- 0, 4.0) -- (C);
+    \draw[->, >=Stealth, line width=1.3pt] (2, 4.0) -- (E);
     \node[anchor=west, font=\bfseries] at (2.1, 3.5) {90 kN};
+
+    % --- Point Labels ---
+    \node[left] at (A) {$A$};
+    \node[above right] at (C) {$C$};
+    \node[below right] at (E) {$E$};
+    \node[above right] at (D) {$D$};
+    \node[above right] at (B) {$B$};
 
     % --- Top Dimension Line (2 m + 2 m) ---
     % Extension lines
-    \draw[line width=1pt] (0, 3.2) -- (0, 4.5);
-    \draw[line width=1pt] (2, 3.2) -- (2, 4.5);
-    \draw[line width=1pt] (4, 3.2) -- (4, 4.5);
+    \draw[line width=1pt] (0, 3.2) -- (0, 4.8);
+    \draw[line width=1pt] (2, 4.1) -- (2, 4.8);
+    \draw[line width=1pt] (4, 3.2) -- (4, 4.8);
 
     % Diagonal slash ticks
-    \draw[line width=1pt] (-0.15, 4.15) -- (0.15, 4.45);
-    \draw[line width=1pt] (1.85, 4.15) -- (2.15, 4.45);
-    \draw[line width=1pt] (3.85, 4.15) -- (4.15, 4.45);
+    \draw[line width=1pt] (-0.15, 4.45) -- (0.15, 4.75);
+    \draw[line width=1pt] (1.85, 4.45) -- (2.15, 4.75);
+    \draw[line width=1pt] (3.85, 4.45) -- (4.15, 4.75);
 
     % Horizontal dimension lines and labels
-    \draw[line width=1pt] (0, 4.3) -- (2, 4.3) node[midway, above, font=\bfseries] {2 m};
-    \draw[line width=1pt] (2, 4.3) -- (4, 4.3) node[midway, above, font=\bfseries] {2 m};
+    \draw[line width=1pt] (0, 4.6) -- (2, 4.6) node[midway, above, font=\bfseries] {2 m};
+    \draw[line width=1pt] (2, 4.6) -- (4, 4.6) node[midway, above, font=\bfseries] {2 m};
 
     % --- Right Dimension Line (3 m) ---
     % Extension lines
@@ -767,46 +779,72 @@ What is the absolute value of the maximum bending moment (in kN-m) in the frame?
 \end{tikzpicture}
 \end{center}
 
-\solution Consider the system of linear equations $Ax = b$. The augmented matrix $[A \mid b]$ is constructed and reduced to row echelon form:
+\solution From the figure, the frame has a hinge at $A$, a roller at $B$, columns of height $3$ m and a beam $CD$ of span $4$ m. A horizontal load of $50$ kN acts at $C$ and a vertical load of $90$ kN acts at the mid-point $E$ of $CD$:
 \begin{align}
-[A \mid b] &= \begin{pmatrix}
-2 & 1 & -1 & \vert & 8 \\
--3 & -1 & 2 & \vert & -11 \\
--2 & 1 & 2 & \vert & -3
-\end{pmatrix} \\
-&\xrightarrow{R_2 \leftarrow R_2 + \frac{3}{2}R_1, \, R_3 \leftarrow R_3 + R_1} \begin{pmatrix}
-2 & 1 & -1 & \vert & 8 \\
-0 & 0.5 & 0.5 & \vert & 1 \\
-0 & 2 & 1 & \vert & 5
-\end{pmatrix} \\
-&\xrightarrow{R_3 \leftarrow R_3 - 4R_2} \begin{pmatrix}
-2 & 1 & -1 & \vert & 8 \\
-0 & 0.5 & 0.5 & \vert & 1 \\
-0 & 0 & -1 & \vert & 1
-\end{pmatrix}
+\vec{A} = \myvec{0\\ 0},\ \vec{C} = \myvec{0\\ 3},\ \vec{E} = \myvec{2\\ 3},\ \vec{D} = \myvec{4\\ 3},\ \vec{B} = \myvec{4\\ 0}\\
+\vec{F}_C = \myvec{50\\ 0},\quad \vec{F}_E = \myvec{0\\ -90}
 \end{align}
-The rank of the coefficient matrix $A$ and the augmented matrix $[A \mid b]$ are obtained by counting the number of non-zero rows:
+The hinge gives two reaction components and the roller gives a vertical reaction only, so
 \begin{align}
-\text{rank}(A) &= 3 \\
-\text{rank}([A \mid b]) &= 3
+\vec{R}_A = \myvec{H_A\\ V_A},\quad \vec{R}_B = \myvec{0\\ V_B}
 \end{align}
-Since $\text{rank}(A) = \text{rank}([A \mid b]) = 3$, which equals the number of variables, the system has a unique solution. Performing back-substitution gives $x_3 = -1$, $x_2 = 3$, and $x_1 = 2$.
+From \eqref{eq:equil}, the force equilibrium is
+\begin{align}
+\vec{R}_A + \vec{R}_B + \vec{F}_C + \vec{F}_E = \vec{0} \implies H_A = -50,\quad V_A + V_B = 90
+\end{align}
+and the moment equilibrium about $\vec{A}$, using $\vec{r}\times\vec{F} = r_xF_y - r_yF_x$, is
+\begin{align}
+\brak{\vec{C} - \vec{A}}\times\vec{F}_C &= 0\times 0 - 3\times 50 = -150\\
+\brak{\vec{E} - \vec{A}}\times\vec{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
+\brak{\vec{B} - \vec{A}}\times\vec{R}_B &= 4\times V_B - 0\times 0 = 4V_B\\
+\implies 4V_B - 150 - 180 &= 0
+\end{align}
+In the matrix form \eqref{eq:axb},
+\begin{align}
+\myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4}\myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 90\\ 330}
+\end{align}
+The matrix is upper triangular with three non-zero pivots, so from \eqref{eq:rc}, $\text{rank}\brak{\vec{A}} = \text{rank}\brak{\vec{A}\mid\vec{b}} = 3 = n$ and the solution is unique:
+\begin{align}
+V_B = \frac{330}{4} = 82.5,\quad V_A = 90 - 82.5 = 7.5,\quad H_A = -50
+\end{align}
+that is, $\vec{R}_A = \myvec{-50\\ 7.5}$ kN (the horizontal component acts towards the left) and $\vec{R}_B = \myvec{0\\ 82.5}$ kN.
+
+The bending moment is found from \eqref{eq:bm}. In the column $AC$, at a section $\vec{P} = \myvec{0\\ y}$ (forces below the section),
+\begin{align}
+M\brak{\vec{P}} = \brak{\vec{A} - \vec{P}}\times\vec{R}_A = \myvec{0\\ -y}\times\myvec{-50\\ 7.5} = 0\times 7.5 - \brak{-y}\brak{-50} = -50y
+\end{align}
+so $\abs{M}$ grows linearly from $0$ at $A$ to
+\begin{align}
+\abs{M_C} = 50\times 3 = 150\ \text{kN m}
+\end{align}
+In the beam $CD$, at a section $\vec{P} = \myvec{x\\ 3}$ (forces to the right of the section),
+\begin{align}
+M\brak{\vec{P}} &= \brak{\vec{B} - \vec{P}}\times\vec{R}_B + \brak{\vec{E} - \vec{P}}\times\vec{F}_E\\
+&= \begin{cases} 82.5\brak{4 - x} - 90\brak{2 - x} = 150 + 7.5x, & 0 \le x \le 2\\ 82.5\brak{4 - x}, & 2 \le x \le 4 \end{cases}
+\end{align}
+which is linear in each part, so the maximum occurs under the load at $E$:
+\begin{align}
+\abs{M_E} &= \abs{\brak{\vec{B} - \vec{E}}\times\vec{R}_B} = \abs{\myvec{2\\ -3}\times\myvec{0\\ 82.5}}\\
+&= \abs{2\times 82.5 - \brak{-3}\times 0} = 165\ \text{kN m}
+\end{align}
+In the column $BD$, the roller reaction is vertical and acts along the column, so $\brak{\vec{B} - \vec{P}}\times\vec{R}_B = \myvec{0\\ -y}\times\myvec{0\\ 82.5} = 0$ and $M = 0$. Therefore
+\begin{align}
+\max\abs{M} = \max\brak{150,\ 165,\ 0} = 165\ \text{kN m}
+\end{align}
+which is option (a).
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q48.pdf}
-\caption{Solving $Ax = b$ using augmented matrix and rank method}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q39.pdf}
+\caption{Frame loading and bending moment diagram}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39.py}@*)
 \end{lstlisting}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48plot.py}@*)
-\end{lstlisting;
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39plot.py}@*)
+\end{lstlisting}
 
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.c}@*)
-\end{lstlisting}
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
 \begin{align}
@@ -940,20 +978,20 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 
     % Angle arc
     \draw[line width=1pt] (M) ++(180:0.6) arc (180:145.6:0.6);
-    \node at ($(M) + (163:0.9)$) {\large $\mathbf{\theta}$};
+    \node at ($(M) + (163:0.9)$) {\large $\theta$};
 
 \end{tikzpicture}
 \end{center}
-\solution Let each block have weight $W$ and let the rod make angle $\theta$ with the horizontal, with $c = \cos\theta$, $s = \sin\theta$. The rod is a two-force member carrying compression $C$ along
+\solution Assume that the rod is weightless and is smoothly pinned to the blocks, and that both blocks are identical, so each has weight $W$. Let the rod make angle $\theta$ with the horizontal, with $c = \cos\theta$, $s = \sin\theta$. A weightless rod with smooth pins carries force only along its length, so it is a two-force member carrying compression $C$ along
 \begin{align}
 \vec{e} = \frac{\vec{A} - \vec{B}}{\norm{\vec{A} - \vec{B}}} = \myvec{-c\\ s}
 \end{align}
-When sliding impends, $A$ moves down and $B$ moves away from the wall, so the friction forces are $\mu N_A$ (upward on $A$) and $\mu N_B$ (towards the wall on $B$). From \eqref{eq:equil}:
+When sliding impends, we assume that $A$ moves down and $B$ moves away from the wall, which is the only motion consistent with the rod length being fixed, so from the limiting friction $F = \mu N$ in \eqref{eq:fric} the friction forces are $\mu N_A$ (upward on $A$) and $\mu N_B$ (towards the wall on $B$). Treating each block as a particle, the force equilibrium $\sum_i\vec{F}_i = \vec{0}$ of \eqref{eq:equil} gives:
 \begin{align}
 \text{Block }A:&\quad \myvec{N_A\\ \mu N_A} + \myvec{0\\ -W} + C\myvec{-c\\ s} = \vec{0}\\
 \text{Block }B:&\quad \myvec{-\mu N_B\\ N_B} + \myvec{0\\ -W} - C\myvec{-c\\ s} = \vec{0}
 \end{align}
-This gives four equations in three unknowns $\myvec{N_A & N_B & C}^\top$:
+This gives four equations in three unknowns $\myvec{N_A & N_B & C}^\top$ of the form \eqref{eq:axb}, with $\vec{A} \in \mathbb{R}^{4\times 3}$:
 \begin{align}
 \myvec{1 & 0 & -c\\ \mu & 0 & s\\ 0 & -\mu & c\\ 0 & 1 & -s}\myvec{N_A\\ N_B\\ C} = \myvec{0\\ W\\ 0\\ W}
 \end{align}
@@ -969,7 +1007,7 @@ Applying $R_4 \rightarrow (c - \mu s)R_4 - (s + \mu c)R_3$:
 \begin{align}
 \myvec{1 & 0 & -c & 0\\ 0 & 1 & -s & W\\ 0 & 0 & c - \mu s & \mu W\\ 0 & 0 & 0 & W\brak{c(1 - \mu^2) - 2\mu s}}
 \end{align}
-For the system to be consistent, the last entry must be zero:
+By \eqref{eq:rc}, the system is consistent only if $\text{rank}\brak{\vec{A}} = \text{rank}\brak{\vec{A}\mid\vec{b}}$. Since $\vec{A} \in \mathbb{R}^{n\times\brak{n-1}}$ with $n = 4$, this requires \eqref{eq:augdet}, i.e. $\mydet{\vec{A} & \vec{b}} = 0$, which in the reduced form means the last entry must be zero:
 \begin{align}
 W\brak{c(1 - \mu^2) - 2\mu s} &= 0\\
 \implies \tan\theta &= \frac{1 - \mu^2}{2\mu}
@@ -992,3 +1030,4 @@ taking the positive root.
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q50/q50plot.py}@*)
 \end{lstlisting}
 
+\end{enumerate}

@@ -213,7 +213,11 @@ a b - b^2 = \frac{a^2}{4} - \brak{b - \frac{a}{2}}^2 \le \frac{a^2}{4}
 \end{align}
 with equality holding if and only if $b = \frac{a}{2}$.
 \item Zero Integral Property:
-If $g\brak{x} \ge 0$ is continuous on $\sbrak{a,b}$ and $\int_{a}^{b} g\brak{x} dx = 0$, then $g\brak{x} = 0$ on $\sbrak{a,b}$.
+If $g\brak{x} \ge 0$ is continuous on $\sbrak{a,b}$ and $\int_{a}^{b} g\brak{x} dx = 0$, then
+\begin{align}
+g\brak{x} = 0 \text{ on } \sbrak{a,b}
+\label{eq:zeroint}
+\end{align}
 \end{itemize}
 
 \item Laplace Transform and State-Space Form
@@ -268,7 +272,11 @@ The bending moment at section $P$ is
 M\brak{P} = \sum_{\text{one side}} \brak{\vec{r}_i - \vec{P}} \times \vec{F}_i
 \label{eq:bm} %% NEW
 \end{align}
-Limiting friction force is $F = \mu N$.
+The limiting friction force is
+\begin{align}
+F = \mu N
+\label{eq:fric}
+\end{align}
 \end{itemize}
 
 \item Direct Stiffness Method
