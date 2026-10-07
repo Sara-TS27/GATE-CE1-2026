@@ -17,7 +17,7 @@ Z2 = -0.5 * X
 ax.plot_surface(X, Y, Z1, alpha=0.5, color='cyan')
 ax.plot_surface(X, Y, Z2, alpha=0.5, color='orange')
 
-# Intersection line using coordgeo line_gen between two end points
+# Intersection line using coordgeo line_gen between two end points.
 A = np.array([[-3.0], [1.5], [1.5]])
 B = np.array([[3.0], [-1.5], [-1.5]])
 line_pts = line_gen(A, B)
