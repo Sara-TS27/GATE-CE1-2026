@@ -1,26 +1,30 @@
-import numpy as np
+import sympy as sp
 
-# Define coefficient matrix A
-A = np.array([[1, 1, 1], [1, 0, 2]])
+# setup free var
+x3 = sp.Symbol('x3')
 
-# Calculate matrix rank and degrees of freedom
-rank = np.linalg.matrix_rank(A)
-num_variables = A.shape[1]
-free_variables = num_variables - rank
+# given mat A
+A = sp.Matrix([[1, 1, 1],
+               [1, 0, 2]])
 
-# For a 2x3 matrix with rank 2, the directional vector of the solution
-# is given by the cross product of the two row vectors
-direction_vector = np.cross(A[0], A[1])
+# 1. row reduction
+R, _ = A.rref()
 
-print(f"Rank of A: {rank}")
-print(f"Number of variables: {num_variables}")
-print(f"Free variables (n - r): {free_variables}")
-print(f"Direction vector: {direction_vector}")
+# 2. sub x3 back to get x1 & x2
+# row 1: x1 + 2*x3 = 0 => x1 = -2*x3
+# row 2: -x2 + x3 = 0  => x2 = x3
+x1 = -R[0, 2] * x3
+x2 = R[1, 2] * x3
 
-# Geometric Interpretation
-if free_variables == 1:
-    print("The system of equations represents a LINE (Option b).")
-elif free_variables == 2:
-    print("The system of equations represents a PLANE (Option a).")
-elif free_variables == 0:
-    print("The system of equations represents a POINT (Option d).")
+# 3. soln vec
+soln = sp.Matrix([x1, x2, x3])
+
+print("reduced matrix:")
+sp.pprint(R)
+
+print("\nsoln vector x:")
+sp.pprint(soln)
+
+print(f"\nin dir vec form:\nx = x3 * {list(soln / x3)}")
+print("\nline thrugh origin")
+
