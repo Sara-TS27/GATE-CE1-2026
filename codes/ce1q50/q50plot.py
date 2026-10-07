@@ -46,8 +46,6 @@ ax.set_xlim(-0.5,2.5); ax.set_ylim(-0.5,2.5)
 ax.grid(alpha=0.4,ls=':')
 ax.set_title('Blocks A and B Connected by a Rigid Rod')
 plt.savefig(os.path.join(FIGS,'q50.pdf'))
-plt.show()
-
 #if using termux
 plt.savefig('../../figs/q50.pdf')
 plt.savefig('../../figs/q50.png')
@@ -58,3 +56,4 @@ plt.savefig('../../figs/q50.png')
 #subprocess.run(shlex.split("termux-open ../../figs/q50.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()
