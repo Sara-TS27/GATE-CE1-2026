@@ -1,30 +1,19 @@
-import sympy as sp
+import numpy as np
 
-# setup free var
-x3 = sp.Symbol('x3')
+# prior probability vector pi = [P(B1), P(B2)]
+pi = np.array([0.5, 0.5])
 
-# given mat A
-A = sp.Matrix([[1, 1, 1],
-               [1, 0, 2]])
+# likelihood vector l = [P(E|B1), P(E|B2)]
+# bag 1 has 6 black out of 10, bag 2 has 3 black out of 7
+l = np.array([6 / 10, 3 / 7])
 
-# 1. row reduction
-R, _ = A.rref()
+# total probability Pr(E) = pi_T * l
+pr_E = np.dot(pi, l)
 
-# 2. sub x3 back to get x1 & x2
-# row 1: x1 + 2*x3 = 0 => x1 = -2*x3
-# row 2: -x2 + x3 = 0  => x2 = x3
-x1 = -R[0, 2] * x3
-x2 = R[1, 2] * x3
+# bayes theorem for Pr(B1|E) = (pi[0] * l[0]) / pr_E
+pr_B1_given_E = (pi[0] * l[0]) / pr_E
 
-# 3. soln vec
-soln = sp.Matrix([x1, x2, x3])
-
-print("reduced matrix:")
-sp.pprint(R)
-
-print("\nsoln vector x:")
-sp.pprint(soln)
-
-print(f"\nin dir vec form:\nx = x3 * {list(soln / x3)}")
-print("\nline thrugh origin")
+print("Total Pr(E):", round(pr_E, 4))
+print("Pr(B1|E):", round(pr_B1_given_E, 4))
+print("Rounded answer:", round(pr_B1_given_E, 2))
 

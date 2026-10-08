@@ -1,38 +1,17 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import quad
+import sympy as sp
 
-# Define f(x) = x / 2
-def f(x):
-    return x / 2.0
+# variables
+x, t = sp.symbols("x t")
+y = sp.Function("y")
 
-# Function inside the integral: f(x) * (x - f(x))
-def integrand(x):
-    return f(x) * (x - f(x))
+# solving y''(t) - y'(t) - 6y(t) = 0 after sub x = e^t
+ode = sp.Eq(y(t).diff(t, 2) - y(t).diff(t) - 6 * y(t), 0)
 
-# Verify the integral value over [0, 2]
-integral_value, _ = quad(integrand, 0, 2)
-print(f"Calculated integral value: {integral_value:.6f}") # Should be 2/3 ≈ 0.666667
-print(f"f(1) = {f(1)}")
+# get general solution in terms of t
+sol_t = sp.dsolve(ode, y(t))
 
-# --- Plotting ---
-x = np.linspace(0, 2, 200)
-y_upper_bound = x**2 / 4.0
-y_actual = integrand(x)
+# put t = ln(x) to get solution in terms of x
+sol_x = sol_t.rhs.subs(t, sp.log(x))
 
-fig, ax = plt.subplots(figsize=(7, 5))
-
-# Plot upper bound x^2 / 4 and actual integrand
-ax.plot(x, y_upper_bound, 'r--', label=r'Upper bound $\frac{x^2}{4}$')
-ax.plot(x, y_actual, 'b-', label=r'$f(x)[x - f(x)]$ for $f(x) = \frac{x}{2}$')
-ax.plot(1, f(1), 'ro', label=f'f(1) = {f(1)}')
-
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_title(r'Integrand attains upper bound only when $f(x) = \frac{x}{2}$')
-ax.grid(True, linestyle=':', alpha=0.6)
-ax.legend()
-
-# Save plot to file
-plt.savefig('figs/q36.pdf', bbox_inches='tight')
-plt.close(fig)
+print("Solution y(x):", sp.simplify(sol_x))
+print("Matches Option (b): y(x) = a*x^3 + b/(x^2)")

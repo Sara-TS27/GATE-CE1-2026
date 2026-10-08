@@ -1,18 +1,20 @@
 import numpy as np
 
-# prior probability vector pi = [P(B1), P(B2)]
-pi = np.array([0.5, 0.5])
+# matrix A from question
+A = np.array([[9, 15], [15, 50]], dtype=float)
 
-# likelihood vector l = [P(E|B1), P(E|B2)]
-# bag 1 has 6 black out of 10, bag 2 has 3 black out of 7
-l = np.array([6 / 10, 3 / 7])
+# manual step by step cholesky calculation like in pdf
+# L = [[l11, 0], [l21, l22]]
+l11 = np.sqrt(A[0, 0])
+l21 = A[1, 0] / l11
+l22 = np.sqrt(A[1, 1] - l21**2)
 
-# total probability Pr(E) = pi_T * l
-pr_E = np.dot(pi, l)
+print("Calculated L matrix elements:")
+print("l11 =", int(l11))
+print("l21 =", int(l21))
+print("l22 =", int(l22))
 
-# bayes theorem for Pr(B1|E) = (pi[0] * l[0]) / pr_E
-pr_B1_given_E = (pi[0] * l[0]) / pr_E
-
-print("Total Pr(E):", round(pr_E, 4))
-print("Pr(B1|E):", round(pr_B1_given_E, 4))
-print("Rounded answer:", round(pr_B1_given_E, 2))
+# verify using numpy cholesky
+L = np.linalg.cholesky(A)
+print("\nVerification using numpy:")
+print("|l22| =", int(abs(L[1, 1])))
