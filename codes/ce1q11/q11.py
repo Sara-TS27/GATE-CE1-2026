@@ -1,44 +1,30 @@
+#GATE CE 2026 Q.11
 import numpy as np
+import numpy.linalg as LA
 
-# matrix given in qn
-P = np.array([
-    [1, 0, 1],
-    [0, 1, 0],
-    [1, 0, 1]
-])
+P = np.array([[1,0,1],
+              [0,1,0],
+              [1,0,1]])
 
+#lambda is an eigenvalue when lambda*I - P is singular
+for lam in [0,1,2]:
+    print("lambda =",lam," rank(lambda*I - P) =",LA.matrix_rank(lam*np.eye(3)-P))
 
+eig_vals = LA.eigvals(P)
+print("eigenvalues =",np.sort(eig_vals))
 
-#(P^T) ---
-P_T = P.T
-print("\n--- P Transpose (P^T) ---")
-print(P_T)
-
-#(P^T * P) ---
-P_trans_P = np.dot(P_T, P)  # or P_T @ P
-print("\n--- P Transpose into P (P^T * P) ---")
-print(P_trans_P)
-
-#a)Trace == Sum of Eigvals
+#a) trace = sum of eigenvalues
 tr_P = np.trace(P)
-eig_vals = np.linalg.eigvals(P)
-sum_eig = np.sum(eig_vals)
-chk_a = np.isclose(tr_P, sum_eig)
-print(f"a) Trace ({tr_P}) == Sum of Eigvals ({sum_eig}) -> {chk_a}")
+print("a)",tr_P,np.sum(eig_vals),np.isclose(tr_P,np.sum(eig_vals)))
 
-# b)P^T * P is Identity Matrix (I)
-I = np.eye(3)
-chk_b = np.array_equal(P_trans_P, I)
-print(f"b) P^T * P == Identity Matrix -> {chk_b}")
+#b) P^T P = I
+print("b)",np.array_equal(P.T@P,np.eye(3)))
+print(P.T@P)
 
-# c)P is Skew-Symmetric (P^T == -P)
-chk_c = np.array_equal(P_T, -P)
-print(f"c) P^T == -P -> {chk_c}")
+#c) skew-symmetric
+print("c)",np.array_equal(P.T,-P))
 
-#d)|Eigenvalues| are all 1
-abs_eig = np.abs(eig_vals)
-chk_d = np.all(np.isclose(abs_eig, 1))
-print(f"d) |Eigvals| are all 1 {abs_eig} -> {chk_d}")
+#d) |eigenvalue| = 1
+print("d)",np.all(np.isclose(np.abs(eig_vals),1)))
 
 
-print("\nans: Option (a) is TRUE!")

@@ -1,15 +1,36 @@
+#GATE CE 2026 Q.7 : angle RTS
 import numpy as np
+import numpy.linalg as LA
 
-# Given angles in degrees
+r = 1.0
 alpha = np.radians(130.0)
 beta = np.radians(50.0)
 
-# Direction vectors for PR and QS from matrix formulations
-m_PR = np.array([np.cos(alpha/2), np.sin(alpha/2)])
-m_QS = np.array([-np.sin(beta/2), np.cos(beta/2)])
+#Unit vectors w_theta and the points
+def w(theta):
+    return np.array([[np.cos(theta)],[np.sin(theta)]])
+i = np.array([[1.0],[0.0]])
+P = -r*i
+Q = r*i
+R = r*w(alpha)
+S = r*w(beta)
 
-# Angle RTS between directions using dot product: cos(theta) = m_PR^T * m_QS
-cos_rts = np.dot(m_PR, m_QS)
-rts_deg = np.degrees(np.arccos(cos_rts))
+#Angle ROS from cos(alpha - beta) = w_alpha^T w_beta
+cos_ROS = (w(alpha).T@w(beta)).item()
+print("angle ROS =",np.degrees(np.arccos(cos_ROS)))
 
-print(f"Angle RTS: {rts_deg:.2f} degrees")
+#Direction vectors of PR and QS
+m1 = R-P
+m2 = S-Q
+
+#Intersection T : [m1  -m2][k1 k2]^T = Q - P
+M = np.block([m1,-m2])
+k = LA.solve(M,Q-P)
+T = P + k[0,0]*m1
+print("T =",T.flatten())
+
+#Angle RTS between TR and TS
+a = R-T
+b = S-T
+cos_RTS = (a.T@b).item()/(LA.norm(a)*LA.norm(b))
+print("angle RTS =",np.degrees(np.arccos(cos_RTS)))
