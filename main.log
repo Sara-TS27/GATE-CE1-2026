@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 10:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1678,99 +1678,17 @@ File: figs/q39.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/q39.pdf  used on input line 838.
 (pdftex.def)             Requested size: 254.9356pt x 191.19699pt.
  [26 <./figs/q39.pdf>]
-
-! Undefined control sequence.
-\lstlisting ->\def \lstenv@name 
-                                {lstlisting}\begingroup \lst@setcatcodes \ca...
-l.875 \end{lstlisting}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Package Listings Error: Extra \endlstlisting.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.875 \end{lstlisting}
-                      
-I'm ignoring this, since I wasn't doing a \def {lstlisting}\begingroup \makeatl
-etter \catcode `\==12\relax \catcode \active =\active \lstlisting@.
-
-
-! LaTeX Error: \begin{enumerate} on input line 9 ended by \end{lstlisting}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.875 \end{lstlisting}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 872--876
-[]\OT1/ptm/m/n/10 The fol-low-ing C code ver-i-fies the ap-prox-i-ma-tions: gin
-l-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 872--876
-\OT1/ptm/m/n/10 stlist-ing[frame=single, ba-sic-style=, es-capein-side=(*@@*)]
- []
-
-
-Overfull \hbox (3.27982pt too wide) in paragraph at lines 872--876
-\OT1/ptm/m/n/10 (*@[]@*)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 872--876
-
- []
-
 <figs/q48.pdf, id=783, 505.89pt x 361.35pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
 Package pdftex.def Info: figs/q48.pdf  used on input line 881.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.893 \item V
-             alues of $y$ for different values of $x$ are tabulated below.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[27 <./figs/q48.pdf>]
-<figs/q49.pdf, id=843, 505.89pt x 361.35pt>
+ [27 <./figs/q48.pdf>]
+<figs/q49.pdf, id=846, 505.89pt x 361.35pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
 Package pdftex.def Info: figs/q49.pdf  used on input line 927.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.938 \item T
-             wo identical blocks $A$ and $B$ are connected by a rigid rod. T...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 ! Package tikz Error: You need to say \usetikzlibrary{patterns}.
@@ -1795,215 +1713,12 @@ l.952     \fill[pattern=north east lines]
 (That was another \errmessage.)
 
 [28 <./figs/q49.pdf>] [29]
-<figs/q50.pdf, id=915, 505.89pt x 505.89pt>
+<figs/q50.pdf, id=919, 505.89pt x 505.89pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
 Package pdftex.def Info: figs/q50.pdf  used on input line 1029.
 (pdftex.def)             Requested size: 254.9356pt x 254.93593pt.
- [30]
-! Undefined control sequence.
-\enit@endenumerate ->\enit@after 
-                                 \endlist \ifx \enit@series \relax \else \if...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\enit@endenumerate ...\else \ifnum \enit@resuming 
-                                                  =\@ne \enit@setresumekeys ...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.1039 \end{enumerate}
-                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\enit@setresumekeys ...xpandafter {\enit@savekeys 
-                                                  }\xdef \enit@afterlist {#2...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\enit@setresumekeys ...it@toks }\ifnum \enit@type 
-                                                  =\z@ #3\def \enit@noexcs {...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.1039 \end{enumerate}
-                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> enit@resume@series@\enit@series 
-                                           
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
-                                                  \endcsname \the \csname c@...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\enit@setresumekeys ...e \the \csname c@\@listctr 
-                                                  \endcsname }\fi }
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! You can't use `\relax' after \the.
-<recently read> \c@ 
-                    
-l.1039 \end{enumerate}
-                      
-I'm forgetting what you said and using zero instead.
-
-! Undefined control sequence.
-\enit@endenumerate ...t \fi \ifnum \enit@resuming 
-                                                  =\thr@@ \enit@setresumekey...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.1039 \end{enumerate}
-                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\enit@setresumekeys ...xpandafter {\enit@savekeys 
-                                                  }\xdef \enit@afterlist {#2...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\enit@setresumekeys ...it@toks }\ifnum \enit@type 
-                                                  =\z@ #3\def \enit@noexcs {...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.1039 \end{enumerate}
-                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
-                                                  \endcsname \the \csname c@...
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\enit@setresumekeys ...e \the \csname c@\@listctr 
-                                                  \endcsname }\fi }
-l.1039 \end{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! You can't use `\relax' after \the.
-<recently read> \c@ 
-                    
-l.1039 \end{enumerate}
-                      
-I'm forgetting what you said and using zero instead.
-
-
-! LaTeX Error: \begin{document} ended by \end{enumerate}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1039 \end{enumerate}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.1039 \end{enumerate}
-                      
-Things are pretty mixed up, but I think the worst is over.
-
-) [31 <./figs/q50.pdf>] (./main.aux)
+ [30]) [31 <./figs/q50.pdf>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2013,9 +1728,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  51039 strings out of 474222
- 1220878 string characters out of 5748734
+ 1220845 string characters out of 5748734
  1953975 words of memory out of 5000000
- 72185 multiletter control sequences out of 15000+600000
+ 72181 multiletter control sequences out of 15000+600000
  605799 words of font info for 150 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,18n,109p,1194b,1276s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2040,10 +1755,10 @@ ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 466707 bytes).
+Output written on main.pdf (31 pages, 465738 bytes).
 PDF statistics:
- 1138 PDF objects out of 1200 (max. 8388607)
- 714 compressed objects within 8 object streams
- 346 named destinations out of 1000 (max. 500000)
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 350 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
