@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 03:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 09:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1678,17 +1678,17 @@ File: figs/q39.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/q39.pdf  used on input line 838.
 (pdftex.def)             Requested size: 254.9356pt x 191.19699pt.
  [26 <./figs/q39.pdf>]
-<figs/q48.pdf, id=783, 462.52798pt x 346.89601pt>
+<figs/q48.pdf, id=783, 505.89pt x 361.35pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
 Package pdftex.def Info: figs/q48.pdf  used on input line 873.
-(pdftex.def)             Requested size: 254.9356pt x 191.20625pt.
+(pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
  [27 <./figs/q48.pdf>]
-<figs/q49.pdf, id=800, 462.52798pt x 346.89601pt>
+<figs/q49.pdf, id=846, 505.89pt x 361.35pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
 Package pdftex.def Info: figs/q49.pdf  used on input line 921.
-(pdftex.def)             Requested size: 254.9356pt x 191.20625pt.
+(pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
 
 
 ! Package tikz Error: You need to say \usetikzlibrary{patterns}.
@@ -1713,7 +1713,7 @@ l.946     \fill[pattern=north east lines]
 (That was another \errmessage.)
 
 [28 <./figs/q49.pdf>] [29]
-<figs/q50.pdf, id=830, 505.89pt x 505.89pt>
+<figs/q50.pdf, id=919, 505.89pt x 505.89pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
 Package pdftex.def Info: figs/q50.pdf  used on input line 1023.
@@ -1755,10 +1755,10 @@ ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 440780 bytes).
+Output written on main.pdf (31 pages, 465679 bytes).
 PDF statistics:
- 1054 PDF objects out of 1200 (max. 8388607)
- 703 compressed objects within 8 object streams
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 719 compressed objects within 8 object streams
  350 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
