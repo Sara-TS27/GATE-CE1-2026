@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 15:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1455,10 +1455,10 @@ you'd better type `E' or `X' now and fix your file.
 
  
 Here is how much of TeX's memory you used:
- 50083 strings out of 474222
- 1207652 string characters out of 5748734
+ 50065 strings out of 474222
+ 1207398 string characters out of 5748734
  1948975 words of memory out of 5000000
- 71524 multiletter control sequences out of 15000+600000
+ 71507 multiletter control sequences out of 15000+600000
  589106 words of font info for 101 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,16n,109p,1194b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
