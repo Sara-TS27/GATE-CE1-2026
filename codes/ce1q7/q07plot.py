@@ -59,16 +59,17 @@ plt.gca().set_aspect('equal',adjustable='box')
 plt.xlim(-1.6,1.6); plt.ylim(-1.15,2.25)
 plt.title('Circle Geometry in Exponential Form ($e^{i\\theta}$)',fontsize=9,fontweight='bold')
 plt.savefig(os.path.join(FIGS,'q07.pdf'))
-plt.show()
 
 #if using termux
-#plt.savefig('./figs/q7.pdf')
-#plt.savefig('./figs/q7.png')
-#subprocess.run(shlex.split("termux-open ./figs/q7.pdf"))
+plt.savefig('../../figs/q7.pdf')
+plt.savefig('../../figs/q7.png')
+#subprocess.run(shlex.split("termux-open ../../figs/q7.pdf"))
 
-#plt.savefig('../figs/q7.pdf')
-#plt.savefig('../figs/q7.eps')
-#subprocess.run(shlex.split("termux-open ../figs/q7.pdf"))
+plt.savefig('../../figs/q7.pdf')
+plt.savefig('../../figs/q7.eps')
+#subprocess.run(shlex.split("termux-open ../../figs/q7.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()
+
 

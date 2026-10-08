@@ -50,14 +50,15 @@ plt.xlabel('x'); plt.ylabel('y')
 plt.title('Two Parabolas and Common Line',fontsize=9)
 plt.legend(loc='upper right',fontsize=7)
 plt.savefig(os.path.join(FIGS,'q03.pdf'))
-plt.show()   
+   
 #if using termux
-#plt.savefig('./figs/q3.pdf')
-#plt.savefig('./figs/q3.png')
-#subprocess.run(shlex.split("termux-open ./figs/q3.pdf"))
+plt.savefig('../../figs/q3.pdf')
+plt.savefig('../../figs/q3.png')
+#subprocess.run(shlex.split("termux-open ../../figs/q3.pdf"))
 
-#plt.savefig('../figs/q3.pdf')
-#plt.savefig('../figs/q3.eps')
-#subprocess.run(shlex.split("termux-open ../figs/q3.pdf"))
+#plt.savefig('../../figs/q3.pdf')
+#plt.savefig('../../figs/q3.eps')
+#subprocess.run(shlex.split("termux-open ../../figs/q3.pdf"))
 #else
 #plt.show() 
+plt.show() 

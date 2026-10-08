@@ -51,15 +51,17 @@ plt.xlim(-0.5,2.5); plt.ylim(-0.5,1.8)
 plt.grid(alpha=0.4,ls=':')
 plt.title('Two-Member Truss with Degrees of Freedom (u, v) at Q')
 plt.savefig(os.path.join(FIGS,'q38.pdf'))
-plt.show()
+
 
 #if using termux
-plt.savefig('./figs/q38.pdf')
-plt.savefig('./figs/q38.png')
-subprocess.run(shlex.split("termux-open ./figs/q38.pdf"))
+plt.savefig('../../figs/q38.pdf')
+plt.savefig('../../figs/q38.png')
+#subprocess.run(shlex.split("termux-open ./figs/q38.pdf"))
 
-#plt.savefig('../figs/q38.pdf')
-#plt.savefig('../figs/q38.eps')
-#subprocess.run(shlex.split("termux-open ../figs/q38.pdf"))
+#plt.savefig('../../figs/q38.pdf')
+#plt.savefig('../../figs/q38.eps')
+#subprocess.run(shlex.split("termux-open ../../figs/q38.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()
+

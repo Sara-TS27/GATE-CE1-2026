@@ -48,8 +48,8 @@ plt.savefig('../../figs/q50.pdf')
 plt.savefig('../../figs/q50.png')
 #subprocess.run(shlex.split("termux-open ../../figs/q50.pdf"))
 
-#plt.savefig('../../figs/q50.pdf')
-#plt.savefig('../../figs/q50.eps')
+plt.savefig('../../figs/q50.pdf')
+plt.savefig('../../figs/q50.eps')
 #subprocess.run(shlex.split("termux-open ../../figs/q50.pdf"))
 #else
 #plt.show() #opening the plot window
