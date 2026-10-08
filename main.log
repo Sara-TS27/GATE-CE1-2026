@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1610,19 +1610,14 @@ File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
 Package pdftex.def Info: figs/q12.pdf  used on input line 397.
 (pdftex.def)             Requested size: 254.9356pt x 218.51653pt.
- [17 <./figs/q12.pdf>] [18]
-
-LaTeX Warning: Reference `eq:ce1q27_pivots' on page 19 undefined on input line 
-454.
-
-[19]
-<figs/q28.pdf, id=504, 499.3857pt x 393.8715pt>
+ [17 <./figs/q12.pdf>] [18] [19]
+<figs/q28.pdf, id=505, 499.3857pt x 393.8715pt>
 File: figs/q28.pdf Graphic file (type pdf)
 <use figs/q28.pdf>
 Package pdftex.def Info: figs/q28.pdf  used on input line 518.
 (pdftex.def)             Requested size: 254.9356pt x 201.07013pt.
  [20 <./figs/q28.pdf>]
-<figs/q36.pdf, id=522, 505.89pt x 361.35pt>
+<figs/q36.pdf, id=523, 505.89pt x 361.35pt>
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
 Package pdftex.def Info: figs/q36.pdf  used on input line 562.
@@ -1654,7 +1649,7 @@ l.638     \fill[pattern=north east lines]
 (That was another \errmessage.)
 
 [23]
-<figs/q38.pdf, id=624, 505.89pt x 361.35pt>
+<figs/q38.pdf, id=625, 505.89pt x 361.35pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
 Package pdftex.def Info: figs/q38.pdf  used on input line 697.
@@ -1683,19 +1678,19 @@ l.744     \fill[pattern=north east lines]
 (That was another \errmessage.)
 
 [25] [26]
-<figs/q39.pdf, id=717, 578.16pt x 433.62pt>
+<figs/q39.pdf, id=718, 578.16pt x 433.62pt>
 File: figs/q39.pdf Graphic file (type pdf)
 <use figs/q39.pdf>
 Package pdftex.def Info: figs/q39.pdf  used on input line 862.
 (pdftex.def)             Requested size: 254.9356pt x 191.19699pt.
  [27] [28 <./figs/q39.pdf>]
-<figs/q48.pdf, id=785, 505.89pt x 361.35pt>
+<figs/q48.pdf, id=786, 505.89pt x 361.35pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
 Package pdftex.def Info: figs/q48.pdf  used on input line 905.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
  [29 <./figs/q48.pdf>]
-<figs/q49.pdf, id=849, 505.89pt x 361.35pt>
+<figs/q49.pdf, id=850, 505.89pt x 361.35pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
 Package pdftex.def Info: figs/q49.pdf  used on input line 951.
@@ -1724,7 +1719,7 @@ l.976     \fill[pattern=north east lines]
 (That was another \errmessage.)
 
 [30 <./figs/q49.pdf>] [31]
-<figs/q50.pdf, id=920, 505.89pt x 505.89pt>
+<figs/q50.pdf, id=921, 505.89pt x 505.89pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
 Package pdftex.def Info: figs/q50.pdf  used on input line 1053.
@@ -1734,21 +1729,14 @@ Package pdftex.def Info: figs/q50.pdf  used on input line 1053.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 51049 strings out of 474222
- 1221031 string characters out of 5748734
+ 51048 strings out of 474222
+ 1221013 string characters out of 5748734
  1954975 words of memory out of 5000000
- 72189 multiletter control sequences out of 15000+600000
+ 72188 multiletter control sequences out of 15000+600000
  605799 words of font info for 150 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,18n,109p,1194b,1287s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1773,10 +1761,10 @@ ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (33 pages, 503415 bytes).
+Output written on main.pdf (33 pages, 502825 bytes).
 PDF statistics:
- 1143 PDF objects out of 1200 (max. 8388607)
- 715 compressed objects within 8 object streams
+ 1144 PDF objects out of 1200 (max. 8388607)
+ 716 compressed objects within 8 object streams
  352 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 
