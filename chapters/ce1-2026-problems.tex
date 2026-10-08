@@ -868,6 +868,14 @@ x_1 = \frac{1.5}{1 + e^{0.5}} = \frac{1.5}{2.64872} = 0.56631 \approx 0.57
 \end{align}
 Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
 
+
+The following C code verifies the approximations:
+gin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.c}@*)
+\end{lstlisting}
+
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q48.pdf}
@@ -878,10 +886,6 @@ Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
 \end{lstlisting}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48plot.py}@*)
-\end{lstlisting}
-
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.c}@*)
 \end{lstlisting}
 
 
@@ -915,6 +919,8 @@ and
 \begin{align}
 P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 \end{align}
+
+
 
 \begin{figure}[H]
 \centering
