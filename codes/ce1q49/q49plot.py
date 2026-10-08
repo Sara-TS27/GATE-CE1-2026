@@ -42,7 +42,6 @@ plt.xlabel('x'); plt.ylabel('y')
 plt.title('Second-Degree Interpolating Polynomial')
 plt.legend(loc='upper right',fontsize=8)
 plt.savefig(os.path.join(FIGS,'q49.pdf'))
-plt.show()
 
 #if using termux
 plt.savefig('../../figs/q49.pdf')
@@ -54,3 +53,4 @@ plt.savefig('../../figs/q49.png')
 #subprocess.run(shlex.split("termux-open ../../figs/q49.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()

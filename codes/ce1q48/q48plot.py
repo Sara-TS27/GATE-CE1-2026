@@ -43,15 +43,15 @@ plt.xlabel('x'); plt.ylabel('f(x)')
 plt.title('Newton-Raphson Step for $f(x)=e^{-x}-x$')
 plt.legend(loc='upper right',fontsize=8)
 plt.savefig(os.path.join(FIGS,'q48.pdf'))
-plt.show()
 
 #if using termux
 plt.savefig('../../figs/q48.pdf')
 plt.savefig('../../figs/q48.png')
-subprocess.run(shlex.split("termux-open ../../figs/q48.pdf"))
+#subprocess.run(shlex.split("termux-open ../../figs/q48.pdf"))
 
 #plt.savefig('../../figs/q48.pdf')
 #plt.savefig('../../figs/q48.eps')
 #subprocess.run(shlex.split("termux-open ../../figs/q48.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()
