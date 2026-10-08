@@ -1,3 +1,4 @@
+%\ chapters/ce1-2025-problems.tex
 
 
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
@@ -17,20 +18,23 @@
 x^2 - y = 0 &\implies \vec{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
 x^2 + 2x + y + 1 = 0 &\implies \vec{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
 \end{align}
-Using \eqref{eq:class},
-\begin{align}
-\abs{\vec{V}_1} = \mydet{1 & 0\\ 0 & 0} = 0,\quad \abs{\vec{V}_2} = \mydet{1 & 0\\ 0 & 0} = 0
-\end{align}
-so both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
+Here $\vec{V}_1 = \vec{V}_2 = \myvec{1 & 0\\ 0 & 0}$ already has a zero row, so it is singular (its rank is $1 < 2$) and both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
 \begin{align}
 \vec{x}^\top\myvec{1+\mu & 0\\ 0 & 0}\vec{x} + 2\myvec{\mu\\ \frac{\mu-1}{2}}^\top\vec{x} + \mu = 0
 \end{align}
-The pencil is degenerate when \eqref{eq:degen} holds. Expanding along the second row using \eqref{eq:detexp} and \eqref{eq:det2},
+The pencil is degenerate when its $3\times 3$ coefficient matrix (the second-degree, linear and constant coefficients of the pencil arranged symmetrically) is singular, which happens exactly when its row reduced form has a zero row. For $\mu \ne -1$, interchanging $R_2$ and $R_3$ and then applying $R_2\to R_2 - \frac{\mu}{1+\mu}R_1$,
 \begin{align}
-\mydet{1+\mu & 0 & \mu\\ 0 & 0 & \frac{\mu-1}{2}\\ \mu & \frac{\mu-1}{2} & \mu}
-&= -\frac{\mu-1}{2}\mydet{1+\mu & 0\\ \mu & \frac{\mu-1}{2}}\\
-&= -\frac{\brak{\mu-1}^2\brak{\mu+1}}{4} = 0 \implies \mu = -1,\ \mu = 1
+\myvec{1+\mu & 0 & \mu\\ 0 & 0 & \frac{\mu-1}{2}\\ \mu & \frac{\mu-1}{2} & \mu}
+&\xrightarrow{R_2\leftrightarrow R_3}
+\myvec{1+\mu & 0 & \mu\\ \mu & \frac{\mu-1}{2} & \mu\\ 0 & 0 & \frac{\mu-1}{2}}\\
+&\xrightarrow{R_2\to R_2 - \frac{\mu}{1+\mu}R_1}
+\myvec{1+\mu & 0 & \mu\\ 0 & \frac{\mu-1}{2} & \frac{\mu}{1+\mu}\\ 0 & 0 & \frac{\mu-1}{2}}
 \end{align}
+The matrix is upper triangular, so it has a zero row only if a diagonal entry is zero, and for $\mu \ne -1$ this gives $\mu = 1$. For $\mu = -1$ the matrix is
+\begin{align}
+\myvec{0 & 0 & -1\\ 0 & 0 & -1\\ -1 & -1 & -1} \xrightarrow{R_2\to R_2 - R_1} \myvec{0 & 0 & -1\\ 0 & 0 & 0\\ -1 & -1 & -1}
+\end{align}
+which has a zero row. Hence the pencil is degenerate for $\mu = -1$ and $\mu = 1$.
 For $\mu = -1$, $\vec{V}_1 - \vec{V}_2 = \vec{0}$ and the second-degree terms vanish. From \eqref{eq:chord},
 \begin{align}
 2\brak{\vec{u}_1 - \vec{u}_2}^\top\vec{x} + \brak{f_1 - f_2} &= 0\\
@@ -310,25 +314,31 @@ PQ = 7\times 6 = 42
 
 
 % ----------------------------------------------------------- Q11 (1.1.15)
-\item Matrix P is given as
+\item Matrix $\vec{P}$ is given as
 \begin{align}
 \vec{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
 \end{align}
 The TRUE option is \hfill (GATE CE 2026)
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
-\item Trace of P is equal to the sum of the Eigen values of P.
-\item PP is an identity matrix.
-\item P is a skew-symmetric matrix.
+\item Trace of $\vec{P}$ is equal to the sum of the Eigen values of $\vec{P}$.
+\item $\vec{P}^\top\vec{P}$ is an identity matrix.
+\item $\vec{P}$ is a skew-symmetric matrix.
 \item Absolute magnitude of each Eigen value is 1.
 \end{enumerate}
 \end{multicols}
-\solution From \eqref{eq:charpoly}, expanding along the second row using \eqref{eq:detexp},
+\solution A scalar $\lambda$ is an eigenvalue of $\vec{P}$ when $\lambda\vec{I} - \vec{P}$ is singular, i.e. when its row reduced form has a zero row. Interchanging $R_1$ and $R_3$ and then applying $R_3\to R_3 + \brak{\lambda-1}R_1$,
 \begin{align}
-\abs{\lambda\vec{I} - \vec{P}} &= \mydet{\lambda-1 & 0 & -1\\ 0 & \lambda-1 & 0\\ -1 & 0 & \lambda-1}\\
-&= \brak{\lambda-1}\sbrak{\brak{\lambda-1}^2 - 1}\\
-&= \lambda\brak{\lambda-1}\brak{\lambda-2} = 0\\
-\implies \lambda_1 &= 0,\ \lambda_2 = 1,\ \lambda_3 = 2
+\myvec{\lambda-1 & 0 & -1\\ 0 & \lambda-1 & 0\\ -1 & 0 & \lambda-1}
+&\xrightarrow{R_1\leftrightarrow R_3}
+\myvec{-1 & 0 & \lambda-1\\ 0 & \lambda-1 & 0\\ \lambda-1 & 0 & -1}\\
+&\xrightarrow{R_3\to R_3 + \brak{\lambda-1}R_1}
+\myvec{-1 & 0 & \lambda-1\\ 0 & \lambda-1 & 0\\ 0 & 0 & \brak{\lambda-1}^2 - 1}
+\end{align}
+The matrix is upper triangular, so it is singular only if a diagonal entry is zero:
+\begin{align}
+\lambda - 1 = 0 \quad\text{or}\quad \brak{\lambda-1}^2 - 1 = \lambda\brak{\lambda-2} = 0
+\implies \lambda_1 = 0,\ \lambda_2 = 1,\ \lambda_3 = 2
 \end{align}
 From \eqref{eq:trace}:
 \begin{align}
@@ -418,11 +428,11 @@ By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular mat
 \begin{align}
 \vec{A} = \myvec{9 & 15\\ 15 & 50} \label{eq:ce1q27_A}
 \end{align}
-Cholesky decomposition applies to a square, symmetric, positive definite matrix. Here $\vec{A}^\top = \vec{A}$ and, using \eqref{eq:det2}, the leading principal minors are
+Cholesky decomposition applies to a square, symmetric, positive definite matrix. Here $\vec{A}^\top = \vec{A}$ and, by row reduction,
 \begin{align}
-a_{11} = 9 > 0,\quad \mydet{9 & 15\\ 15 & 50} = 9\times 50 - 15^2 = 225 > 0 \label{eq:ce1q27_minors}
+\myvec{9 & 15\\ 15 & 50} \xrightarrow{R_2\to R_2 - \frac{5}{3}R_1} \myvec{9 & 15\\ 0 & 25} \label{eq:ce1q27_pivots}
 \end{align}
-so $\vec{A}$ is positive definite and, from \eqref{eq:chol1}, can be written as $\vec{A} = \vec{L}\vec{L}^\top$, where $\vec{L}$ is lower triangular with positive diagonal entries. For a general $n\times n$ matrix, the entries of $\vec{L}$ are found column by column using \eqref{eq:choldiag} and \eqref{eq:choloff}. For $n = 2$, these reduce to \eqref{eq:chol2}:
+Both pivots $9$ and $25$ are positive, so $\vec{A}$ is positive definite and, from \eqref{eq:chol1}, can be written as $\vec{A} = \vec{L}\vec{L}^\top$, where $\vec{L}$ is lower triangular with positive diagonal entries. For a general $n\times n$ matrix, the entries of $\vec{L}$ are found column by column using \eqref{eq:choldiag} and \eqref{eq:choloff}. For $n = 2$, these reduce to \eqref{eq:chol2}:
 \begin{align}
 \myvec{9 & 15\\ 15 & 50} = \myvec{l_{11} & 0\\ l_{21} & l_{22}}\myvec{l_{11} & l_{21}\\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21}\\ l_{11}l_{21} & l_{21}^2 + l_{22}^2} \label{eq:ce1q27_decomp}
 \end{align}
@@ -436,7 +446,7 @@ These are the same as \eqref{eq:choldiag} with $j = 1$, \eqref{eq:choloff} with 
 \begin{align}
 \vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{3 & 0\\ 5 & 5}\myvec{3 & 5\\ 0 & 5} = \myvec{9 & 15\\ 15 & 50} = \vec{A} \label{eq:ce1q27_L}
 \end{align}
-As a check, using \eqref{eq:det2}, $\abs{\vec{L}} = 3\times 5 - 0\times 5 = 15$, so $\abs{\vec{A}} = \abs{\vec{L}}^2 = 225$, which matches the minor computed in \eqref{eq:ce1q27_minors}. Hence,
+As a check, the pivots $9$ and $25$ in \eqref{eq:ce1q27_pivots} are $l_{11}^2$ and $l_{22}^2$, which agrees with $l_{11} = 3$ and $l_{22} = 5$. Hence,
 \begin{align}
 \abs{l_{22}} = 5 \label{eq:ce1q27_ans}
 \end{align}
@@ -477,15 +487,11 @@ Reducing $\vec{M}$ by row operations (the multipliers $5$ in $R_2\to 5R_2 - 2R_1
 &\xrightarrow{R_3\to R_3 + 4R_2}
 \myvec{10 & 4 & -46\\ 0 & 2 & -8\\ 0 & 0 & 0}
 \end{align}
-The last row is zero, so
+The last row is zero, so $\text{rank}\brak{\vec{M}} = 2 < 3$, i.e. $\vec{M}$ is singular, so the conic is degenerate. Row reducing $\vec{V}$,
 \begin{align}
-\mydet{\vec{V} & \vec{u}\\ \vec{u}^\top & f} = 0
+\myvec{10 & 4\\ 4 & 2} \xrightarrow{R_2\to R_2 - \frac{2}{5}R_1} \myvec{10 & 4\\ 0 & \frac{2}{5}}
 \end{align}
-and from \eqref{eq:degen} the conic is degenerate. From \eqref{eq:class},
-\begin{align}
-\abs{\vec{V}} = 10\times 2 - 4^2 = 4 > 0
-\end{align}
-so it is a degenerate ellipse, i.e. a single point. To find this point, note that
+Both pivots are positive, so $\vec{V}$ is positive definite and the conic is an ellipse. Hence it is a degenerate ellipse, i.e. a single point. To find this point, note that
 \begin{align}
 \vec{M} = \vec{B}^\top\vec{B},\quad \vec{B} = \myvec{1 & 1 & -7\\ 3 & 1 & -13}
 \end{align}
@@ -502,6 +508,11 @@ Therefore,
 \begin{align}
 x^3 + y^3 = 27 + 64 = 91
 \end{align}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q28.pdf}
+\caption{The lines $x + y = 7$ and $3x + y = 13$ meet at $\brak{3,4}$}
+\end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q28/q28.py}@*)
 \end{lstlisting}
@@ -688,6 +699,9 @@ Assembling the global system \eqref{eq:kuf} and deleting the restrained degrees 
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q38/q38plot.py}@*)
 \end{lstlisting}
 
+
+
+
 % ----------------------------------------------------------- Q39
 \item The plane frame has a hinge and a roller support, and is loaded as shown in the figure. Both the columns have same height.
 
@@ -782,24 +796,35 @@ The hinge gives two reaction components and the roller gives a vertical reaction
 \begin{align}
 \vec{R}_A = \myvec{H_A\\ V_A},\quad \vec{R}_B = \myvec{0\\ V_B}
 \end{align}
-From \eqref{eq:equil}, the force equilibrium is
-\begin{align}
-\vec{R}_A + \vec{R}_B + \vec{F}_C + \vec{F}_E = \vec{0} \implies H_A = -50,\quad V_A + V_B = 90
-\end{align}
-and the moment equilibrium about $\vec{A}$, using $\vec{r}\times\vec{F} = r_xF_y - r_yF_x$, is
+From \eqref{eq:equil}, the force equilibrium is $\vec{R}_A + \vec{R}_B + \vec{F}_C + \vec{F}_E = \vec{0}$ and the moment equilibrium about $\vec{A}$, using $\vec{r}\times\vec{F} = r_xF_y - r_yF_x$, requires
 \begin{align}
 \brak{\vec{C} - \vec{A}}\times\vec{F}_C &= 0\times 0 - 3\times 50 = -150\\
 \brak{\vec{E} - \vec{A}}\times\vec{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
-\brak{\vec{B} - \vec{A}}\times\vec{R}_B &= 4\times V_B - 0\times 0 = 4V_B\\
-\implies 4V_B - 150 - 180 &= 0
+\brak{\vec{B} - \vec{A}}\times\vec{R}_B &= 4\times V_B - 0\times 0 = 4V_B
 \end{align}
-In the matrix form \eqref{eq:axb},
+to add up to zero. Let $\vec{x} = \myvec{H_A & V_A & V_B}^\top$. The three equilibrium conditions give the residual vector
 \begin{align}
-\myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4}\myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 90\\ 330}
+\vec{e}\brak{\vec{x}} = \myvec{H_A + 50\\ V_A + V_B - 90\\ 4V_B - 150 - 180} = \vec{S}\vec{x} - \vec{b},\quad \vec{S} = \myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4},\quad \vec{b} = \myvec{-50\\ 90\\ 330}
 \end{align}
-The matrix is upper triangular with three non-zero pivots, so from \eqref{eq:rc}, $\text{rank}\brak{\vec{A}} = \text{rank}\brak{\vec{A}\mid\vec{b}} = 3 = n$ and the solution is unique:
+which is of the form \eqref{eq:axb} (the matrix is named $\vec{S}$ to avoid confusion with the point $\vec{A}$). The body is in equilibrium only if $\vec{e} = \vec{0}$, so we require its squared norm to be zero:
 \begin{align}
-V_B = \frac{330}{4} = 82.5,\quad V_A = 90 - 82.5 = 7.5,\quad H_A = -50
+\norm{\vec{e}}^2 = \brak{H_A + 50}^2 + \brak{V_A + V_B - 90}^2 + \brak{4V_B - 330}^2 = 0
+\end{align}
+From \eqref{eq:zeronorm}, a vector has zero norm if and only if it is the zero vector, so $\vec{e} = \vec{0}$, that is, each term vanishes:
+\begin{align}
+H_A + 50 = 0,\quad 4V_B - 330 = 0,\quad V_A + V_B - 90 = 0
+\end{align}
+These equations are $\vec{S}\vec{x} = \vec{b}$. Row reducing the augmented matrix,
+\begin{align}
+\myvec{1 & 0 & 0 & -50\\ 0 & 1 & 1 & 90\\ 0 & 0 & 4 & 330}
+&\xrightarrow{R_3\to\frac{1}{4}R_3}
+\myvec{1 & 0 & 0 & -50\\ 0 & 1 & 1 & 90\\ 0 & 0 & 1 & 82.5}\\
+&\xrightarrow{R_2\to R_2 - R_3}
+\myvec{1 & 0 & 0 & -50\\ 0 & 1 & 0 & 7.5\\ 0 & 0 & 1 & 82.5}
+\end{align}
+From \eqref{eq:rc}, $\text{rank}\brak{\vec{S}} = \text{rank}\brak{\vec{S}\mid\vec{b}} = 3 = n$, so $\norm{\vec{e}}^2 = 0$ holds for exactly one $\vec{x}$:
+\begin{align}
+H_A = -50,\quad V_A = 7.5,\quad V_B = 82.5
 \end{align}
 that is, $\vec{R}_A = \myvec{-50\\ 7.5}$ kN (the horizontal component acts towards the left) and $\vec{R}_B = \myvec{0\\ 82.5}$ kN.
 
@@ -807,25 +832,25 @@ The bending moment is found from \eqref{eq:bm}. In the column $AC$, at a section
 \begin{align}
 M\brak{\vec{P}} = \brak{\vec{A} - \vec{P}}\times\vec{R}_A = \myvec{0\\ -y}\times\myvec{-50\\ 7.5} = 0\times 7.5 - \brak{-y}\brak{-50} = -50y
 \end{align}
-so $\abs{M}$ grows linearly from $0$ at $A$ to
+so $\norm{M\brak{\vec{P}}} = 50y$ grows linearly from $0$ at $A$ to
 \begin{align}
-\abs{M_C} = 50\times 3 = 150\ \text{kN m}
+\norm{M_C} = 50\times 3 = 150\ \text{kN m}
 \end{align}
 In the beam $CD$, at a section $\vec{P} = \myvec{x\\ 3}$ (forces to the right of the section),
 \begin{align}
 M\brak{\vec{P}} &= \brak{\vec{B} - \vec{P}}\times\vec{R}_B + \brak{\vec{E} - \vec{P}}\times\vec{F}_E\\
 &= \begin{cases} 82.5\brak{4 - x} - 90\brak{2 - x} = 150 + 7.5x, & 0 \le x \le 2\\ 82.5\brak{4 - x}, & 2 \le x \le 4 \end{cases}
 \end{align}
-which is linear in each part, so the maximum occurs under the load at $E$:
+which is positive and increasing from $150$ to $165$ on $0 \le x \le 2$ and decreasing from $165$ to $0$ on $2 \le x \le 4$, so the maximum in the beam occurs under the load at $E$:
 \begin{align}
-\abs{M_E} &= \abs{\brak{\vec{B} - \vec{E}}\times\vec{R}_B} = \abs{\myvec{2\\ -3}\times\myvec{0\\ 82.5}}\\
-&= \abs{2\times 82.5 - \brak{-3}\times 0} = 165\ \text{kN m}
+M_E = \brak{\vec{B} - \vec{E}}\times\vec{R}_B = \myvec{2\\ -3}\times\myvec{0\\ 82.5} = 2\times 82.5 - \brak{-3}\times 0 = 165\ \text{kN m}
 \end{align}
+so $\norm{M_E} = 165$ kN m. The beam value $\norm{M\brak{\vec{P}}} = 150$ at $x = 0$ equals $\norm{M_C}$ from the column, as it must since the joint $C$ is in moment equilibrium (the signs differ only because the two sections are taken on different sides of the joint).
 In the column $BD$, the roller reaction is vertical and acts along the column, so $\brak{\vec{B} - \vec{P}}\times\vec{R}_B = \myvec{0\\ -y}\times\myvec{0\\ 82.5} = 0$ and $M = 0$. Therefore
 \begin{align}
-\max\abs{M} = \max\brak{150,\ 165,\ 0} = 165\ \text{kN m}
+\max\norm{M} = \max\brak{\norm{M_C},\ \norm{M_E},\ 0} = \max\brak{150,\ 165,\ 0} = 165\ \text{kN m}
 \end{align}
-which is option (a).
+As a check, substituting the reactions gives $\norm{\vec{e}} = \norm{\myvec{-50 + 50\\ 7.5 + 82.5 - 90\\ 4\times 82.5 - 330}} = \norm{\vec{0}} = 0$. Hence the maximum absolute bending moment is $165$ kN m, which is option (a).
 
 \begin{figure}[H]
 \centering
@@ -838,7 +863,6 @@ which is option (a).
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39plot.py}@*)
 \end{lstlisting}
-
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
 \begin{align}
@@ -863,10 +887,12 @@ x_1 = \frac{1.5}{1 + e^{0.5}} = \frac{1.5}{2.64872} = 0.56631 \approx 0.57
 Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
 
 
-The following C code verifies the solution.
+The following C code verifies the approximations:
+
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48.c}@*)
 \end{lstlisting}
+
 
 
 \begin{figure}[H]
@@ -880,7 +906,6 @@ The following C code verifies the solution.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q48/q48plot.py}@*)
 \end{lstlisting}
-
 
 
 % ----------------------------------------------------------- Q49
@@ -913,6 +938,8 @@ and
 \begin{align}
 P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 \end{align}
+
+
 
 \begin{figure}[H]
 \centering
@@ -1005,7 +1032,7 @@ Applying $R_4 \rightarrow (c - \mu s)R_4 - (s + \mu c)R_3$:
 \begin{align}
 \myvec{1 & 0 & -c & 0\\ 0 & 1 & -s & W\\ 0 & 0 & c - \mu s & \mu W\\ 0 & 0 & 0 & W\brak{c(1 - \mu^2) - 2\mu s}}
 \end{align}
-By \eqref{eq:rc}, the system is consistent only if $\text{rank}\brak{\vec{A}} = \text{rank}\brak{\vec{A}\mid\vec{b}}$. Since $\vec{A} \in \mathbb{R}^{n\times\brak{n-1}}$ with $n = 4$, this requires \eqref{eq:augdet}, i.e. $\mydet{\vec{A} & \vec{b}} = 0$, which in the reduced form means the last entry must be zero:
+By \eqref{eq:rc}, the system is consistent only if $\text{rank}\brak{\vec{A}} = \text{rank}\brak{\vec{A}\mid\vec{b}}$. The first three rows have non-zero pivots in the three columns (the pivot $c - \mu s$ is positive for the $\mu$ found below), so $\text{rank}\brak{\vec{A}} = 3$. The fourth row is zero in $\vec{A}$, so $\text{rank}\brak{\vec{A}\mid\vec{b}} = 3$ only if its last entry is zero:
 \begin{align}
 W\brak{c(1 - \mu^2) - 2\mu s} &= 0\\
 \implies \tan\theta &= \frac{1 - \mu^2}{2\mu}
@@ -1029,3 +1056,5 @@ taking the positive root.
 \end{lstlisting}
 
 \end{enumerate}
+
+
