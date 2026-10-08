@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 11:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1681,13 +1681,13 @@ Package pdftex.def Info: figs/q39.pdf  used on input line 838.
 <figs/q48.pdf, id=783, 505.89pt x 361.35pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
-Package pdftex.def Info: figs/q48.pdf  used on input line 881.
+Package pdftex.def Info: figs/q48.pdf  used on input line 882.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
  [27 <./figs/q48.pdf>]
 <figs/q49.pdf, id=846, 505.89pt x 361.35pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
-Package pdftex.def Info: figs/q49.pdf  used on input line 927.
+Package pdftex.def Info: figs/q49.pdf  used on input line 928.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
 
 
@@ -1697,7 +1697,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.949     \fill[pattern=north east lines]
+l.950     \fill[pattern=north east lines]
                                           (-0.25, 0) rectangle (0, 4.2);
 (That was another \errmessage.)
 
@@ -1708,7 +1708,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.952     \fill[pattern=north east lines]
+l.953     \fill[pattern=north east lines]
                                           (-0.25, -0.25) rectangle (5.2, 0);
 (That was another \errmessage.)
 
@@ -1716,7 +1716,7 @@ l.952     \fill[pattern=north east lines]
 <figs/q50.pdf, id=919, 505.89pt x 505.89pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
-Package pdftex.def Info: figs/q50.pdf  used on input line 1029.
+Package pdftex.def Info: figs/q50.pdf  used on input line 1030.
 (pdftex.def)             Requested size: 254.9356pt x 254.93593pt.
  [30]) [31 <./figs/q50.pdf>] (./main.aux)
  ***********
