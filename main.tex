@@ -3,12 +3,16 @@
 %\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
 \usepackage{tfrupee} % Include tfrupee package
 
+% --- Added for Arabic text support ---
+\usepackage[LFE,LAE,T1]{fontenc}
+\usepackage[arabic,english]{babel}
+% -------------------------------------
 
 \setlength{\headheight}{1cm} % Set the height of the header box
 \setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
 
 
-%\usepackage[a5paper, top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
+%\package[a5paper, top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
 
 %
 \usepackage{gvv-book}
@@ -29,24 +33,24 @@
 
 
 \title{
-	%\begin{flushleft}
-	\begin{center}
-	%MATRICES \\ In Geometry
-	Math for EE
-	\\
+    %\begin{flushleft}
+    \begin{center}
+    %MATRICES \\ In Geometry
+    Math for EE
+    \\
 \rule{0.4\columnwidth}{0.4pt}
 %\end{flushleft}
 \end{center}
 }
 % \author{
 % \vspace{11cm}
-% 	\begin{flushleft}
-% 	\begin{center}
+%     \begin{flushleft}
+%     \begin{center}
 % \includegraphics[width=0.2\columnwidth]{figs/logo.jpg}
 % \\
-% 		{	\huge G. V. V. Sharma}
-% 	\end{center}
-% 	\end{flushleft}
+%         {    \huge G. V. V. Sharma}
+%     \end{center}
+%     \end{flushleft}
 % \IEEEpubid{\makebox[\columnwidth]{978-1-7281-5966-1/20/\$31.00 ©2020 IEEE \hfill} \hspace{\columnsep}\makebox[\columnwidth]{ }}
 % }
 % \maketitle 
@@ -62,7 +66,7 @@ There is no copyright, so readers are free to print and share.
 %\today
 %\end{flushright}
 %Github: https://github.com/gadepall/matgeo
-%		\\
+%        \\
 License: https://creativecommons.org/licenses/by-sa/3.0/
 \\
 and
@@ -295,33 +299,8 @@ In this edition, some incorrect solutions were removed.  All figures redrawn. Mo
 \section{Triangle}
 %\numberwithin{equation}{section}
 Consider a triangle with vertices
-		\begin{align}
-			\label{eq:app-tri-pts}
-			\vec{A} = \myvec{1 \\ -1},\,
-			\vec{B} = \myvec{-4 \\ 6},\,
-			\vec{C} = \myvec{-3 \\ -5}
-		\end{align}
-\subsection{Sides}
-\input{chapters/triangle/vector}
-\subsection{Formulae}
-\input{chapters/formulae/line}
-\subsection{Median}
-\input{chapters/triangle/median}
-\subsection{Altitude}
-\input{chapters/triangle/altitude}
-\subsection{Perpendicular Bisector}
-\input{chapters/triangle/perp-bisect}
-\subsection{Angle Bisector}
-\input{chapters/triangle/angle-bisect}
-\subsection{Eigenvalues and Eigenvectors}
-\input{chapters/triangle/eigen}
-\subsection{Formulae}
-\input{chapters/formulae/circle/tangent}
-\subsection{Matrices}
-\input{chapters/triangle/matrix}
-\newpage
-\section{Conic Section}
-\input{chapters/formulae/conics/app}
-\fi
-\end{document}
-
+        \begin{align}
+            \label{eq:app-tri-pts}
+            \vec{A} = \myvec{1 \\ -1},\,
+            \vec{B} = \myvec{-4 \\ 6},\,
+            \vec{C} = \myvec{-

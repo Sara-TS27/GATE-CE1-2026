@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 15:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1436,126 +1436,48 @@ l.104 ...n\alpha}$ with $\vec{e}_\alpha \triangleq
 ? r
 OK, entering \nonstopmode...
 [4] [5] [6] [7]) [8] (./chapters/ce1-2026-problems.tex
-! Undefined control sequence.
-<argument> ...nAnchorHref {section*.3}\textarabic 
-                                                  {المسائل}
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
+! LaTeX Error: Can be used only in preamble.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
+l.1 \usepackage
+               {enumitem}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-You may provide a definition with
-\DeclareUnicodeCharacter 
+! Missing number, treated as zero.
+<to be read again> 
+                   \c@* 
+l.2 [label=\thesubsection.\arabic*
+                                  , ref=\thesubsection.\arabic*]
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character م (U+0645)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character س (U+0633)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ا (U+0627)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ئ (U+0626)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ل (U+0644)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \section*{\textarabic{المسائل}}
-                                              % "Problems" (only Arabic text...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
+! Missing number, treated as zero.
+<to be read again> 
+                   \c@* 
+l.2 ...ction.\arabic*, ref=\thesubsection.\arabic*
+                                                  ]
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
 [9]
-<figs/q03.pdf, id=186, 578.16pt x 469.755pt>
+<figs/q03.pdf, id=185, 578.16pt x 469.755pt>
 File: figs/q03.pdf Graphic file (type pdf)
 <use figs/q03.pdf>
-Package pdftex.def Info: figs/q03.pdf  used on input line 79.
+Package pdftex.def Info: figs/q03.pdf  used on input line 75.
 (pdftex.def)             Requested size: 254.9356pt x 207.13008pt.
  [10]
 ! Undefined control sequence.
 <argument>  \vec {i} \triangleq 
                                 \myvec {1\\ 0},\quad \vec {w}_\theta \triang...
-l.104 \end{align}
+l.100 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1566,7 +1488,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...0},\quad \vec {w}_\theta \triangleq 
                                                   \myvec {\cos \theta \\ \si...
-l.104 \end{align}
+l.100 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1577,7 +1499,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \vec {i} \triangleq 
                                 \myvec {1\\ 0},\quad \vec {w}_\theta \triang...
-l.104 \end{align}
+l.100 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1588,7 +1510,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...0},\quad \vec {w}_\theta \triangleq 
                                                   \myvec {\cos \theta \\ \si...
-l.104 \end{align}
+l.100 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1597,30 +1519,30 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [11 <./figs/q03.pdf>]
-<figs/q07.pdf, id=267, 578.16pt x 722.7pt>
+<figs/q07.pdf, id=266, 578.16pt x 722.7pt>
 File: figs/q07.pdf Graphic file (type pdf)
 <use figs/q07.pdf>
-Package pdftex.def Info: figs/q07.pdf  used on input line 147.
+Package pdftex.def Info: figs/q07.pdf  used on input line 143.
 (pdftex.def)             Requested size: 254.9356pt x 318.66165pt.
  [12] [13 <./figs/q07.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 200.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 196.
  [14] [15] [16]
-<figs/q12.pdf, id=411, 505.89pt x 433.62pt>
+<figs/q12.pdf, id=410, 505.89pt x 433.62pt>
 File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
-Package pdftex.def Info: figs/q12.pdf  used on input line 397.
+Package pdftex.def Info: figs/q12.pdf  used on input line 393.
 (pdftex.def)             Requested size: 254.9356pt x 218.51653pt.
  [17 <./figs/q12.pdf>] [18] [19]
-<figs/q28.pdf, id=505, 499.3857pt x 393.8715pt>
+<figs/q28.pdf, id=504, 499.3857pt x 393.8715pt>
 File: figs/q28.pdf Graphic file (type pdf)
 <use figs/q28.pdf>
-Package pdftex.def Info: figs/q28.pdf  used on input line 518.
+Package pdftex.def Info: figs/q28.pdf  used on input line 514.
 (pdftex.def)             Requested size: 254.9356pt x 201.07013pt.
  [20 <./figs/q28.pdf>]
-<figs/q36.pdf, id=523, 505.89pt x 361.35pt>
+<figs/q36.pdf, id=522, 505.89pt x 361.35pt>
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
-Package pdftex.def Info: figs/q36.pdf  used on input line 562.
+Package pdftex.def Info: figs/q36.pdf  used on input line 558.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
  [21] [22 <./figs/q36.pdf>]
 
@@ -1630,7 +1552,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.632     \fill[pattern=north east lines]
+l.628     \fill[pattern=north east lines]
                                           (-0.6, -0.8) rectangle (0.6, -0.5);
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -1644,15 +1566,15 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.638     \fill[pattern=north east lines]
+l.634     \fill[pattern=north east lines]
                                           (5.4, -0.8) rectangle (6.6, -0.5);
 (That was another \errmessage.)
 
 [23]
-<figs/q38.pdf, id=625, 505.89pt x 361.35pt>
+<figs/q38.pdf, id=624, 505.89pt x 361.35pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
-Package pdftex.def Info: figs/q38.pdf  used on input line 697.
+Package pdftex.def Info: figs/q38.pdf  used on input line 693.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
  [24 <./figs/q38.pdf>]
 
@@ -1662,7 +1584,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.739     \fill[pattern=north east lines]
+l.735     \fill[pattern=north east lines]
                                           (-0.5, -0.65) rectangle (0.5, -0.4);
 (That was another \errmessage.)
 
@@ -1673,27 +1595,27 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.744     \fill[pattern=north east lines]
+l.740     \fill[pattern=north east lines]
                                           (3.5, -0.65) rectangle (4.5, -0.4);
 (That was another \errmessage.)
 
 [25] [26]
-<figs/q39.pdf, id=718, 578.16pt x 433.62pt>
+<figs/q39.pdf, id=717, 578.16pt x 433.62pt>
 File: figs/q39.pdf Graphic file (type pdf)
 <use figs/q39.pdf>
-Package pdftex.def Info: figs/q39.pdf  used on input line 862.
+Package pdftex.def Info: figs/q39.pdf  used on input line 858.
 (pdftex.def)             Requested size: 254.9356pt x 191.19699pt.
  [27] [28 <./figs/q39.pdf>]
-<figs/q48.pdf, id=786, 505.89pt x 361.35pt>
+<figs/q48.pdf, id=785, 505.89pt x 361.35pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
-Package pdftex.def Info: figs/q48.pdf  used on input line 905.
+Package pdftex.def Info: figs/q48.pdf  used on input line 901.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
  [29 <./figs/q48.pdf>]
-<figs/q49.pdf, id=850, 505.89pt x 361.35pt>
+<figs/q49.pdf, id=849, 505.89pt x 361.35pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
-Package pdftex.def Info: figs/q49.pdf  used on input line 951.
+Package pdftex.def Info: figs/q49.pdf  used on input line 947.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
 
 
@@ -1703,7 +1625,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.973     \fill[pattern=north east lines]
+l.969     \fill[pattern=north east lines]
                                           (-0.25, 0) rectangle (0, 4.2);
 (That was another \errmessage.)
 
@@ -1714,32 +1636,36 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.976     \fill[pattern=north east lines]
+l.972     \fill[pattern=north east lines]
                                           (-0.25, -0.25) rectangle (5.2, 0);
 (That was another \errmessage.)
 
 [30 <./figs/q49.pdf>] [31]
-<figs/q50.pdf, id=921, 505.89pt x 505.89pt>
+<figs/q50.pdf, id=920, 505.89pt x 505.89pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
-Package pdftex.def Info: figs/q50.pdf  used on input line 1053.
+Package pdftex.def Info: figs/q50.pdf  used on input line 1049.
 (pdftex.def)             Requested size: 254.9356pt x 254.93593pt.
  [32]) [33 <./figs/q50.pdf>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 51048 strings out of 474222
- 1221013 string characters out of 5748734
+ 51043 strings out of 474222
+ 1220981 string characters out of 5748734
  1954975 words of memory out of 5000000
- 72188 multiletter control sequences out of 15000+600000
+ 72184 multiletter control sequences out of 15000+600000
  605799 words of font info for 150 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,109p,1194b,1287s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,109p,1194b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -1761,10 +1687,10 @@ ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (33 pages, 502829 bytes).
+Output written on main.pdf (33 pages, 503014 bytes).
 PDF statistics:
- 1144 PDF objects out of 1200 (max. 8388607)
- 716 compressed objects within 8 object streams
- 352 named destinations out of 1000 (max. 500000)
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 715 compressed objects within 8 object streams
+ 351 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 
