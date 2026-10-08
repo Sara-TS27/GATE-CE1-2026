@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 15:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  8 OCT 2026 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,28 +1405,28 @@ Package hyperref Info: Link coloring ON on input line 26.
 -dist/fonts/enc/dvips/base/8r.enc}
 
 
-] (./main.toc)
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
-
-[2] (./chapters/ce1-2026-formulae.tex
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 9.
+] (./main.toc
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3
+))
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [2]
+(./chapters/ce1-2026-formulae.tex [3
 
 ]
 ! Undefined control sequence.
@@ -1435,31 +1435,330 @@ l.104 ...n\alpha}$ with $\vec{e}_\alpha \triangleq
 
 ? r
 OK, entering \nonstopmode...
-[4] [5] [6] [7]) [8])
-Runaway argument?
-{chapters/ce1 
-! File ended while scanning use of \@iinput.
-<inserted text> 
-                \par 
-<*> main.tex
-            
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+[4] [5] [6] [7]) [8] (./chapters/ce1-2026-problems.tex
+! Undefined control sequence.
+<argument> ...nAnchorHref {section*.3}\textarabic 
+                                                  {المسائل}
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! Emergency stop.
-<*> main.tex
-            
-*** (job aborted, no legal \end found)
 
- 
+! LaTeX Error: Unicode character ا (U+0627)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ل (U+0644)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character م (U+0645)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character س (U+0633)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ا (U+0627)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ئ (U+0626)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ل (U+0644)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \section*{\textarabic{المسائل}}
+                                              % "Problems" (only Arabic text...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[9]
+<figs/q03.pdf, id=189, 578.16pt x 469.755pt>
+File: figs/q03.pdf Graphic file (type pdf)
+<use figs/q03.pdf>
+Package pdftex.def Info: figs/q03.pdf  used on input line 76.
+(pdftex.def)             Requested size: 254.9356pt x 207.13008pt.
+ [10]
+! Undefined control sequence.
+<argument>  \vec {i} \triangleq 
+                                \myvec {1\\ 0},\quad \vec {w}_\theta \triang...
+l.101 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...0},\quad \vec {w}_\theta \triangleq 
+                                                  \myvec {\cos \theta \\ \si...
+l.101 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \vec {i} \triangleq 
+                                \myvec {1\\ 0},\quad \vec {w}_\theta \triang...
+l.101 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...0},\quad \vec {w}_\theta \triangleq 
+                                                  \myvec {\cos \theta \\ \si...
+l.101 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[11 <./figs/q03.pdf>]
+<figs/q07.pdf, id=269, 578.16pt x 722.7pt>
+File: figs/q07.pdf Graphic file (type pdf)
+<use figs/q07.pdf>
+Package pdftex.def Info: figs/q07.pdf  used on input line 144.
+(pdftex.def)             Requested size: 254.9356pt x 318.66165pt.
+ [12] [13 <./figs/q07.pdf>]
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 197.
+ [14] [15] [16]
+<figs/q12.pdf, id=418, 505.89pt x 433.62pt>
+File: figs/q12.pdf Graphic file (type pdf)
+<use figs/q12.pdf>
+Package pdftex.def Info: figs/q12.pdf  used on input line 388.
+(pdftex.def)             Requested size: 254.9356pt x 218.51653pt.
+ [17 <./figs/q12.pdf>] [18] [19] [20]
+<figs/q36.pdf, id=542, 505.89pt x 361.35pt>
+File: figs/q36.pdf Graphic file (type pdf)
+<use figs/q36.pdf>
+Package pdftex.def Info: figs/q36.pdf  used on input line 552.
+(pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
+ [21 <./figs/q36.pdf>]
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.622     \fill[pattern=north east lines]
+                                          (-0.6, -0.8) rectangle (0.6, -0.5);
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.628     \fill[pattern=north east lines]
+                                          (5.4, -0.8) rectangle (6.6, -0.5);
+(That was another \errmessage.)
+
+[22]
+<figs/q38.pdf, id=624, 505.89pt x 361.35pt>
+File: figs/q38.pdf Graphic file (type pdf)
+<use figs/q38.pdf>
+Package pdftex.def Info: figs/q38.pdf  used on input line 687.
+(pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
+ [23 <./figs/q38.pdf>]
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.726     \fill[pattern=north east lines]
+                                          (-0.5, -0.65) rectangle (0.5, -0.4);
+(That was another \errmessage.)
+
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.731     \fill[pattern=north east lines]
+                                          (3.5, -0.65) rectangle (4.5, -0.4);
+(That was another \errmessage.)
+
+[24] [25]
+<figs/q39.pdf, id=722, 578.16pt x 433.62pt>
+File: figs/q39.pdf Graphic file (type pdf)
+<use figs/q39.pdf>
+Package pdftex.def Info: figs/q39.pdf  used on input line 838.
+(pdftex.def)             Requested size: 254.9356pt x 191.19699pt.
+ [26 <./figs/q39.pdf>]
+<figs/q48.pdf, id=783, 505.89pt x 361.35pt>
+File: figs/q48.pdf Graphic file (type pdf)
+<use figs/q48.pdf>
+Package pdftex.def Info: figs/q48.pdf  used on input line 880.
+(pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
+ [27 <./figs/q48.pdf>]
+<figs/q49.pdf, id=846, 505.89pt x 361.35pt>
+File: figs/q49.pdf Graphic file (type pdf)
+<use figs/q49.pdf>
+Package pdftex.def Info: figs/q49.pdf  used on input line 925.
+(pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
+
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.947     \fill[pattern=north east lines]
+                                          (-0.25, 0) rectangle (0, 4.2);
+(That was another \errmessage.)
+
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.950     \fill[pattern=north east lines]
+                                          (-0.25, -0.25) rectangle (5.2, 0);
+(That was another \errmessage.)
+
+[28 <./figs/q49.pdf>] [29]
+<figs/q50.pdf, id=919, 505.89pt x 505.89pt>
+File: figs/q50.pdf Graphic file (type pdf)
+<use figs/q50.pdf>
+Package pdftex.def Info: figs/q50.pdf  used on input line 1027.
+(pdftex.def)             Requested size: 254.9356pt x 254.93593pt.
+ [30]) [31 <./figs/q50.pdf>] (./main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
+ ) 
 Here is how much of TeX's memory you used:
- 50065 strings out of 474222
- 1207398 string characters out of 5748734
- 1948975 words of memory out of 5000000
- 71507 multiletter control sequences out of 15000+600000
- 589106 words of font info for 101 fonts, out of 8000000 for 9000
+ 51039 strings out of 474222
+ 1220845 string characters out of 5748734
+ 1953975 words of memory out of 5000000
+ 72181 multiletter control sequences out of 15000+600000
+ 605799 words of font info for 150 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,16n,109p,1194b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 109i,18n,109p,1194b,1276s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (31 pages, 465732 bytes).
+PDF statistics:
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 350 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+
