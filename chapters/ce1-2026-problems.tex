@@ -1,9 +1,5 @@
-%\ chapters/ce1-2025-problems.tex
-% GATE CE1 - Problems (BT25 format)
-% Compile with XeLaTeX. Main language = English, Arabic only in heading.
-% Each problem is an \item of the outer enumerate.
-% Options are a nested enumerate so they are NOT numbered as problems.
-\section*{\textarabic{المسائل}}    % "Problems" (only Arabic text in the document)
+\usepackage{enumitem}
+[label=\thesubsection.\arabic*, ref=\thesubsection.\arabic*]
 \setcounter{subsection}{1}         % labels become 1.1, 1.2, ...
 
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
