@@ -695,6 +695,9 @@ Assembling the global system \eqref{eq:kuf} and deleting the restrained degrees 
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q39
+
+
+% ----------------------------------------------------------- Q39
 \item The plane frame has a hinge and a roller support, and is loaded as shown in the figure. Both the columns have same height.
 
 What is the absolute value of the maximum bending moment (in kN-m) in the frame? \hfill (GATE CE 2026)
@@ -788,24 +791,35 @@ The hinge gives two reaction components and the roller gives a vertical reaction
 \begin{align}
 \vec{R}_A = \myvec{H_A\\ V_A},\quad \vec{R}_B = \myvec{0\\ V_B}
 \end{align}
-From \eqref{eq:equil}, the force equilibrium is
-\begin{align}
-\vec{R}_A + \vec{R}_B + \vec{F}_C + \vec{F}_E = \vec{0} \implies H_A = -50,\quad V_A + V_B = 90
-\end{align}
-and the moment equilibrium about $\vec{A}$, using $\vec{r}\times\vec{F} = r_xF_y - r_yF_x$, is
+From \eqref{eq:equil}, the force equilibrium is $\vec{R}_A + \vec{R}_B + \vec{F}_C + \vec{F}_E = \vec{0}$ and the moment equilibrium about $\vec{A}$, using $\vec{r}\times\vec{F} = r_xF_y - r_yF_x$, requires
 \begin{align}
 \brak{\vec{C} - \vec{A}}\times\vec{F}_C &= 0\times 0 - 3\times 50 = -150\\
 \brak{\vec{E} - \vec{A}}\times\vec{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
-\brak{\vec{B} - \vec{A}}\times\vec{R}_B &= 4\times V_B - 0\times 0 = 4V_B\\
-\implies 4V_B - 150 - 180 &= 0
+\brak{\vec{B} - \vec{A}}\times\vec{R}_B &= 4\times V_B - 0\times 0 = 4V_B
 \end{align}
-In the matrix form \eqref{eq:axb},
+to add up to zero. Let $\vec{x} = \myvec{H_A & V_A & V_B}^\top$. The three equilibrium conditions give the residual vector
 \begin{align}
-\myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4}\myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 90\\ 330}
+\vec{e}\brak{\vec{x}} = \myvec{H_A + 50\\ V_A + V_B - 90\\ 4V_B - 150 - 180} = \vec{S}\vec{x} - \vec{b},\quad \vec{S} = \myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4},\quad \vec{b} = \myvec{-50\\ 90\\ 330}
 \end{align}
-The matrix is upper triangular with three non-zero pivots, so from \eqref{eq:rc}, $\text{rank}\brak{\vec{A}} = \text{rank}\brak{\vec{A}\mid\vec{b}} = 3 = n$ and the solution is unique:
+which is of the form \eqref{eq:axb} (the matrix is named $\vec{S}$ to avoid confusion with the point $\vec{A}$). The body is in equilibrium only if $\vec{e} = \vec{0}$, so we require its squared norm to be zero:
 \begin{align}
-V_B = \frac{330}{4} = 82.5,\quad V_A = 90 - 82.5 = 7.5,\quad H_A = -50
+\norm{\vec{e}}^2 = \brak{H_A + 50}^2 + \brak{V_A + V_B - 90}^2 + \brak{4V_B - 330}^2 = 0
+\end{align}
+From \eqref{eq:zeronorm}, a vector has zero norm if and only if it is the zero vector, so $\vec{e} = \vec{0}$, that is, each term vanishes:
+\begin{align}
+H_A + 50 = 0,\quad 4V_B - 330 = 0,\quad V_A + V_B - 90 = 0
+\end{align}
+These equations are $\vec{S}\vec{x} = \vec{b}$. Row reducing the augmented matrix,
+\begin{align}
+\myvec{1 & 0 & 0 & -50\\ 0 & 1 & 1 & 90\\ 0 & 0 & 4 & 330}
+&\xrightarrow{R_3\to\frac{1}{4}R_3}
+\myvec{1 & 0 & 0 & -50\\ 0 & 1 & 1 & 90\\ 0 & 0 & 1 & 82.5}\\
+&\xrightarrow{R_2\to R_2 - R_3}
+\myvec{1 & 0 & 0 & -50\\ 0 & 1 & 0 & 7.5\\ 0 & 0 & 1 & 82.5}
+\end{align}
+From \eqref{eq:rc}, $\text{rank}\brak{\vec{S}} = \text{rank}\brak{\vec{S}\mid\vec{b}} = 3 = n$, so $\norm{\vec{e}}^2 = 0$ holds for exactly one $\vec{x}$:
+\begin{align}
+H_A = -50,\quad V_A = 7.5,\quad V_B = 82.5
 \end{align}
 that is, $\vec{R}_A = \myvec{-50\\ 7.5}$ kN (the horizontal component acts towards the left) and $\vec{R}_B = \myvec{0\\ 82.5}$ kN.
 
@@ -813,25 +827,25 @@ The bending moment is found from \eqref{eq:bm}. In the column $AC$, at a section
 \begin{align}
 M\brak{\vec{P}} = \brak{\vec{A} - \vec{P}}\times\vec{R}_A = \myvec{0\\ -y}\times\myvec{-50\\ 7.5} = 0\times 7.5 - \brak{-y}\brak{-50} = -50y
 \end{align}
-so $\abs{M}$ grows linearly from $0$ at $A$ to
+so $\norm{M\brak{\vec{P}}} = 50y$ grows linearly from $0$ at $A$ to
 \begin{align}
-\abs{M_C} = 50\times 3 = 150\ \text{kN m}
+\norm{M_C} = 50\times 3 = 150\ \text{kN m}
 \end{align}
 In the beam $CD$, at a section $\vec{P} = \myvec{x\\ 3}$ (forces to the right of the section),
 \begin{align}
 M\brak{\vec{P}} &= \brak{\vec{B} - \vec{P}}\times\vec{R}_B + \brak{\vec{E} - \vec{P}}\times\vec{F}_E\\
 &= \begin{cases} 82.5\brak{4 - x} - 90\brak{2 - x} = 150 + 7.5x, & 0 \le x \le 2\\ 82.5\brak{4 - x}, & 2 \le x \le 4 \end{cases}
 \end{align}
-which is linear in each part, so the maximum occurs under the load at $E$:
+which is positive and increasing from $150$ to $165$ on $0 \le x \le 2$ and decreasing from $165$ to $0$ on $2 \le x \le 4$, so the maximum in the beam occurs under the load at $E$:
 \begin{align}
-\abs{M_E} &= \abs{\brak{\vec{B} - \vec{E}}\times\vec{R}_B} = \abs{\myvec{2\\ -3}\times\myvec{0\\ 82.5}}\\
-&= \abs{2\times 82.5 - \brak{-3}\times 0} = 165\ \text{kN m}
+M_E = \brak{\vec{B} - \vec{E}}\times\vec{R}_B = \myvec{2\\ -3}\times\myvec{0\\ 82.5} = 2\times 82.5 - \brak{-3}\times 0 = 165\ \text{kN m}
 \end{align}
+so $\norm{M_E} = 165$ kN m. The beam value $\norm{M\brak{\vec{P}}} = 150$ at $x = 0$ equals $\norm{M_C}$ from the column, as it must since the joint $C$ is in moment equilibrium (the signs differ only because the two sections are taken on different sides of the joint).
 In the column $BD$, the roller reaction is vertical and acts along the column, so $\brak{\vec{B} - \vec{P}}\times\vec{R}_B = \myvec{0\\ -y}\times\myvec{0\\ 82.5} = 0$ and $M = 0$. Therefore
 \begin{align}
-\max\abs{M} = \max\brak{150,\ 165,\ 0} = 165\ \text{kN m}
+\max\norm{M} = \max\brak{\norm{M_C},\ \norm{M_E},\ 0} = \max\brak{150,\ 165,\ 0} = 165\ \text{kN m}
 \end{align}
-
+As a check, substituting the reactions gives $\norm{\vec{e}} = \norm{\myvec{-50 + 50\\ 7.5 + 82.5 - 90\\ 4\times 82.5 - 330}} = \norm{\vec{0}} = 0$. Hence the maximum absolute bending moment is $165$ kN m, which is option (a).
 
 \begin{figure}[H]
 \centering
@@ -844,7 +858,6 @@ In the column $BD$, the roller reaction is vertical and acts along the column, s
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q39/q39plot.py}@*)
 \end{lstlisting}
-
 % ----------------------------------------------------------- Q48
 \item Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
 \begin{align}
