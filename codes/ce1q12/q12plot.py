@@ -41,15 +41,15 @@ ax.set_xlim(-3,3); ax.set_ylim(-3,3); ax.set_zlim(-6,6)
 ax.set_xlabel('X'); ax.set_ylabel('Y'); ax.set_zlabel('Z')
 ax.set_title('Intersection of Two Planes',fontsize=9)
 plt.savefig(os.path.join(FIGS,'q12.pdf'))
-plt.show()
 
 #if using termux
-#plt.savefig('./figs/q12.pdf')
-#plt.savefig('./figs/q12.png')
-#subprocess.run(shlex.split("termux-open ./figs/q12.pdf"))
+plt.savefig('../../figs/q12.pdf')
+plt.savefig('../../figs/q12.png')
+#subprocess.run(shlex.split("termux-open ../../figs/q12.pdf"))
 
-#plt.savefig('../figs/q12.pdf')
-#plt.savefig('../figs/q12.eps')
-#subprocess.run(shlex.split("termux-open ../figs/q12.pdf"))
+#plt.savefig('../../figs/q12.pdf')
+#plt.savefig('../../figs/q12.eps')
+#subprocess.run(shlex.split("termux-open ../../figs/q12.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()

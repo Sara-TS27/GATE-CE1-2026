@@ -33,15 +33,13 @@ plt.xlabel('x'); plt.ylabel('y')
 plt.title('Upper Bound $x^2/4$ and Optimal $f(x)=x/2$')
 plt.legend(loc='upper left',fontsize=8)
 plt.savefig(os.path.join(FIGS,'q36.pdf'))
-plt.show()
 
 #if using termux
-#plt.savefig('./figs/q36.pdf')
-#plt.savefig('./figs/q36.png')
-#subprocess.run(shlex.split("termux-open ./figs/q36.pdf"))
+plt.savefig('../../figs/q36.pdf')
+plt.savefig('../../figs/q36.png')
+#subprocess.run(shlex.split("termux-open ../../figs/q36.pdf"))
 
-#plt.savefig('../figs/q36.pdf')
-#plt.savefig('../figs/q36.eps')
-#subprocess.run(shlex.split("termux-open ../figs/q36.pdf"))
 #else
 #plt.show() #opening the plot window
+plt.show()
+
